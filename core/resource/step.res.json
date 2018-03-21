@@ -1,0 +1,207 @@
+{
+	"groups": [
+		{
+			"keys": "attack_json,tile_down,sound_bg,sound_readygo,global_json,battle_bg_jpg,btn_back_png,btn_share_png,friend_png,head_bg_png,icon_bg_png,index_bg_jpg,logo_png,match_png,onestep_png,lost_png,win_png,vs_png,twostep_png,time_png,tile_trap2_png,tile_start_png,tile_narmal2_png,single_png,sign_png,result_png,ranking_png,pk_png,hero_png,monster_png,hero_json,monster_json",
+			"name": "step"
+		}
+	],
+	"resources": [
+		{
+			"url": "config/attack.json",
+			"type": "json",
+			"name": "attack_json"
+		},
+		{
+			"url": "assets/stepGame/map/tile_narmal.png",
+			"type": "image",
+			"name": "tile_narmal"
+		},
+		{
+			"url": "assets/stepGame/map/tile_down.png",
+			"type": "image",
+			"name": "tile_down"
+		},
+		{
+			"url": "assets/stepGame/map/tile_trap.png",
+			"type": "image",
+			"name": "tile_trap"
+		},
+		{
+			"url": "assets/stepGame/map/tile_twosign.png",
+			"type": "image",
+			"name": "tile_twosign"
+		},
+		{
+			"url": "assets/stepGame/map/role_yongshi.png",
+			"type": "image",
+			"name": "role_yongshi"
+		},
+		{
+			"url": "assets/bg/map.jpg",
+			"type": "image",
+			"name": "map_jpg"
+		},
+		{
+			"url": "assets/stepGame/ui/pk.png",
+			"type": "image",
+			"name": "pk_png"
+		},
+		{
+			"url": "assets/stepGame/ui/ranking.png",
+			"type": "image",
+			"name": "ranking_png"
+		},
+		{
+			"url": "assets/stepGame/ui/result.png",
+			"type": "image",
+			"name": "result_png"
+		},
+		{
+			"url": "assets/stepGame/ui/single.png",
+			"type": "image",
+			"name": "single_png"
+		},
+		{
+			"url": "assets/stepGame/ui/vs.png",
+			"type": "image",
+			"name": "vs_png"
+		},
+		{
+			"url": "assets/stepGame/ui/friend.png",
+			"type": "image",
+			"name": "friend_png"
+		},
+		{
+			"url": "assets/stepGame/ui/icon_bg.png",
+			"type": "image",
+			"name": "icon_bg_png"
+		},
+		{
+			"url": "assets/stepGame/ui/battle_bg.jpg",
+			"type": "image",
+			"name": "battle_bg_jpg"
+		},
+		{
+			"url": "assets/stepGame/ui/head_bg.png",
+			"type": "image",
+			"name": "head_bg_png"
+		},
+		{
+			"url": "assets/stepGame/ui/onestep.png",
+			"type": "image",
+			"name": "onestep_png"
+		},
+		{
+			"url": "assets/stepGame/ui/sign.png",
+			"type": "image",
+			"name": "sign_png"
+		},
+		{
+			"url": "assets/stepGame/ui/tile_narmal.png",
+			"type": "image",
+			"name": "tile_narmal2_png"
+		},
+		{
+			"url": "assets/stepGame/ui/tile_start.png",
+			"type": "image",
+			"name": "tile_start_png"
+		},
+		{
+			"url": "assets/stepGame/ui/tile_trap.png",
+			"type": "image",
+			"name": "tile_trap2_png"
+		},
+		{
+			"url": "assets/stepGame/ui/twostep.png",
+			"type": "image",
+			"name": "twostep_png"
+		},
+		{
+			"url": "assets/stepGame/ui/match.png",
+			"type": "image",
+			"name": "match_png"
+		},
+		{
+			"url": "assets/stepGame/ui/btn_back.png",
+			"type": "image",
+			"name": "btn_back_png"
+		},
+		{
+			"url": "assets/stepGame/ui/btn_share.png",
+			"type": "image",
+			"name": "btn_share_png"
+		},
+		{
+			"url": "assets/stepGame/ui/lost.png",
+			"type": "image",
+			"name": "lost_png"
+		},
+		{
+			"url": "assets/stepGame/ui/time.png",
+			"type": "image",
+			"name": "time_png"
+		},
+		{
+			"url": "assets/stepGame/ui/win.png",
+			"type": "image",
+			"name": "win_png"
+		},
+		{
+			"url": "assets/stepGame/ui/index_bg.jpg",
+			"type": "image",
+			"name": "index_bg_jpg"
+		},
+		{
+			"url": "assets/stepGame/ui/logo.png",
+			"type": "image",
+			"name": "logo_png"
+		},
+		{
+			"url": "assets/stepGame/sound/step_bg.mp3",
+			"type": "sound",
+			"name": "sound_bg",
+			"soundType": "music"
+		},
+		{
+			"url": "assets/stepGame/sound/step_go.wav",
+			"type": "sound",
+			"name": "sound_readygo",
+			"soundType": "effect"
+		},
+		{
+			"url": "config/global.json",
+			"type": "json",
+			"name": "global_json"
+		},
+		{
+			"url": "assets/stepGame/mc/hero.png",
+			"type": "image",
+			"name": "hero_png"
+		},
+		{
+			"url": "assets/stepGame/mc/monster.png",
+			"type": "image",
+			"name": "monster_png"
+		},
+		{
+			"url": "assets/stepGame/mc/movieclip.png",
+			"type": "image",
+			"name": "movieclip_png"
+		},
+		{
+			"url": "assets/stepGame/mc/movieclip.json",
+			"type": "json",
+			"name": "movieclip_json"
+		},
+		{
+			"url": "assets/stepGame/mc/hero.json",
+			"type": "json",
+			"name": "hero_json"
+		},
+		{
+			"url": "assets/stepGame/mc/monster.json",
+			"type": "json",
+			"name": "monster_json"
+		}
+	]
+}

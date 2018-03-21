@@ -1,0 +1,30 @@
+﻿{
+"mc": {
+	"monster": {
+		"frameRate":30,
+		"labels": [
+			{"name":"idle","frame":1},
+			{"name":"move","frame":3},
+			{"name":"hurt","frame":9},
+			{"name":"win","frame":11},
+			{"name":"lose","frame":13}
+		],
+		"frames": [
+			{"res":"monster0000","x":-155.95,"y":-228.4,"duration":4},
+			{"res":"monster0004","x":-145.95,"y":-226.4,"duration":2},
+			{"res":"monster0006","x":-145.95,"y":-233.4,"duration":2},
+			{"res":"monster0008","x":-123.94999999999999,"y":-194.4,"duration":2},
+			{"res":"monster0010","x":-164.95,"y":-234.4,"duration":2},
+			{"res":"monster0012","x":-155.95,"y":-219.4,"duration":2}
+		]
+	}
+},
+"res": {
+	"monster0000":{"x":0,"y":0,"w":170,"h":171},
+	"monster0004":{"x":170,"y":0,"w":160,"h":169},
+	"monster0006":{"x":330,"y":0,"w":160,"h":176},
+	"monster0008":{"x":0,"y":176,"w":138,"h":154},
+	"monster0010":{"x":138,"y":176,"w":174,"h":176},
+	"monster0012":{"x":312,"y":176,"w":179,"h":166}
+}
+}

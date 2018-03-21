@@ -1,0 +1,8 @@
+{
+    "IsDebug":false,
+    "HttpSerever":"http://www.baidu.com",
+    "SocketServer":"192.168.0.133",
+    "SocketPort":"8080/step",
+    "ProtoFile":"simple_proto",
+    "ProtoConfig":"simple_config"
+}

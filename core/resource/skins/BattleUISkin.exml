@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BattleUISkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="battle_bg_jpg" x="0" y="0" visible="false"/>
+	<e:Image source="04游戏_jpg" x="0" y="0" scaleX="1" scaleY="1" visible="false"/>
+	<e:Group id="mapGroup" width="640" height="1136" x="0" y="0"/>
+	<e:Image source="tile_narmal2_png" x="332" y="292" visible="false"/>
+	<e:Image source="tile_narmal2_png" x="30" y="292" visible="false"/>
+	<e:Image source="tile_narmal2_png" x="182" y="292" visible="false"/>
+	<e:Image source="tile_narmal2_png" x="482" y="292" visible="false"/>
+	<e:Image source="tile_narmal2_png" x="482" y="160.69" visible="false"/>
+	<e:Image source="tile_trap2_png" x="182" y="306" visible="false"/>
+	<e:Group id="uiGroup" width="640" height="1136" x="0" y="0">
+		<e:Image source="head_bg_png" x="39.5" y="29" scaleX="1" scaleY="1"/>
+		<e:Image source="head_bg_png" x="358" y="29" scaleX="1" scaleY="1"/>
+		<e:Image source="vs_png" x="248" y="32" anchorOffsetX="0" width="143.73" anchorOffsetY="0" height="96.31" scaleX="1" scaleY="1"/>
+		<e:Image id="imgIcon1" source="icon_bg_png" x="10" y="13" anchorOffsetX="0" width="134.01" anchorOffsetY="0" height="131.9" scaleX="1" scaleY="1"/>
+		<e:Image id="imgIcon2" source="icon_bg_png" x="488.5" y="13" anchorOffsetX="0" width="134.01" anchorOffsetY="0" height="131.9" scaleX="1" scaleY="1"/>
+		<e:Label id="lblProgress1" text="100%" x="145" y="67" fontFamily="Microsoft YaHei" size="35" scaleX="1" scaleY="1" bold="true"/>
+		<e:Label id="lblProgress2" text="100%" x="380.5" y="67" fontFamily="Microsoft YaHei" size="35" scaleX="1" scaleY="1" bold="true"/>
+		<e:Image id="btnOneStep" source="onestep_png" x="49.5" y="1000" scaleX="1" scaleY="1"/>
+		<e:Image id="btnTwoStep" source="twostep_png" x="352" y="1000" scaleX="1" scaleY="1"/>
+	</e:Group>
+</e:Skin>

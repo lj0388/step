@@ -1,0 +1,2000 @@
+{
+	"groups": [
+		{
+			"keys": "bg_jpg,egret_icon_png,description_json,attack_json,global_json,guaiwu001_skeleton_json,guaiwu001_texture_json,guaiwu001_texture_png,guaiwu002_skeleton_json,guaiwu002_texture_json,guaiwu002_texture_png,guaiwu002_effect_skeleton_json,guaiwu002_effect_texture_json,guaiwu002_effect_texture_png,guaiwu003_skeleton_json,guaiwu003_texture_json,guaiwu003_texture_png,guaiwu003_effect_skeleton_json,guaiwu003_effect_texture_json,guaiwu003_effect_texture_png,jineng1_skeleton_json,jineng1_texture_json,jineng1_texture_png,jineng2_skeleton_json,jineng2_texture_json,jineng2_texture_png,zhujue1_skeleton_json,zhujue1_texture_json,zhujue1_texture_png,zhujue2_skeleton_json,zhujue2_texture_json,zhujue2_texture_png,map_jpg,bbs_png,btn_activity_png,btn_mail_png,btn_mission_png,btn_shrink_png,btn_shrink_bg_png,btn_wrong_png,card_bg_png,icon_02_png,icon_badge_png,icon_diamond_png,icon_experience_png,icon_factory_png,icon_factory_tittle_png,icon_fertilization_png,icon_fertilizer02_png,icon_fertilizer03_png,icon_fertilizer04_png,icon_fertilizer05_png,icon_friend_png,icon_gold_png,icon_head_png,icon_line_png,icon_LV_png,icon_more_png,icon_name_png,icon_sale_png,icon_shop_png,icon_warehouse_png,menu_bg_png,sto_table_tittle_png,tabBar_down_png,tabBar_selected_down_png,table_activity_png,table_bg_png,table_box_down_png,table_box_down__png,table_box_middle_png,table_box_up_png,table_cloud_png,table_cloud1_png,table_mail_png,table_shop_png,table_task_png,table_tittle_png,table_warehouse_png,task_bg_png,text_fertilizer01_png,text_fertilizer02_png,text_fruit_01_png,text_fruit_02_png,text_fruit_juice_01_png,text_fruit_juice_02_png,text_seed01_png,text_seed02_png,avatarDefault_png,0_0_jpg,0_1_jpg,0_10_jpg,0_11_jpg,0_12_jpg,0_2_jpg,0_3_jpg,0_4_jpg,0_5_jpg,0_6_jpg,0_7_jpg,0_8_jpg,0_9_jpg,1_0_jpg,1_1_jpg,1_10_jpg,1_11_jpg,1_12_jpg,1_2_jpg,1_3_jpg,1_4_jpg,1_5_jpg,1_6_jpg,1_7_jpg,1_8_jpg,1_9_jpg,2_0_jpg,2_1_jpg,2_10_jpg,2_11_jpg,2_12_jpg,2_2_jpg,2_3_jpg,2_4_jpg,2_5_jpg,2_6_jpg,2_7_jpg,2_8_jpg,2_9_jpg,3_0_jpg,3_1_jpg,3_10_jpg,3_11_jpg,3_12_jpg,3_2_jpg,3_3_jpg,3_4_jpg,3_5_jpg,3_6_jpg,3_7_jpg,3_8_jpg,3_9_jpg,4_0_jpg,4_1_jpg,4_10_jpg,4_11_jpg,4_12_jpg,4_2_jpg,4_3_jpg,4_4_jpg,4_5_jpg,4_6_jpg,4_7_jpg,4_8_jpg,4_9_jpg,5_0_jpg,5_1_jpg,5_10_jpg,5_11_jpg,5_12_jpg,5_2_jpg,5_3_jpg,5_4_jpg,5_5_jpg,5_6_jpg,5_7_jpg,5_8_jpg,5_9_jpg,6_0_jpg,6_1_jpg,6_10_jpg,6_11_jpg,6_12_jpg,6_2_jpg,6_3_jpg,6_4_jpg,6_5_jpg,6_6_jpg,6_7_jpg,6_8_jpg,6_9_jpg,7_0_jpg,7_1_jpg,7_10_jpg,7_11_jpg,7_12_jpg,7_2_jpg,7_3_jpg,7_4_jpg,7_5_jpg,7_6_jpg,7_7_jpg,7_8_jpg,7_9_jpg,8_0_jpg,8_1_jpg,8_10_jpg,8_11_jpg,8_12_jpg,8_2_jpg,8_3_jpg,8_4_jpg,8_5_jpg,8_6_jpg,8_7_jpg,8_8_jpg,8_9_jpg,9_0_jpg,9_1_jpg,9_10_jpg,9_11_jpg,9_12_jpg,9_2_jpg,9_3_jpg,9_4_jpg,9_5_jpg,9_6_jpg,9_7_jpg,9_8_jpg,9_9_jpg,data_json,mini_jpg,monster_0_json,monster_0_png,monster_1_json,monster_1_png,monster_2_json,monster_2_png,monster_3_json,monster_3_png,monster_4_json,monster_4_png,monster_5_json,monster_5_png,monster_6_json,monster_6_png,monster_7_json,monster_7_png,monster_8_json,monster_8_png,monster_9_json,monster_9_png,aaa_json,aaa_png,scenePlayer_0_json,scenePlayer_0_png,scenePlayer_0_attack_json,scenePlayer_0_attack_png,checkbox-select_disabled_png,checkbox-select_normal_png,checkbox-select_over_png,checkbox-unselect_disabled_png,checkbox-unselect_normal_png,checkbox-unselect_over_png,DropDownListButtonSkin_down_png,DropDownListButtonSkin_up_png,dropdownlist_arrow_down_png,dropdownlist_arrow_up_png,hscrollbtn_png,hscrolltrack_png,HSlider_fill_png,HSlider_thumb_png,HSlider_track_png,app_list_item_cutlline_png,app_list_item_select_png,app_list_item_up_png,button_disabled_png,button_down_png,button_normal_png,onoffbutton_off_label_png,onoffbutton_off_thumb_png,onoffbutton_off_track_png,onoffbutton_on_label_png,onoffbutton_on_thumb_png,onoffbutton_on_track_png,Panel_back_png,Panel_headeBack_png,Progressbar_fill_png,Progressbar_track_png,RadioButton_select_disabled_png,RadioButton_select_normal_png,RadioButton_select_over_png,RadioButton_unselect_disabled_png,RadioButton_unselect_normal_png,RadioButton_unselect_over_png,Tab Bar_select_png,textbox_png,closebtn_disabled_png,closebtn_down_png,closebtn_up_png,togglebutton_disabled_png,togglebutton_normal_png,togglebutton_over_png,togglebutton_selected_png,tree_back_png,tree_btnDisabled_png,tree_btnDisabledSelect_png,tree_btnDown_png,tree_btnDownSelect_png,tree_btnUp_png,tree_btnUpSelect_png,tree_icon_dir_png,tree_icon_file_png,vscrollbtn_png,vscrolltrack_png,VSlider_fill_png,VSlider_thumb_png,VSlider_track_png,-10_png,baoji_png,btnAttack_png,btnAttack1_png,btnSkill1_png,btnSkill1_1_png,btnSkill2_png,btnSkill2_1_png,btnSkill3_png,btnSkill3_1_png,btnSkill4_png,btnSkill4_1_png,move_png,moveBg_png,button_down2_png,button_up_png,checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,thumb_pb_png,track_pb_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,track_sb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,beiji_wav,bg_mp3,bossAttack_mp3,bossSkill_mp3,dianji_mp3,enemyAttack_mp3,enenyLand_wav,heroAttack_wav,heroBeiji_wav,heroSkill_mp3,font_fnt,font_png,simple_json,rotateBg_png,resource_battle_json,resource_core_json,resource_rpg_json,resource_ui_json,resource_version_json,tile_twosign_png,tile_down_png,tile_narmal_png,tile_trap_png,role_yongshi_png,movieclip_json,movieclip_png,02主画面_jpg,03匹配_jpg,04游戏_jpg,05win_jpg,06lost_jpg,pk_png,ranking_png,result_png,single_png,vs_png,friend_png,icon_bg_png,battle_bg_jpg,head_bg_png,onestep_png,sign_png,tile_narmal2_png,tile_start_png,tile_trap2_png,twostep_png,match_png,btn_back_png,btn_share_png,lost_png,time_png,win_png,index_bg_jpg,logo_png",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"name": "bg_jpg",
+			"type": "image",
+			"url": "assets/bg.jpg"
+		},
+		{
+			"name": "egret_icon_png",
+			"type": "image",
+			"url": "assets/egret_icon.png"
+		},
+		{
+			"name": "description_json",
+			"type": "json",
+			"url": "config/description.json"
+		},
+		{
+			"name": "attack_json",
+			"type": "json",
+			"url": "config/attack.json"
+		},
+		{
+			"name": "global_json",
+			"type": "json",
+			"url": "config/global.json"
+		},
+		{
+			"name": "guaiwu001_skeleton_json",
+			"type": "json",
+			"url": "assets/animation/guaiwu001/guaiwu001_skeleton.json"
+		},
+		{
+			"name": "guaiwu001_texture_json",
+			"type": "json",
+			"url": "assets/animation/guaiwu001/guaiwu001_texture.json"
+		},
+		{
+			"name": "guaiwu001_texture_png",
+			"type": "image",
+			"url": "assets/animation/guaiwu001/guaiwu001_texture.png"
+		},
+		{
+			"name": "guaiwu002_skeleton_json",
+			"type": "json",
+			"url": "assets/animation/guaiwu002/guaiwu002_skeleton.json"
+		},
+		{
+			"name": "guaiwu002_texture_json",
+			"type": "json",
+			"url": "assets/animation/guaiwu002/guaiwu002_texture.json"
+		},
+		{
+			"name": "guaiwu002_texture_png",
+			"type": "image",
+			"url": "assets/animation/guaiwu002/guaiwu002_texture.png"
+		},
+		{
+			"name": "guaiwu002_effect_skeleton_json",
+			"type": "json",
+			"url": "assets/animation/guaiwu002_effect/guaiwu002_effect_skeleton.json"
+		},
+		{
+			"name": "guaiwu002_effect_texture_json",
+			"type": "json",
+			"url": "assets/animation/guaiwu002_effect/guaiwu002_effect_texture.json"
+		},
+		{
+			"name": "guaiwu002_effect_texture_png",
+			"type": "image",
+			"url": "assets/animation/guaiwu002_effect/guaiwu002_effect_texture.png"
+		},
+		{
+			"name": "guaiwu003_skeleton_json",
+			"type": "json",
+			"url": "assets/animation/guaiwu003/guaiwu003_skeleton.json"
+		},
+		{
+			"name": "guaiwu003_texture_json",
+			"type": "json",
+			"url": "assets/animation/guaiwu003/guaiwu003_texture.json"
+		},
+		{
+			"name": "guaiwu003_texture_png",
+			"type": "image",
+			"url": "assets/animation/guaiwu003/guaiwu003_texture.png"
+		},
+		{
+			"name": "guaiwu003_effect_skeleton_json",
+			"type": "json",
+			"url": "assets/animation/guaiwu003_effect/guaiwu003_effect_skeleton.json"
+		},
+		{
+			"name": "guaiwu003_effect_texture_json",
+			"type": "json",
+			"url": "assets/animation/guaiwu003_effect/guaiwu003_effect_texture.json"
+		},
+		{
+			"name": "guaiwu003_effect_texture_png",
+			"type": "image",
+			"url": "assets/animation/guaiwu003_effect/guaiwu003_effect_texture.png"
+		},
+		{
+			"name": "jineng1_skeleton_json",
+			"type": "json",
+			"url": "assets/animation/jineng1/jineng1_skeleton.json"
+		},
+		{
+			"name": "jineng1_texture_json",
+			"type": "json",
+			"url": "assets/animation/jineng1/jineng1_texture.json"
+		},
+		{
+			"name": "jineng1_texture_png",
+			"type": "image",
+			"url": "assets/animation/jineng1/jineng1_texture.png"
+		},
+		{
+			"name": "jineng2_skeleton_json",
+			"type": "json",
+			"url": "assets/animation/jineng2/jineng2_skeleton.json"
+		},
+		{
+			"name": "jineng2_texture_json",
+			"type": "json",
+			"url": "assets/animation/jineng2/jineng2_texture.json"
+		},
+		{
+			"name": "jineng2_texture_png",
+			"type": "image",
+			"url": "assets/animation/jineng2/jineng2_texture.png"
+		},
+		{
+			"name": "zhujue1_skeleton_json",
+			"type": "json",
+			"url": "assets/animation/zhujue1/zhujue1_skeleton.json"
+		},
+		{
+			"name": "zhujue1_texture_json",
+			"type": "json",
+			"url": "assets/animation/zhujue1/zhujue1_texture.json"
+		},
+		{
+			"name": "zhujue1_texture_png",
+			"type": "image",
+			"url": "assets/animation/zhujue1/zhujue1_texture.png"
+		},
+		{
+			"name": "zhujue2_skeleton_json",
+			"type": "json",
+			"url": "assets/animation/zhujue2/zhujue2_skeleton.json"
+		},
+		{
+			"name": "zhujue2_texture_json",
+			"type": "json",
+			"url": "assets/animation/zhujue2/zhujue2_texture.json"
+		},
+		{
+			"name": "zhujue2_texture_png",
+			"type": "image",
+			"url": "assets/animation/zhujue2/zhujue2_texture.png"
+		},
+		{
+			"name": "map_jpg",
+			"type": "image",
+			"url": "assets/bg/map.jpg"
+		},
+		{
+			"name": "bbs_png",
+			"type": "image",
+			"url": "assets/example/bbs.png"
+		},
+		{
+			"name": "btn_activity_png",
+			"type": "image",
+			"url": "assets/example/btn_activity.png"
+		},
+		{
+			"name": "btn_mail_png",
+			"type": "image",
+			"url": "assets/example/btn_mail.png"
+		},
+		{
+			"name": "btn_mission_png",
+			"type": "image",
+			"url": "assets/example/btn_mission.png"
+		},
+		{
+			"name": "btn_shrink_png",
+			"type": "image",
+			"url": "assets/example/btn_shrink.png"
+		},
+		{
+			"name": "btn_shrink_bg_png",
+			"type": "image",
+			"url": "assets/example/btn_shrink_bg.png"
+		},
+		{
+			"name": "btn_wrong_png",
+			"type": "image",
+			"url": "assets/example/btn_wrong.png"
+		},
+		{
+			"name": "card_bg_png",
+			"type": "image",
+			"url": "assets/example/card_bg.png"
+		},
+		{
+			"name": "icon_02_png",
+			"type": "image",
+			"url": "assets/example/icon_02.png"
+		},
+		{
+			"name": "icon_badge_png",
+			"type": "image",
+			"url": "assets/example/icon_badge.png"
+		},
+		{
+			"name": "icon_diamond_png",
+			"type": "image",
+			"url": "assets/example/icon_diamond.png"
+		},
+		{
+			"name": "icon_experience_png",
+			"type": "image",
+			"url": "assets/example/icon_experience.png"
+		},
+		{
+			"name": "icon_factory_png",
+			"type": "image",
+			"url": "assets/example/icon_factory.png"
+		},
+		{
+			"name": "icon_factory_tittle_png",
+			"type": "image",
+			"url": "assets/example/icon_factory_tittle.png"
+		},
+		{
+			"name": "icon_fertilization_png",
+			"type": "image",
+			"url": "assets/example/icon_fertilization.png"
+		},
+		{
+			"name": "icon_fertilizer02_png",
+			"type": "image",
+			"url": "assets/example/icon_fertilizer02.png"
+		},
+		{
+			"name": "icon_fertilizer03_png",
+			"type": "image",
+			"url": "assets/example/icon_fertilizer03.png"
+		},
+		{
+			"name": "icon_fertilizer04_png",
+			"type": "image",
+			"url": "assets/example/icon_fertilizer04.png"
+		},
+		{
+			"name": "icon_fertilizer05_png",
+			"type": "image",
+			"url": "assets/example/icon_fertilizer05.png"
+		},
+		{
+			"name": "icon_friend_png",
+			"type": "image",
+			"url": "assets/example/icon_friend.png"
+		},
+		{
+			"name": "icon_gold_png",
+			"type": "image",
+			"url": "assets/example/icon_gold.png"
+		},
+		{
+			"name": "icon_head_png",
+			"type": "image",
+			"url": "assets/example/icon_head.png"
+		},
+		{
+			"name": "icon_line_png",
+			"type": "image",
+			"url": "assets/example/icon_line.png"
+		},
+		{
+			"name": "icon_LV_png",
+			"type": "image",
+			"url": "assets/example/icon_LV.png"
+		},
+		{
+			"name": "icon_more_png",
+			"type": "image",
+			"url": "assets/example/icon_more.png"
+		},
+		{
+			"name": "icon_name_png",
+			"type": "image",
+			"url": "assets/example/icon_name.png"
+		},
+		{
+			"name": "icon_sale_png",
+			"type": "image",
+			"url": "assets/example/icon_sale.png"
+		},
+		{
+			"name": "icon_shop_png",
+			"type": "image",
+			"url": "assets/example/icon_shop.png"
+		},
+		{
+			"name": "icon_warehouse_png",
+			"type": "image",
+			"url": "assets/example/icon_warehouse.png"
+		},
+		{
+			"name": "menu_bg_png",
+			"type": "image",
+			"url": "assets/example/menu_bg.png"
+		},
+		{
+			"name": "sto_table_tittle_png",
+			"type": "image",
+			"url": "assets/example/sto_table_tittle.png"
+		},
+		{
+			"name": "tabBar_down_png",
+			"type": "image",
+			"url": "assets/example/tabBar_down.png"
+		},
+		{
+			"name": "tabBar_selected_down_png",
+			"type": "image",
+			"url": "assets/example/tabBar_selected_down.png"
+		},
+		{
+			"name": "table_activity_png",
+			"type": "image",
+			"url": "assets/example/table_activity.png"
+		},
+		{
+			"name": "table_bg_png",
+			"type": "image",
+			"url": "assets/example/table_bg.png"
+		},
+		{
+			"name": "table_box_down_png",
+			"type": "image",
+			"url": "assets/example/table_box_down.png"
+		},
+		{
+			"name": "table_box_down__png",
+			"type": "image",
+			"url": "assets/example/table_box_down_.png"
+		},
+		{
+			"name": "table_box_middle_png",
+			"type": "image",
+			"url": "assets/example/table_box_middle.png"
+		},
+		{
+			"name": "table_box_up_png",
+			"type": "image",
+			"url": "assets/example/table_box_up.png"
+		},
+		{
+			"name": "table_cloud_png",
+			"type": "image",
+			"url": "assets/example/table_cloud.png"
+		},
+		{
+			"name": "table_cloud1_png",
+			"type": "image",
+			"url": "assets/example/table_cloud1.png"
+		},
+		{
+			"name": "table_mail_png",
+			"type": "image",
+			"url": "assets/example/table_mail.png"
+		},
+		{
+			"name": "table_shop_png",
+			"type": "image",
+			"url": "assets/example/table_shop.png"
+		},
+		{
+			"name": "table_task_png",
+			"type": "image",
+			"url": "assets/example/table_task.png"
+		},
+		{
+			"name": "table_tittle_png",
+			"type": "image",
+			"url": "assets/example/table_tittle.png"
+		},
+		{
+			"name": "table_warehouse_png",
+			"type": "image",
+			"url": "assets/example/table_warehouse.png"
+		},
+		{
+			"name": "task_bg_png",
+			"type": "image",
+			"url": "assets/example/task_bg.png"
+		},
+		{
+			"name": "text_fertilizer01_png",
+			"type": "image",
+			"url": "assets/example/text_fertilizer01.png"
+		},
+		{
+			"name": "text_fertilizer02_png",
+			"type": "image",
+			"url": "assets/example/text_fertilizer02.png"
+		},
+		{
+			"name": "text_fruit_01_png",
+			"type": "image",
+			"url": "assets/example/text_fruit_01.png"
+		},
+		{
+			"name": "text_fruit_02_png",
+			"type": "image",
+			"url": "assets/example/text_fruit_02.png"
+		},
+		{
+			"name": "text_fruit_juice_01_png",
+			"type": "image",
+			"url": "assets/example/text_fruit_juice_01.png"
+		},
+		{
+			"name": "text_fruit_juice_02_png",
+			"type": "image",
+			"url": "assets/example/text_fruit_juice_02.png"
+		},
+		{
+			"name": "text_seed01_png",
+			"type": "image",
+			"url": "assets/example/text_seed01.png"
+		},
+		{
+			"name": "text_seed02_png",
+			"type": "image",
+			"url": "assets/example/text_seed02.png"
+		},
+		{
+			"name": "avatarDefault_png",
+			"type": "image",
+			"url": "assets/rpgGame/avatarDefault.png"
+		},
+		{
+			"name": "0_0_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/0_0.jpg"
+		},
+		{
+			"name": "0_1_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/0_1.jpg"
+		},
+		{
+			"name": "0_10_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/0_10.jpg"
+		},
+		{
+			"name": "0_11_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/0_11.jpg"
+		},
+		{
+			"name": "0_12_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/0_12.jpg"
+		},
+		{
+			"name": "0_2_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/0_2.jpg"
+		},
+		{
+			"name": "0_3_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/0_3.jpg"
+		},
+		{
+			"name": "0_4_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/0_4.jpg"
+		},
+		{
+			"name": "0_5_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/0_5.jpg"
+		},
+		{
+			"name": "0_6_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/0_6.jpg"
+		},
+		{
+			"name": "0_7_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/0_7.jpg"
+		},
+		{
+			"name": "0_8_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/0_8.jpg"
+		},
+		{
+			"name": "0_9_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/0_9.jpg"
+		},
+		{
+			"name": "1_0_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/1_0.jpg"
+		},
+		{
+			"name": "1_1_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/1_1.jpg"
+		},
+		{
+			"name": "1_10_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/1_10.jpg"
+		},
+		{
+			"name": "1_11_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/1_11.jpg"
+		},
+		{
+			"name": "1_12_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/1_12.jpg"
+		},
+		{
+			"name": "1_2_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/1_2.jpg"
+		},
+		{
+			"name": "1_3_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/1_3.jpg"
+		},
+		{
+			"name": "1_4_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/1_4.jpg"
+		},
+		{
+			"name": "1_5_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/1_5.jpg"
+		},
+		{
+			"name": "1_6_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/1_6.jpg"
+		},
+		{
+			"name": "1_7_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/1_7.jpg"
+		},
+		{
+			"name": "1_8_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/1_8.jpg"
+		},
+		{
+			"name": "1_9_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/1_9.jpg"
+		},
+		{
+			"name": "2_0_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/2_0.jpg"
+		},
+		{
+			"name": "2_1_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/2_1.jpg"
+		},
+		{
+			"name": "2_10_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/2_10.jpg"
+		},
+		{
+			"name": "2_11_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/2_11.jpg"
+		},
+		{
+			"name": "2_12_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/2_12.jpg"
+		},
+		{
+			"name": "2_2_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/2_2.jpg"
+		},
+		{
+			"name": "2_3_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/2_3.jpg"
+		},
+		{
+			"name": "2_4_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/2_4.jpg"
+		},
+		{
+			"name": "2_5_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/2_5.jpg"
+		},
+		{
+			"name": "2_6_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/2_6.jpg"
+		},
+		{
+			"name": "2_7_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/2_7.jpg"
+		},
+		{
+			"name": "2_8_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/2_8.jpg"
+		},
+		{
+			"name": "2_9_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/2_9.jpg"
+		},
+		{
+			"name": "3_0_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/3_0.jpg"
+		},
+		{
+			"name": "3_1_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/3_1.jpg"
+		},
+		{
+			"name": "3_10_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/3_10.jpg"
+		},
+		{
+			"name": "3_11_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/3_11.jpg"
+		},
+		{
+			"name": "3_12_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/3_12.jpg"
+		},
+		{
+			"name": "3_2_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/3_2.jpg"
+		},
+		{
+			"name": "3_3_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/3_3.jpg"
+		},
+		{
+			"name": "3_4_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/3_4.jpg"
+		},
+		{
+			"name": "3_5_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/3_5.jpg"
+		},
+		{
+			"name": "3_6_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/3_6.jpg"
+		},
+		{
+			"name": "3_7_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/3_7.jpg"
+		},
+		{
+			"name": "3_8_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/3_8.jpg"
+		},
+		{
+			"name": "3_9_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/3_9.jpg"
+		},
+		{
+			"name": "4_0_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/4_0.jpg"
+		},
+		{
+			"name": "4_1_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/4_1.jpg"
+		},
+		{
+			"name": "4_10_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/4_10.jpg"
+		},
+		{
+			"name": "4_11_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/4_11.jpg"
+		},
+		{
+			"name": "4_12_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/4_12.jpg"
+		},
+		{
+			"name": "4_2_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/4_2.jpg"
+		},
+		{
+			"name": "4_3_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/4_3.jpg"
+		},
+		{
+			"name": "4_4_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/4_4.jpg"
+		},
+		{
+			"name": "4_5_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/4_5.jpg"
+		},
+		{
+			"name": "4_6_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/4_6.jpg"
+		},
+		{
+			"name": "4_7_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/4_7.jpg"
+		},
+		{
+			"name": "4_8_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/4_8.jpg"
+		},
+		{
+			"name": "4_9_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/4_9.jpg"
+		},
+		{
+			"name": "5_0_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/5_0.jpg"
+		},
+		{
+			"name": "5_1_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/5_1.jpg"
+		},
+		{
+			"name": "5_10_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/5_10.jpg"
+		},
+		{
+			"name": "5_11_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/5_11.jpg"
+		},
+		{
+			"name": "5_12_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/5_12.jpg"
+		},
+		{
+			"name": "5_2_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/5_2.jpg"
+		},
+		{
+			"name": "5_3_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/5_3.jpg"
+		},
+		{
+			"name": "5_4_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/5_4.jpg"
+		},
+		{
+			"name": "5_5_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/5_5.jpg"
+		},
+		{
+			"name": "5_6_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/5_6.jpg"
+		},
+		{
+			"name": "5_7_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/5_7.jpg"
+		},
+		{
+			"name": "5_8_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/5_8.jpg"
+		},
+		{
+			"name": "5_9_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/5_9.jpg"
+		},
+		{
+			"name": "6_0_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/6_0.jpg"
+		},
+		{
+			"name": "6_1_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/6_1.jpg"
+		},
+		{
+			"name": "6_10_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/6_10.jpg"
+		},
+		{
+			"name": "6_11_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/6_11.jpg"
+		},
+		{
+			"name": "6_12_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/6_12.jpg"
+		},
+		{
+			"name": "6_2_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/6_2.jpg"
+		},
+		{
+			"name": "6_3_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/6_3.jpg"
+		},
+		{
+			"name": "6_4_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/6_4.jpg"
+		},
+		{
+			"name": "6_5_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/6_5.jpg"
+		},
+		{
+			"name": "6_6_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/6_6.jpg"
+		},
+		{
+			"name": "6_7_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/6_7.jpg"
+		},
+		{
+			"name": "6_8_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/6_8.jpg"
+		},
+		{
+			"name": "6_9_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/6_9.jpg"
+		},
+		{
+			"name": "7_0_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/7_0.jpg"
+		},
+		{
+			"name": "7_1_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/7_1.jpg"
+		},
+		{
+			"name": "7_10_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/7_10.jpg"
+		},
+		{
+			"name": "7_11_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/7_11.jpg"
+		},
+		{
+			"name": "7_12_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/7_12.jpg"
+		},
+		{
+			"name": "7_2_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/7_2.jpg"
+		},
+		{
+			"name": "7_3_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/7_3.jpg"
+		},
+		{
+			"name": "7_4_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/7_4.jpg"
+		},
+		{
+			"name": "7_5_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/7_5.jpg"
+		},
+		{
+			"name": "7_6_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/7_6.jpg"
+		},
+		{
+			"name": "7_7_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/7_7.jpg"
+		},
+		{
+			"name": "7_8_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/7_8.jpg"
+		},
+		{
+			"name": "7_9_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/7_9.jpg"
+		},
+		{
+			"name": "8_0_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/8_0.jpg"
+		},
+		{
+			"name": "8_1_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/8_1.jpg"
+		},
+		{
+			"name": "8_10_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/8_10.jpg"
+		},
+		{
+			"name": "8_11_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/8_11.jpg"
+		},
+		{
+			"name": "8_12_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/8_12.jpg"
+		},
+		{
+			"name": "8_2_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/8_2.jpg"
+		},
+		{
+			"name": "8_3_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/8_3.jpg"
+		},
+		{
+			"name": "8_4_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/8_4.jpg"
+		},
+		{
+			"name": "8_5_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/8_5.jpg"
+		},
+		{
+			"name": "8_6_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/8_6.jpg"
+		},
+		{
+			"name": "8_7_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/8_7.jpg"
+		},
+		{
+			"name": "8_8_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/8_8.jpg"
+		},
+		{
+			"name": "8_9_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/8_9.jpg"
+		},
+		{
+			"name": "9_0_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/9_0.jpg"
+		},
+		{
+			"name": "9_1_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/9_1.jpg"
+		},
+		{
+			"name": "9_10_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/9_10.jpg"
+		},
+		{
+			"name": "9_11_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/9_11.jpg"
+		},
+		{
+			"name": "9_12_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/9_12.jpg"
+		},
+		{
+			"name": "9_2_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/9_2.jpg"
+		},
+		{
+			"name": "9_3_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/9_3.jpg"
+		},
+		{
+			"name": "9_4_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/9_4.jpg"
+		},
+		{
+			"name": "9_5_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/9_5.jpg"
+		},
+		{
+			"name": "9_6_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/9_6.jpg"
+		},
+		{
+			"name": "9_7_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/9_7.jpg"
+		},
+		{
+			"name": "9_8_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/9_8.jpg"
+		},
+		{
+			"name": "9_9_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/9_9.jpg"
+		},
+		{
+			"name": "data_json",
+			"type": "json",
+			"url": "assets/rpgGame/map/1193/data.json"
+		},
+		{
+			"name": "mini_jpg",
+			"type": "image",
+			"url": "assets/rpgGame/map/1193/mini.jpg"
+		},
+		{
+			"name": "monster_0_json",
+			"type": "json",
+			"url": "assets/rpgGame/monster/monster_0.json"
+		},
+		{
+			"name": "monster_0_png",
+			"type": "image",
+			"url": "assets/rpgGame/monster/monster_0.png"
+		},
+		{
+			"name": "monster_1_json",
+			"type": "json",
+			"url": "assets/rpgGame/monster/monster_1.json"
+		},
+		{
+			"name": "monster_1_png",
+			"type": "image",
+			"url": "assets/rpgGame/monster/monster_1.png"
+		},
+		{
+			"name": "monster_2_json",
+			"type": "json",
+			"url": "assets/rpgGame/monster/monster_2.json"
+		},
+		{
+			"name": "monster_2_png",
+			"type": "image",
+			"url": "assets/rpgGame/monster/monster_2.png"
+		},
+		{
+			"name": "monster_3_json",
+			"type": "json",
+			"url": "assets/rpgGame/monster/monster_3.json"
+		},
+		{
+			"name": "monster_3_png",
+			"type": "image",
+			"url": "assets/rpgGame/monster/monster_3.png"
+		},
+		{
+			"name": "monster_4_json",
+			"type": "json",
+			"url": "assets/rpgGame/monster/monster_4.json"
+		},
+		{
+			"name": "monster_4_png",
+			"type": "image",
+			"url": "assets/rpgGame/monster/monster_4.png"
+		},
+		{
+			"name": "monster_5_json",
+			"type": "json",
+			"url": "assets/rpgGame/monster/monster_5.json"
+		},
+		{
+			"name": "monster_5_png",
+			"type": "image",
+			"url": "assets/rpgGame/monster/monster_5.png"
+		},
+		{
+			"name": "monster_6_json",
+			"type": "json",
+			"url": "assets/rpgGame/monster/monster_6.json"
+		},
+		{
+			"name": "monster_6_png",
+			"type": "image",
+			"url": "assets/rpgGame/monster/monster_6.png"
+		},
+		{
+			"name": "monster_7_json",
+			"type": "json",
+			"url": "assets/rpgGame/monster/monster_7.json"
+		},
+		{
+			"name": "monster_7_png",
+			"type": "image",
+			"url": "assets/rpgGame/monster/monster_7.png"
+		},
+		{
+			"name": "monster_8_json",
+			"type": "json",
+			"url": "assets/rpgGame/monster/monster_8.json"
+		},
+		{
+			"name": "monster_8_png",
+			"type": "image",
+			"url": "assets/rpgGame/monster/monster_8.png"
+		},
+		{
+			"name": "monster_9_json",
+			"type": "json",
+			"url": "assets/rpgGame/monster/monster_9.json"
+		},
+		{
+			"name": "monster_9_png",
+			"type": "image",
+			"url": "assets/rpgGame/monster/monster_9.png"
+		},
+		{
+			"name": "aaa_json",
+			"type": "json",
+			"url": "assets/rpgGame/player/aaa.json"
+		},
+		{
+			"name": "aaa_png",
+			"type": "image",
+			"url": "assets/rpgGame/player/aaa.png"
+		},
+		{
+			"name": "scenePlayer_0_json",
+			"type": "json",
+			"url": "assets/rpgGame/player/scenePlayer_0.json"
+		},
+		{
+			"name": "scenePlayer_0_png",
+			"type": "image",
+			"url": "assets/rpgGame/player/scenePlayer_0.png"
+		},
+		{
+			"name": "scenePlayer_0_attack_json",
+			"type": "json",
+			"url": "assets/rpgGame/skill/scenePlayer_0_attack.json"
+		},
+		{
+			"name": "scenePlayer_0_attack_png",
+			"type": "image",
+			"url": "assets/rpgGame/skill/scenePlayer_0_attack.png"
+		},
+		{
+			"name": "checkbox-select_disabled_png",
+			"type": "image",
+			"url": "assets/simple/CheckBox/checkbox-select_disabled.png"
+		},
+		{
+			"name": "checkbox-select_normal_png",
+			"type": "image",
+			"url": "assets/simple/CheckBox/checkbox-select_normal.png"
+		},
+		{
+			"name": "checkbox-select_over_png",
+			"type": "image",
+			"url": "assets/simple/CheckBox/checkbox-select_over.png"
+		},
+		{
+			"name": "checkbox-unselect_disabled_png",
+			"type": "image",
+			"url": "assets/simple/CheckBox/checkbox-unselect_disabled.png"
+		},
+		{
+			"name": "checkbox-unselect_normal_png",
+			"type": "image",
+			"url": "assets/simple/CheckBox/checkbox-unselect_normal.png"
+		},
+		{
+			"name": "checkbox-unselect_over_png",
+			"type": "image",
+			"url": "assets/simple/CheckBox/checkbox-unselect_over.png"
+		},
+		{
+			"name": "DropDownListButtonSkin_down_png",
+			"type": "image",
+			"url": "assets/simple/DropdownList/DropDownListButtonSkin_down.png"
+		},
+		{
+			"name": "DropDownListButtonSkin_up_png",
+			"type": "image",
+			"url": "assets/simple/DropdownList/DropDownListButtonSkin_up.png"
+		},
+		{
+			"name": "dropdownlist_arrow_down_png",
+			"type": "image",
+			"url": "assets/simple/DropdownList/dropdownlist_arrow_down.png"
+		},
+		{
+			"name": "dropdownlist_arrow_up_png",
+			"type": "image",
+			"url": "assets/simple/DropdownList/dropdownlist_arrow_up.png"
+		},
+		{
+			"name": "hscrollbtn_png",
+			"type": "image",
+			"url": "assets/simple/HScrollBar/hscrollbtn.png"
+		},
+		{
+			"name": "hscrolltrack_png",
+			"type": "image",
+			"url": "assets/simple/HScrollBar/hscrolltrack.png"
+		},
+		{
+			"name": "HSlider_fill_png",
+			"type": "image",
+			"url": "assets/simple/HSlider/HSlider_fill.png"
+		},
+		{
+			"name": "HSlider_thumb_png",
+			"type": "image",
+			"url": "assets/simple/HSlider/HSlider_thumb.png"
+		},
+		{
+			"name": "HSlider_track_png",
+			"type": "image",
+			"url": "assets/simple/HSlider/HSlider_track.png"
+		},
+		{
+			"name": "app_list_item_cutlline_png",
+			"type": "image",
+			"url": "assets/simple/ItemRenderer/app_list_item_cutlline.png"
+		},
+		{
+			"name": "app_list_item_select_png",
+			"type": "image",
+			"url": "assets/simple/ItemRenderer/app_list_item_select.png"
+		},
+		{
+			"name": "app_list_item_up_png",
+			"type": "image",
+			"url": "assets/simple/ItemRenderer/app_list_item_up.png"
+		},
+		{
+			"name": "button_disabled_png",
+			"type": "image",
+			"url": "assets/simple/NormalButton/button_disabled.png"
+		},
+		{
+			"name": "button_down_png",
+			"type": "image",
+			"url": "assets/simple/NormalButton/button_down.png"
+		},
+		{
+			"name": "button_normal_png",
+			"type": "image",
+			"url": "assets/simple/NormalButton/button_normal.png"
+		},
+		{
+			"name": "onoffbutton_off_label_png",
+			"type": "image",
+			"url": "assets/simple/ONOFFButton/onoffbutton_off_label.png"
+		},
+		{
+			"name": "onoffbutton_off_thumb_png",
+			"type": "image",
+			"url": "assets/simple/ONOFFButton/onoffbutton_off_thumb.png"
+		},
+		{
+			"name": "onoffbutton_off_track_png",
+			"type": "image",
+			"url": "assets/simple/ONOFFButton/onoffbutton_off_track.png"
+		},
+		{
+			"name": "onoffbutton_on_label_png",
+			"type": "image",
+			"url": "assets/simple/ONOFFButton/onoffbutton_on_label.png"
+		},
+		{
+			"name": "onoffbutton_on_thumb_png",
+			"type": "image",
+			"url": "assets/simple/ONOFFButton/onoffbutton_on_thumb.png"
+		},
+		{
+			"name": "onoffbutton_on_track_png",
+			"type": "image",
+			"url": "assets/simple/ONOFFButton/onoffbutton_on_track.png"
+		},
+		{
+			"name": "Panel_back_png",
+			"type": "image",
+			"url": "assets/simple/Panel/Panel_back.png"
+		},
+		{
+			"name": "Panel_headeBack_png",
+			"type": "image",
+			"url": "assets/simple/Panel/Panel_headeBack.png"
+		},
+		{
+			"name": "Progressbar_fill_png",
+			"type": "image",
+			"url": "assets/simple/ProgressBar/Progressbar_fill.png"
+		},
+		{
+			"name": "Progressbar_track_png",
+			"type": "image",
+			"url": "assets/simple/ProgressBar/Progressbar_track.png"
+		},
+		{
+			"name": "RadioButton_select_disabled_png",
+			"type": "image",
+			"url": "assets/simple/RadioButton/RadioButton_select_disabled.png"
+		},
+		{
+			"name": "RadioButton_select_normal_png",
+			"type": "image",
+			"url": "assets/simple/RadioButton/RadioButton_select_normal.png"
+		},
+		{
+			"name": "RadioButton_select_over_png",
+			"type": "image",
+			"url": "assets/simple/RadioButton/RadioButton_select_over.png"
+		},
+		{
+			"name": "RadioButton_unselect_disabled_png",
+			"type": "image",
+			"url": "assets/simple/RadioButton/RadioButton_unselect_disabled.png"
+		},
+		{
+			"name": "RadioButton_unselect_normal_png",
+			"type": "image",
+			"url": "assets/simple/RadioButton/RadioButton_unselect_normal.png"
+		},
+		{
+			"name": "RadioButton_unselect_over_png",
+			"type": "image",
+			"url": "assets/simple/RadioButton/RadioButton_unselect_over.png"
+		},
+		{
+			"name": "Tab Bar_select_png",
+			"type": "image",
+			"url": "assets/simple/TabBar/Tab Bar_select.png"
+		},
+		{
+			"name": "textbox_png",
+			"type": "image",
+			"url": "assets/simple/TextInput/textbox.png"
+		},
+		{
+			"name": "closebtn_disabled_png",
+			"type": "image",
+			"url": "assets/simple/TitleWindow/closebtn_disabled.png"
+		},
+		{
+			"name": "closebtn_down_png",
+			"type": "image",
+			"url": "assets/simple/TitleWindow/closebtn_down.png"
+		},
+		{
+			"name": "closebtn_up_png",
+			"type": "image",
+			"url": "assets/simple/TitleWindow/closebtn_up.png"
+		},
+		{
+			"name": "togglebutton_disabled_png",
+			"type": "image",
+			"url": "assets/simple/ToggleButton/togglebutton_disabled.png"
+		},
+		{
+			"name": "togglebutton_normal_png",
+			"type": "image",
+			"url": "assets/simple/ToggleButton/togglebutton_normal.png"
+		},
+		{
+			"name": "togglebutton_over_png",
+			"type": "image",
+			"url": "assets/simple/ToggleButton/togglebutton_over.png"
+		},
+		{
+			"name": "togglebutton_selected_png",
+			"type": "image",
+			"url": "assets/simple/ToggleButton/togglebutton_selected.png"
+		},
+		{
+			"name": "tree_back_png",
+			"type": "image",
+			"url": "assets/simple/Tree/tree_back.png"
+		},
+		{
+			"name": "tree_btnDisabled_png",
+			"type": "image",
+			"url": "assets/simple/Tree/tree_btnDisabled.png"
+		},
+		{
+			"name": "tree_btnDisabledSelect_png",
+			"type": "image",
+			"url": "assets/simple/Tree/tree_btnDisabledSelect.png"
+		},
+		{
+			"name": "tree_btnDown_png",
+			"type": "image",
+			"url": "assets/simple/Tree/tree_btnDown.png"
+		},
+		{
+			"name": "tree_btnDownSelect_png",
+			"type": "image",
+			"url": "assets/simple/Tree/tree_btnDownSelect.png"
+		},
+		{
+			"name": "tree_btnUp_png",
+			"type": "image",
+			"url": "assets/simple/Tree/tree_btnUp.png"
+		},
+		{
+			"name": "tree_btnUpSelect_png",
+			"type": "image",
+			"url": "assets/simple/Tree/tree_btnUpSelect.png"
+		},
+		{
+			"name": "tree_icon_dir_png",
+			"type": "image",
+			"url": "assets/simple/Tree/tree_icon_dir.png"
+		},
+		{
+			"name": "tree_icon_file_png",
+			"type": "image",
+			"url": "assets/simple/Tree/tree_icon_file.png"
+		},
+		{
+			"name": "vscrollbtn_png",
+			"type": "image",
+			"url": "assets/simple/VScrollBar/vscrollbtn.png"
+		},
+		{
+			"name": "vscrolltrack_png",
+			"type": "image",
+			"url": "assets/simple/VScrollBar/vscrolltrack.png"
+		},
+		{
+			"name": "VSlider_fill_png",
+			"type": "image",
+			"url": "assets/simple/VSlider/VSlider_fill.png"
+		},
+		{
+			"name": "VSlider_thumb_png",
+			"type": "image",
+			"url": "assets/simple/VSlider/VSlider_thumb.png"
+		},
+		{
+			"name": "VSlider_track_png",
+			"type": "image",
+			"url": "assets/simple/VSlider/VSlider_track.png"
+		},
+		{
+			"name": "-10_png",
+			"type": "image",
+			"url": "assets/ui/-10.png"
+		},
+		{
+			"name": "baoji_png",
+			"type": "image",
+			"url": "assets/ui/baoji.png"
+		},
+		{
+			"name": "btnAttack_png",
+			"type": "image",
+			"url": "assets/ui/btnAttack.png"
+		},
+		{
+			"name": "btnAttack1_png",
+			"type": "image",
+			"url": "assets/ui/btnAttack1.png"
+		},
+		{
+			"name": "btnSkill1_png",
+			"type": "image",
+			"url": "assets/ui/btnSkill1.png"
+		},
+		{
+			"name": "btnSkill1_1_png",
+			"type": "image",
+			"url": "assets/ui/btnSkill1_1.png"
+		},
+		{
+			"name": "btnSkill2_png",
+			"type": "image",
+			"url": "assets/ui/btnSkill2.png"
+		},
+		{
+			"name": "btnSkill2_1_png",
+			"type": "image",
+			"url": "assets/ui/btnSkill2_1.png"
+		},
+		{
+			"name": "btnSkill3_png",
+			"type": "image",
+			"url": "assets/ui/btnSkill3.png"
+		},
+		{
+			"name": "btnSkill3_1_png",
+			"type": "image",
+			"url": "assets/ui/btnSkill3_1.png"
+		},
+		{
+			"name": "btnSkill4_png",
+			"type": "image",
+			"url": "assets/ui/btnSkill4.png"
+		},
+		{
+			"name": "btnSkill4_1_png",
+			"type": "image",
+			"url": "assets/ui/btnSkill4_1.png"
+		},
+		{
+			"name": "move_png",
+			"type": "image",
+			"url": "assets/ui/move.png"
+		},
+		{
+			"name": "moveBg_png",
+			"type": "image",
+			"url": "assets/ui/moveBg.png"
+		},
+		{
+			"name": "button_down2_png",
+			"type": "image",
+			"url": "eui_assets/Button/button_down.png"
+		},
+		{
+			"name": "button_up_png",
+			"type": "image",
+			"url": "eui_assets/Button/button_up.png"
+		},
+		{
+			"name": "checkbox_select_disabled_png",
+			"type": "image",
+			"url": "eui_assets/CheckBox/checkbox_select_disabled.png"
+		},
+		{
+			"name": "checkbox_select_down_png",
+			"type": "image",
+			"url": "eui_assets/CheckBox/checkbox_select_down.png"
+		},
+		{
+			"name": "checkbox_select_up_png",
+			"type": "image",
+			"url": "eui_assets/CheckBox/checkbox_select_up.png"
+		},
+		{
+			"name": "checkbox_unselect_png",
+			"type": "image",
+			"url": "eui_assets/CheckBox/checkbox_unselect.png"
+		},
+		{
+			"name": "selected_png",
+			"type": "image",
+			"url": "eui_assets/ItemRenderer/selected.png"
+		},
+		{
+			"name": "border_png",
+			"type": "image",
+			"url": "eui_assets/Panel/border.png"
+		},
+		{
+			"name": "header_png",
+			"type": "image",
+			"url": "eui_assets/Panel/header.png"
+		},
+		{
+			"name": "thumb_pb_png",
+			"type": "image",
+			"url": "eui_assets/ProgressBar/thumb_pb.png"
+		},
+		{
+			"name": "track_pb_png",
+			"type": "image",
+			"url": "eui_assets/ProgressBar/track_pb.png"
+		},
+		{
+			"name": "radiobutton_select_disabled_png",
+			"type": "image",
+			"url": "eui_assets/RadioButton/radiobutton_select_disabled.png"
+		},
+		{
+			"name": "radiobutton_select_down_png",
+			"type": "image",
+			"url": "eui_assets/RadioButton/radiobutton_select_down.png"
+		},
+		{
+			"name": "radiobutton_select_up_png",
+			"type": "image",
+			"url": "eui_assets/RadioButton/radiobutton_select_up.png"
+		},
+		{
+			"name": "radiobutton_unselect_png",
+			"type": "image",
+			"url": "eui_assets/RadioButton/radiobutton_unselect.png"
+		},
+		{
+			"name": "roundthumb_png",
+			"type": "image",
+			"url": "eui_assets/ScrollBar/roundthumb.png"
+		},
+		{
+			"name": "track_sb_png",
+			"type": "image",
+			"url": "eui_assets/ScrollBar/track_sb.png"
+		},
+		{
+			"name": "thumb_png",
+			"type": "image",
+			"url": "eui_assets/Slider/thumb.png"
+		},
+		{
+			"name": "track_png",
+			"type": "image",
+			"url": "eui_assets/Slider/track.png"
+		},
+		{
+			"name": "tracklight_png",
+			"type": "image",
+			"url": "eui_assets/Slider/tracklight.png"
+		},
+		{
+			"name": "handle_png",
+			"type": "image",
+			"url": "eui_assets/ToggleSwitch/handle.png"
+		},
+		{
+			"name": "off_png",
+			"type": "image",
+			"url": "eui_assets/ToggleSwitch/off.png"
+		},
+		{
+			"name": "on_png",
+			"type": "image",
+			"url": "eui_assets/ToggleSwitch/on.png"
+		},
+		{
+			"name": "beiji_wav",
+			"type": "sound",
+			"url": "sound/beiji.wav"
+		},
+		{
+			"name": "bg_mp3",
+			"type": "sound",
+			"url": "sound/bg.mp3"
+		},
+		{
+			"name": "bossAttack_mp3",
+			"type": "sound",
+			"url": "sound/bossAttack.mp3"
+		},
+		{
+			"name": "bossSkill_mp3",
+			"type": "sound",
+			"url": "sound/bossSkill.mp3"
+		},
+		{
+			"name": "dianji_mp3",
+			"type": "sound",
+			"url": "sound/dianji.mp3"
+		},
+		{
+			"name": "enemyAttack_mp3",
+			"type": "sound",
+			"url": "sound/enemyAttack.mp3"
+		},
+		{
+			"name": "enenyLand_wav",
+			"type": "sound",
+			"url": "sound/enenyLand.wav"
+		},
+		{
+			"name": "heroAttack_wav",
+			"type": "sound",
+			"url": "sound/heroAttack.wav"
+		},
+		{
+			"name": "heroBeiji_wav",
+			"type": "sound",
+			"url": "sound/heroBeiji.wav"
+		},
+		{
+			"name": "heroSkill_mp3",
+			"type": "sound",
+			"url": "sound/heroSkill.mp3"
+		},
+		{
+			"name": "font_fnt",
+			"type": "font",
+			"url": "font/font.fnt"
+		},
+		{
+			"name": "font_png",
+			"type": "image",
+			"url": "font/font.png"
+		},
+		{
+			"name": "simple_json",
+			"type": "json",
+			"url": "proto/simple.json"
+		},
+		{
+			"name": "rotateBg_png",
+			"type": "image",
+			"url": "rotateBg.png"
+		},
+		{
+			"name": "resource_battle_json",
+			"type": "json",
+			"url": "resource_battle.json"
+		},
+		{
+			"name": "resource_core_json",
+			"type": "json",
+			"url": "resource_core.json"
+		},
+		{
+			"name": "resource_rpg_json",
+			"type": "json",
+			"url": "resource_rpg.json"
+		},
+		{
+			"name": "resource_ui_json",
+			"type": "json",
+			"url": "resource_ui.json"
+		},
+		{
+			"name": "resource_version_json",
+			"type": "json",
+			"url": "resource_version.json"
+		},
+		{
+			"name": "tile_twosign_png",
+			"type": "image",
+			"url": "assets/stepGame/map/tile_twosign.png"
+		},
+		{
+			"name": "tile_down_png",
+			"type": "image",
+			"url": "assets/stepGame/map/tile_down.png"
+		},
+		{
+			"name": "tile_narmal_png",
+			"type": "image",
+			"url": "assets/stepGame/map/tile_narmal.png"
+		},
+		{
+			"name": "tile_trap_png",
+			"type": "image",
+			"url": "assets/stepGame/map/tile_trap.png"
+		},
+		{
+			"name": "role_yongshi_png",
+			"type": "image",
+			"url": "assets/stepGame/map/role_yongshi.png"
+		},
+		{
+			"name": "movieclip_json",
+			"type": "json",
+			"url": "assets/stepGame/mc/movieclip.json"
+		},
+		{
+			"name": "movieclip_png",
+			"type": "image",
+			"url": "assets/stepGame/mc/movieclip.png"
+		},
+		{
+			"name": "02主画面_jpg",
+			"type": "image",
+			"url": "assets/stepGame/design/02主画面.jpg"
+		},
+		{
+			"name": "03匹配_jpg",
+			"type": "image",
+			"url": "assets/stepGame/design/03匹配.jpg"
+		},
+		{
+			"name": "04游戏_jpg",
+			"type": "image",
+			"url": "assets/stepGame/design/04游戏.jpg"
+		},
+		{
+			"name": "05win_jpg",
+			"type": "image",
+			"url": "assets/stepGame/design/05win.jpg"
+		},
+		{
+			"name": "06lost_jpg",
+			"type": "image",
+			"url": "assets/stepGame/design/06lost.jpg"
+		},
+		{
+			"name": "pk_png",
+			"type": "image",
+			"url": "assets/stepGame/ui/pk.png"
+		},
+		{
+			"name": "ranking_png",
+			"type": "image",
+			"url": "assets/stepGame/ui/ranking.png"
+		},
+		{
+			"name": "result_png",
+			"type": "image",
+			"url": "assets/stepGame/ui/result.png"
+		},
+		{
+			"name": "single_png",
+			"type": "image",
+			"url": "assets/stepGame/ui/single.png"
+		},
+		{
+			"name": "vs_png",
+			"type": "image",
+			"url": "assets/stepGame/ui/vs.png"
+		},
+		{
+			"name": "friend_png",
+			"type": "image",
+			"url": "assets/stepGame/ui/friend.png"
+		},
+		{
+			"name": "icon_bg_png",
+			"type": "image",
+			"url": "assets/stepGame/ui/icon_bg.png"
+		},
+		{
+			"name": "battle_bg_jpg",
+			"type": "image",
+			"url": "assets/stepGame/ui/battle_bg.jpg"
+		},
+		{
+			"name": "head_bg_png",
+			"type": "image",
+			"url": "assets/stepGame/ui/head_bg.png"
+		},
+		{
+			"name": "onestep_png",
+			"type": "image",
+			"url": "assets/stepGame/ui/onestep.png"
+		},
+		{
+			"name": "sign_png",
+			"type": "image",
+			"url": "assets/stepGame/ui/sign.png"
+		},
+		{
+			"name": "tile_narmal2_png",
+			"type": "image",
+			"url": "assets/stepGame/ui/tile_narmal.png"
+		},
+		{
+			"name": "tile_start_png",
+			"type": "image",
+			"url": "assets/stepGame/ui/tile_start.png"
+		},
+		{
+			"name": "tile_trap2_png",
+			"type": "image",
+			"url": "assets/stepGame/ui/tile_trap.png"
+		},
+		{
+			"name": "twostep_png",
+			"type": "image",
+			"url": "assets/stepGame/ui/twostep.png"
+		},
+		{
+			"name": "match_png",
+			"type": "image",
+			"url": "assets/stepGame/ui/match.png"
+		},
+		{
+			"name": "btn_back_png",
+			"type": "image",
+			"url": "assets/stepGame/ui/btn_back.png"
+		},
+		{
+			"name": "btn_share_png",
+			"type": "image",
+			"url": "assets/stepGame/ui/btn_share.png"
+		},
+		{
+			"name": "lost_png",
+			"type": "image",
+			"url": "assets/stepGame/ui/lost.png"
+		},
+		{
+			"name": "time_png",
+			"type": "image",
+			"url": "assets/stepGame/ui/time.png"
+		},
+		{
+			"name": "win_png",
+			"type": "image",
+			"url": "assets/stepGame/ui/win.png"
+		},
+		{
+			"name": "index_bg_jpg",
+			"type": "image",
+			"url": "assets/stepGame/ui/index_bg.jpg"
+		},
+		{
+			"name": "logo_png",
+			"type": "image",
+			"url": "assets/stepGame/ui/logo.png"
+		}
+	]
+}

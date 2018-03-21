@@ -1,0 +1,177 @@
+{
+    "groups": [
+        {
+            "keys": "attack_json,tile_narmal,tile_down,tile_trap,tile_twosign,role_yongshi,sound_bg,sound_readygo,global_json",
+            "name": "preload_battle"
+        }
+    ],
+    "resources": [
+        {
+            "name": "attack_json",
+            "type": "json",
+            "url": "config/attack.json"
+        },
+        {
+            "name": "tile_narmal",
+            "type": "image",
+            "url": "assets/stepGame/map/tile_narmal.png"
+        },
+        {
+            "name": "tile_down",
+            "type": "image",
+            "url": "assets/stepGame/map/tile_down.png"
+        },
+        {
+            "name": "tile_trap",
+            "type": "image",
+            "url": "assets/stepGame/map/tile_trap.png"
+        },
+        {
+            "name": "tile_twosign",
+            "type": "image",
+            "url": "assets/stepGame/map/tile_twosign.png"
+        },
+        {
+            "name": "role_yongshi",
+            "type": "image",
+            "url": "assets/stepGame/map/role_yongshi.png"
+        },
+        {
+            "name": "map_jpg",
+            "type": "image",
+            "url": "assets/bg/map.jpg"
+        },
+        {
+            "name": "pk_png",
+            "type": "image",
+            "url": "assets/stepGame/ui/pk.png"
+        },
+        {
+            "name": "ranking_png",
+            "type": "image",
+            "url": "assets/stepGame/ui/ranking.png"
+        },
+        {
+            "name": "result_png",
+            "type": "image",
+            "url": "assets/stepGame/ui/result.png"
+        },
+        {
+            "name": "single_png",
+            "type": "image",
+            "url": "assets/stepGame/ui/single.png"
+        },
+        {
+            "name": "vs_png",
+            "type": "image",
+            "url": "assets/stepGame/ui/vs.png"
+        },
+        {
+            "name": "friend_png",
+            "type": "image",
+            "url": "assets/stepGame/ui/friend.png"
+        },
+        {
+            "name": "icon_bg_png",
+            "type": "image",
+            "url": "assets/stepGame/ui/icon_bg.png"
+        },
+        {
+            "name": "battle_bg_jpg",
+            "type": "image",
+            "url": "assets/stepGame/ui/battle_bg.jpg"
+        },
+        {
+            "name": "head_bg_png",
+            "type": "image",
+            "url": "assets/stepGame/ui/head_bg.png"
+        },
+        {
+            "name": "onestep_png",
+            "type": "image",
+            "url": "assets/stepGame/ui/onestep.png"
+        },
+        {
+            "name": "sign_png",
+            "type": "image",
+            "url": "assets/stepGame/ui/sign.png"
+        },
+        {
+            "name": "tile_narmal2_png",
+            "type": "image",
+            "url": "assets/stepGame/ui/tile_narmal.png"
+        },
+        {
+            "name": "tile_start_png",
+            "type": "image",
+            "url": "assets/stepGame/ui/tile_start.png"
+        },
+        {
+            "name": "tile_trap2_png",
+            "type": "image",
+            "url": "assets/stepGame/ui/tile_trap.png"
+        },
+        {
+            "name": "twostep_png",
+            "type": "image",
+            "url": "assets/stepGame/ui/twostep.png"
+        },
+        {
+            "name": "match_png",
+            "type": "image",
+            "url": "assets/stepGame/ui/match.png"
+        },
+        {
+            "name": "btn_back_png",
+            "type": "image",
+            "url": "assets/stepGame/ui/btn_back.png"
+        },
+        {
+            "name": "btn_share_png",
+            "type": "image",
+            "url": "assets/stepGame/ui/btn_share.png"
+        },
+        {
+            "name": "lost_png",
+            "type": "image",
+            "url": "assets/stepGame/ui/lost.png"
+        },
+        {
+            "name": "time_png",
+            "type": "image",
+            "url": "assets/stepGame/ui/time.png"
+        },
+        {
+            "name": "win_png",
+            "type": "image",
+            "url": "assets/stepGame/ui/win.png"
+        },
+        {
+            "name": "index_bg_jpg",
+            "type": "image",
+            "url": "assets/stepGame/ui/index_bg.jpg"
+        },
+        {
+            "name": "logo_png",
+            "type": "image",
+            "url": "assets/stepGame/ui/logo.png"
+        },
+        {
+            "name": "sound_bg",
+            "type": "sound",
+            "soundType": "music",
+            "url": "assets/stepGame/sound/step_bg.mp3"
+        },
+        {
+            "name": "sound_readygo",
+            "type": "sound",
+            "soundType": "effect",
+            "url": "assets/stepGame/sound/step_go.wav"
+        },
+        {
+            "name": "global_json",
+            "type": "json",
+            "url": "config/global.json"
+        }
+    ]
+}
