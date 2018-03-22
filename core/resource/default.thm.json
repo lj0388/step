@@ -42,5 +42,6 @@
     "resource/skins/TabBarButtonSkin.exml",
     "resource/skins/TabBarSkin.exml",
     "resource/skins/TaskItemRendererSkin.exml"
-  ]
+  ],
+  "path": "resource/default.thm.json"
 }

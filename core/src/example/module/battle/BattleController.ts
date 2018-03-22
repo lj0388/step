@@ -41,7 +41,7 @@ class BattleController extends BaseController
         this.showBattleResultUI(true);
     }
 
-    private onMoveEndMsg():void
+    private onMoveEndMsg(data:any):void
     {
         this.showBattleResultUI(false);
     }

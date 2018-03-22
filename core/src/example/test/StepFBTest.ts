@@ -1,36 +1,53 @@
-class GameTest
+class StepFBTest 
 {
 	public constructor() 
 	{
+		this.initSDK();
+	}
+
+    private initSDK()
+    {
+        egretfb.EgretFBInstant.initializeAsync().then
+        {
+            this.loadAssets();
+        }
+    }
+
+    private loadAssets()
+    {
         var groupName:string = "preload";
         var subGroups:Array<string> = ["step"];
         App.ResourceUtils.loadGroups(groupName, subGroups, this.onResourceLoadComplete, this.onResourceLoadProgress, this);
-		    
-	}
-
-    /**
-     * 资源组加载完成
-     */
-    private onResourceLoadComplete():void 
-    {
-        this.initModule();
-       
-	    App.Init();
-
-		this.initSocket();
-        //App.SceneManager.runScene(SceneConsts.Battle);
-
-        //音乐音效处理
-        //App.SoundManager.setBgOn(false);
-        //App.SoundManager.setEffectOn(false);   
     }
 
-    /**
-     * 资源组加载进度
-     */
     private onResourceLoadProgress(itemsLoaded:number, itemsTotal:number):void 
     {
-        App.ControllerManager.applyFunc(ControllerConst.Loading, LoadingConst.SetProgress, itemsLoaded, itemsTotal);
+         egretfb.EgretFBInstant.setLoadingProgress(itemsLoaded / itemsTotal);        
+    }
+
+    private onResourceLoadComplete():void 
+    {
+        egretfb.EgretFBInstant.startGameAsync().then
+        {
+            GlobalData.userId = egretfb.EgretFBInstant.player.getID();
+            GlobalData.userName = egretfb.EgretFBInstant.player.getName();
+            GlobalData.userIcon = egretfb.EgretFBInstant.player.getPhoto();
+            GlobalData.contextId = egretfb.EgretFBInstant.context.getID();
+            GlobalData.contextType = egretfb.EgretFBInstant.context.getType();  
+
+            this.startGame();
+        }      
+    }
+
+    private startGame()
+    {
+        this.initModule();       
+	    App.Init();
+		this.initSocket();
+
+		//App.SceneManager.runScene(SceneConsts.Battle);
+        //App.SoundManager.setBgOn(false);
+        //App.SoundManager.setEffectOn(false);  
     }
 
 	private initSocket():void
@@ -43,7 +60,6 @@ class GameTest
             //send();
 			 //进入游戏
 	        App.SceneManager.runScene(SceneConsts.Login);
-
 
         }, this);
 

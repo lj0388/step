@@ -26,7 +26,8 @@ class IndexController extends BaseController
 	{
 		this.indexView.showMatchUI();
 		this.indexView.showMatchTime(30);		//30秒倒计时
-		this.proxy.matchPlayer("1111");
+		//this.proxy.matchPlayer("1111");
+		this.proxy.matchPlayer(GlobalData.userModel.uid);
     }
 
 	//匹配超时        		

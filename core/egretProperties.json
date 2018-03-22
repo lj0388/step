@@ -36,6 +36,10 @@
 			"path": "librarys/protobuf"
 		},
     {
+      "name": "egretfb",
+      "path": "./egretfb"
+    },
+    {
       "name": "promise",
       "path": "./promise"
     }

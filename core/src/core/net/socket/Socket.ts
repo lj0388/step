@@ -119,8 +119,31 @@ class Socket extends BaseClass {
         }
         Log.trace("WebSocket: " + this._host + ":" + this._port);
         this.addEvents();
+        //this._socket.connectByUrl("wss://sdk.vrseastar.com/step");
         this._socket.connect(this._host, this._port);
     }
+
+    //wws
+    public connectByUrl(url:string):void 
+    {
+        if (App.DeviceUtils.IsHtml5) 
+        {
+            if (!window["WebSocket"]) 
+            {
+                Log.trace("不支持WebSocket");
+                return;
+            }
+        }
+        this._socket = new egret.WebSocket();
+        if (this._msg instanceof ByteArrayMsg)
+         {
+            this._socket.type = egret.WebSocket.TYPE_BINARY;
+        }
+        Log.trace("WebSocket: " + this._host + ":" + this._port);
+        this.addEvents();
+        this._socket.connectByUrl(url);
+    }
+
 
     /**
      * 重新连接

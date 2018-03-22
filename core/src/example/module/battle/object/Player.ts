@@ -59,7 +59,8 @@ class Player extends egret.DisplayObjectContainer
 		}
 		else
 		{
-			this.mc = App.MovieClipFactory.createMC("monster", "monster");
+			//this.mc = App.MovieClipFactory.createMC("monster", "monster");
+			this.mc = App.MovieClipFactory.createMC("hero", "hero");
 			this.alpha = 0.5;
 		}			
 		
@@ -101,7 +102,8 @@ class Player extends egret.DisplayObjectContainer
 		if (tile == null)
 			return;
 		
-		this.sendData(step);		//同步坐标
+		if (step > 0)
+			this.sendData(step);		//同步坐标
 
 		this.goTo(tile.row, tile.col);		
 		this.changeDirection(tile.face);			
@@ -128,6 +130,8 @@ class Player extends egret.DisplayObjectContainer
 	public nextStepByServer(step:number)
 	{
 		var targetIndex = this.currentIndex + step;
+		if (!this.view.cells.hasOwnProperty(targetIndex.toString()))
+			return;
 
 		var tile:MapTile = this.view.cells[targetIndex];
 		this.goTo(tile.row, tile.col);		

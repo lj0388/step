@@ -40,7 +40,8 @@ class Main extends egret.DisplayObjectContainer {
         this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
     }
 
-    private onAddToStage(event: egret.Event) {
+    private onAddToStage(event: egret.Event) 
+    {
         //注入自定义的素材解析器
         egret.registerImplementation("eui.IAssetAdapter", new AssetAdapter());
         egret.registerImplementation("eui.IThemeAdapter", new ThemeAdapter());
@@ -61,7 +62,7 @@ class Main extends egret.DisplayObjectContainer {
             egret.ticker.resume();
         }
 
-
+        
         //初始化
         this.initScene();
         this.initModule();
@@ -81,6 +82,7 @@ class Main extends egret.DisplayObjectContainer {
         // RES.loadConfig("resource/default.res.json", "resource/");
     }
 
+   
     private loadResVersionComplate(): void 
     {
         //初始化Resource资源加载库
@@ -96,7 +98,8 @@ class Main extends egret.DisplayObjectContainer {
     /**
      * 配置文件加载完成,开始预加载preload资源组。
      */
-    private onConfigComplete(): void {
+    private onConfigComplete(): void 
+    {
         //加载皮肤主题配置文件,可以手动修改这个文件。替换默认皮肤。
         var theme = new eui.Theme("resource/default.thm.json", this.stage);
         theme.addEventListener(eui.UIEvent.COMPLETE, this.onThemeLoadComplete, this);
@@ -109,7 +112,8 @@ class Main extends egret.DisplayObjectContainer {
     private onThemeLoadComplete(): void {
         //new RpgTest();
         //new ActTest();
-        new GameTest();
+        //new GameTest();
+        new StepFBTest();
     }
 
     /**
