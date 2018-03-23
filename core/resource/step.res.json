@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "attack_json,tile_down,sound_bg,sound_readygo,global_json,battle_bg_jpg,btn_back_png,btn_share_png,friend_png,head_bg_png,icon_bg_png,index_bg_jpg,logo_png,match_png,onestep_png,lost_png,win_png,vs_png,twostep_png,time_png,tile_trap2_png,tile_start_png,tile_narmal2_png,single_png,sign_png,result_png,ranking_png,pk_png,hero_png,monster_png,hero_json,monster_json",
+			"keys": "attack_json,tile_down,sound_bg,sound_readygo,global_json,battle_bg_jpg,btn_back_png,btn_share_png,friend_png,head_bg_png,icon_bg_png,index_bg_jpg,logo_png,match_png,onestep_png,lost_png,win_png,vs_png,twostep_png,time_png,single_png,result_png,ranking_png,pk_png,hero_png,monster_png,hero_json,monster_json,tile_narmal,tile_trap,tile_twosign,tile_end,hero2_png,hero2_json",
 			"name": "step"
 		}
 	],
@@ -202,6 +202,21 @@
 			"url": "assets/stepGame/mc/monster.json",
 			"type": "json",
 			"name": "monster_json"
+		},
+		{
+			"url": "assets/stepGame/map/tile_end.png",
+			"type": "image",
+			"name": "tile_end"
+		},
+		{
+			"url": "assets/stepGame/mc/hero2.json",
+			"type": "json",
+			"name": "hero2_json"
+		},
+		{
+			"url": "assets/stepGame/mc/hero2.png",
+			"type": "image",
+			"name": "hero2_png"
 		}
 	]
 }

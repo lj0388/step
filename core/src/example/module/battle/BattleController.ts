@@ -43,6 +43,8 @@ class BattleController extends BaseController
 
     private onMoveEndMsg(data:any):void
     {
+        var player:Player = this.battleView.getPlayer(data.uid);
+        player.lose();
         this.showBattleResultUI(false);
     }
 

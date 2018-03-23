@@ -46,21 +46,21 @@ class Main extends egret.DisplayObjectContainer {
         egret.registerImplementation("eui.IAssetAdapter", new AssetAdapter());
         egret.registerImplementation("eui.IThemeAdapter", new ThemeAdapter());
 
-        egret.lifecycle.addLifecycleListener((context) => {
-            // custom lifecycle plugin
+        // egret.lifecycle.addLifecycleListener((context) => {
+        //     // custom lifecycle plugin
 
-            context.onUpdate = () => {
-                console.log('hello,world')
-            }
-        })
+        //     context.onUpdate = () => {
+        //         console.log('hello,world')
+        //     }
+        // })
 
-        egret.lifecycle.onPause = () => {
-            egret.ticker.pause();
-        }
+        // egret.lifecycle.onPause = () => {
+        //     egret.ticker.pause();
+        // }
 
-        egret.lifecycle.onResume = () => {
-            egret.ticker.resume();
-        }
+        // egret.lifecycle.onResume = () => {
+        //     egret.ticker.resume();
+        // }
 
         
         //初始化
@@ -109,11 +109,29 @@ class Main extends egret.DisplayObjectContainer {
     /**
    * 主题文件加载完成
    */
-    private onThemeLoadComplete(): void {
+    private getRandom():void
+    {
+
+    }
+    
+    private onThemeLoadComplete(): void 
+    {
         //new RpgTest();
         //new ActTest();
-        //new GameTest();
-        new StepFBTest();
+
+        // var seed:number = 5;   
+        // function aa (max, min) {   
+        // max = max || 1;  
+        // min = min || 0;   
+        // seed = (seed * 9301 + 49297) % 233280;   
+        // var rnd = seed / 233280.0;  
+        // return min + rnd * (max - min);   
+        // };  
+        // for (var i= 0; i<10; i++) {  
+        //     console.log(aa(10, 1));   
+        // } 
+        new GameTest();
+        //new StepFBTest();
     }
 
     /**

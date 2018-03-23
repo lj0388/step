@@ -50,9 +50,14 @@ class StepFBTest
         //App.SoundManager.setEffectOn(false);  
     }
 
+	private serverUrl:string = "wss://sdk.vrseastar.com/step";
+
 	private initSocket():void
 	{
-        App.Socket.connect();
+		if (GlobalData.isDev)
+			App.Socket.connect();
+		else
+			App.Socket.connectByUrl(this.serverUrl);
 		
         App.MessageCenter.addListener(SocketConst.SOCKET_CONNECT, ()=>
 		{

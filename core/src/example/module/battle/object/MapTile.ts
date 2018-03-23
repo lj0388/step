@@ -35,17 +35,18 @@ class MapTile extends egret.Bitmap
 		this.x = (this.col - 1) * BattleData.tileWidth;
         this.y = -(this.row - 1) * BattleData.tileHeight;
         
+        
         if (this.type == TileType.Normal)
         {
-            this.texture = RES.getRes("tile_narmal2_png");
+            this.texture = RES.getRes("tile_down");
         }
         else if(this.type == TileType.Trap)
         {
-            this.texture = RES.getRes("tile_trap2_png");
+            this.texture = RES.getRes("tile_trap");
         }
         else if(this.type == TileType.End)
         {
-            this.texture = RES.getRes("tile_narmal2_png");
+            this.texture = RES.getRes("tile_end");
         }
 	}
 
@@ -63,6 +64,16 @@ class MapTile extends egret.Bitmap
             return;
 
         this.texture = RES.getRes("tile_down");
+    }
+
+    public show():void
+    {
+        this.visible = true;
+    }
+
+    public hide():void
+    {
+        this.visible = false;
     }
     // public init(mapId: number, col: number, row: number) 
 	// {

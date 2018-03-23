@@ -73,6 +73,16 @@ class BattleView extends BaseSpriteView
 
     private initMap():void
     {
+        var seed:number = 5;   
+        function aaa (max, min) {   
+        max = max || 1;  
+        min = min || 0;   
+        seed = (seed * 9301 + 49297) % 233280;   
+        var rnd = seed / 233280.0;  
+        return min + rnd * (max - min);   
+        };  
+
+
         var arr:any[] = BattleData.mapData;
         var len = arr.length;
         for (var i:number = 0; i < len; i++)
@@ -84,7 +94,9 @@ class BattleView extends BaseSpriteView
             
             if (this.oldTile != null && this.oldTile.type != TileType.Trap)
             {
-                if (Math.random() > 0.6)
+               
+                //if (Math.random() > 0.6)
+                if (aaa(10,1) >= 5)
                 {
                     cellData.type = TileType.Trap;
                 }
@@ -92,6 +104,9 @@ class BattleView extends BaseSpriteView
             
             if (i == len -1)
                 cellData.type = TileType.End;
+
+            // if (i == 3)
+            //     cellData.type = TileType.End;
                 
             tile.initData(cellData);
             this.gameObjcetLayer.addChild(tile);
@@ -106,6 +121,17 @@ class BattleView extends BaseSpriteView
         // bit.texture = RES.getRes("tile_narmal");
         // this.gameObjcetLayer.addChild(bit);
     }
+
+  
+    private getRandom (max, min):number
+    {   
+        var seed:number = 5;   
+        max = max || 1;  
+        min = min || 0;   
+        seed = (seed * 9301 + 49297) % 233280;   
+        var rnd = seed / 233280.0;  
+        return min + rnd * (max - min);   
+    };  
 
     private initPlayers():void
     {

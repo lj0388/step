@@ -21,12 +21,13 @@
 		"bin-debug/core/starlingswf/display/SwfSprite.js",
 		"bin-debug/example/module/base/BasePanelView.js",
 		"bin-debug/example/module/game/object/BaseFrameGameObject.js",
+		"bin-debug/core/sound/BaseSound.js",
 		"bin-debug/core/scene/base/BaseEuiLayer.js",
 		"bin-debug/core/scene/base/BaseScene.js",
 		"bin-debug/core/scene/base/BaseSpriteLayer.js",
 		"bin-debug/core/base/BaseClass.js",
 		"bin-debug/core/starlingswf/display/SwfMovieClip.js",
-		"bin-debug/core/sound/BaseSound.js",
+		"bin-debug/core/mvc/controller/BaseController.js",
 		"bin-debug/core/mvc/model/BaseModel.js",
 		"bin-debug/core/mvc/proxy/BaseProxy.js",
 		"bin-debug/example/module/task/BaseTaskView.js",
@@ -36,7 +37,6 @@
 		"bin-debug/example/module/game/object/Enemy.js",
 		"bin-debug/example/module/rpgGame/components/Component.js",
 		"bin-debug/example/module/rpgGame/object/RpgGameObject.js",
-		"bin-debug/core/mvc/controller/BaseController.js",
 		"bin-debug/example/module/battle/object/Player.js",
 		"bin-debug/core/mvc/view/IBaseView.js",
 		"bin-debug/core/net/http/DataCache.js",
@@ -116,7 +116,7 @@
 		"bin-debug/example/module/battle/BattleUIView.js",
 		"bin-debug/example/module/battle/BattleView.js",
 		"bin-debug/example/module/battle/object/MapTile.js",
-		"bin-debug/example/test/StepFBTest.js",
+		"bin-debug/Main.js",
 		"bin-debug/example/module/battle/vo/PlayerVO.js",
 		"bin-debug/example/module/components/Menu.js",
 		"bin-debug/example/module/components/SaleItemRenderer.js",
@@ -218,6 +218,6 @@
 		"bin-debug/example/test/ProtoBufTest.js",
 		"bin-debug/example/test/RpgTest.js",
 		"bin-debug/example/test/StarlingSwfTest.js",
-		"bin-debug/Main.js"
+		"bin-debug/example/test/StepFBTest.js"
 	]
 }

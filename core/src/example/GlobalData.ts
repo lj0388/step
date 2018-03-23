@@ -13,5 +13,5 @@ class GlobalData
 	public static contextId:string;
 	public static contextType:string;
 
-	public static isDev:boolean = true;		//开发环境
+	public static isDev:boolean = false;		//开发环境
 }
