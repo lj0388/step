@@ -21,5 +21,6 @@ enum ViewConst{
 
     Battle = 30000,
     BattleUI,
-    BattleResultUI
+    BattleResultUI,
+    Record
 }

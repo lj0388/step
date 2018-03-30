@@ -130,12 +130,14 @@ class IndexView extends BaseEuiView
 	{
 		//App.ViewManager.open(ViewConst.Friend);
 
-		egretfb.EgretFBInstant.player.getDataAsync(['context']).then((data) =>
-        {
-			this.contextArr = data['context'];
-			egret.log('getDataAsync', data['context']);		
+		// egretfb.EgretFBInstant.player.getDataAsync(['context']).then((data) =>
+        // {
+		// 	this.contextArr = data['context'];
+		// 	egret.log('getDataAsync', data['context']);		
 			
-        })
+        // })
+
+		this.applyControllerFunc(FriendConst.OpenFriendView);
 	}
 
 	
