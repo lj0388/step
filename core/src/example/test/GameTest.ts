@@ -82,6 +82,6 @@ class GameTest
         App.ControllerManager.register(ControllerConst.Login, new UserController());
         App.ControllerManager.register(ControllerConst.Index, new IndexController());
         App.ControllerManager.register(ControllerConst.Battle, new BattleController());
-     
+        App.ControllerManager.register(ControllerConst.Friend, new FriendController());
     }
 }

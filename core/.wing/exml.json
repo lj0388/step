@@ -1,7 +1,8 @@
 {
   "global": {
     "globalRulerEnable": true,
-    "globalAutoLayerMarkEnable": false
+    "globalAutoLayerMarkEnable": false,
+    "globalBindingDataTestObj": []
   },
   "1621d7fa2f1": {
     "backgroundX": 0,
@@ -12,5 +13,8 @@
     "useBgColor": true,
     "backgroundAlpha": 100,
     "guideLinesEnabled": false
+  },
+  "16271472b41": {
+    "bindingDataTestObj": []
   }
 }

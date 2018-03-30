@@ -1,0 +1,4 @@
+class RankingModel {
+	public constructor() {
+	}
+}

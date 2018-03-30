@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="FriendSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+
+	<e:Image source="index_bg_jpg" x="0" y="0" />
+	<e:Image id="imgIcon" source="icon_bg_png" x="65" y="149.68" anchorOffsetX="0" width="86" anchorOffsetY="0" height="84.65"/>
+	<e:Group id="indexGroup" width="640" height="1136">
+		<e:Image id="btnFriend" source="single_png" x="72" y="831" anchorOffsetX="0" width="447" anchorOffsetY="0" height="107"/>
+		<e:Image id="btnBack" source="single_png" x="144" y="972"/>
+		<e:Image id="btnRandom" source="pk_png" x="275" y="165" anchorOffsetX="0" width="222" anchorOffsetY="0" height="54"/>
+	</e:Group>
+	<e:Group id="matchGroup" width="640" height="1136">
+		<e:Label text="聊天小组" x="224" y="46"/>
+		<e:Label text="随机对手" x="72" y="116" size="18"/>
+		<e:Label text="朋友" x="72" y="309" size="18"/>
+		<e:List id="list" width="418" height="456" x="95.5" y="344" anchorOffsetX="0" anchorOffsetY="0"/>
+	</e:Group>
+	
+
+</e:Skin>

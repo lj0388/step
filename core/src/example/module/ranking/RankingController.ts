@@ -1,0 +1,4 @@
+class RankingController {
+	public constructor() {
+	}
+}

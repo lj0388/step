@@ -23,6 +23,8 @@ class GameScene extends BaseScene{
 
         //播放背景音乐
         App.SoundManager.playBg("sound_bg");
+
+        
     }
 
     /**

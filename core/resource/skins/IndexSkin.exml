@@ -4,13 +4,14 @@
 	<e:Image source="index_bg_jpg" x="0" y="0" />
 	<e:Image source="logo_png" x="0" y="58"/>
 	<e:Image id="imgIcon" source="icon_bg_png" x="38" y="432"/>
-	<e:Image source="friend_png" x="408" y="426"/>
+
 	<e:Image source="vs_png" x="227" y="454"/>
 	<e:Group id="indexGroup" width="640" height="1136">
 		<e:Image id="btnRank" source="ranking_png" x="441" y="864"/>
 		<e:Image id="btnResult" source="result_png" x="440" y="680"/>
 		<e:Image id="btnSingle" source="single_png" x="72" y="866"/>
 		<e:Image id="btnMatch" source="pk_png" x="72" y="680"/>
+		<e:Image id="btnFriend" source="friend_png" x="440" y="425"/>
 	</e:Group>
 	<e:Group id="matchGroup" width="640" height="1136">
 		<e:Image source="match_png" x="275" y="824"/>

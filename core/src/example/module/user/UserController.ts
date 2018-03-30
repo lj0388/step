@@ -11,22 +11,22 @@ class UserController extends BaseController
 	{
         super();
 
-        //初始化Model
-        this.userModel = new UserModel(this);
-  		
-		//初始化Proxy
-        this.userProxy = new UserProxy(this);
-        GlobalData.userModel = this.userModel;
-        
+       
+        this.userModel = new UserModel(this);        //初始化Model
+  		GlobalData.userModel = this.userModel;
+		
+        this.userProxy = new UserProxy(this);       //初始化Proxy
+       
 		//初始化UI
         this.userView = new UserView(this, LayerManager.UI_Main);
         App.ViewManager.register(ViewConst.Login, this.userView);
       
-        //注册C2S消息
         this.registerFunc(UserConst.LOGIN_C2S, this.onLogin, this);
-
-        //注册S2C消息
         this.registerFunc(UserConst.LOGIN_S2C, this.loginSuccess, this);
+
+        this.registerFunc(UserConst.Invite_LOGIN_C2S, this.onInviteLogin, this);
+        this.registerFunc(UserConst.Invite_LOGIN_S2C, this.loginSuccess, this);
+        //this.registerFunc(UserConst.Invite_LOGIN_S2C, this.inviteLoginSuccess, this);
     }
 
 	private onLogin(uid:string, name:string, icon:string):void
@@ -34,20 +34,31 @@ class UserController extends BaseController
         this.userProxy.login(uid, name, icon);
     }
 
+    private onInviteLogin(uid:string, name:string, icon:string, rid:string, sid:string):void
+	{
+        this.userProxy.login(uid, name, icon);
+    }
+
     /**
      * 登陆成功处理
      */
-    private loginSuccess(userInfo:any):void
+    private loginSuccess(data:any):void
 	{
         //保存数据
-		this.userModel.updateData(userInfo);
+		this.userModel.updateData(data);
         //本模块UI处理
         //this.userView.loginSuccess();
         //UI跳转
         //App.ViewManager.close(ViewConst.Login);
         //var model:BaseModel = this.getControllerModel(ControllerConst.Login);
-		App.SceneManager.runScene(SceneConsts.Index);
-		
+		App.SceneManager.runScene(SceneConsts.Index, data);
     }
+
+    // private inviteLoginSuccess(data:any):void
+	// {
+    //     this.userModel.updateData(data);
+    //     App.SceneManager.runScene(SceneConsts.Index, data);
+    // }
+   
 
 }

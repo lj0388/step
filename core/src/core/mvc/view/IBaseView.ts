@@ -70,7 +70,8 @@ interface IBaseView {
      * @param param 所需参数
      *
      */
-    applyControllerFunc(controllerKey:number, key:any, ...param:any[]):any;
+    //applyControllerFunc(controllerKey:number, key:any, ...param:any[]):any;
+    applyControllerFunc(controllerKey:number, ...param:any[]):any;
 
     /**
      * 设置是否隐藏

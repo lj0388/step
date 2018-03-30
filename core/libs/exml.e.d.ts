@@ -54,6 +54,10 @@ declare class BattleWin extends eui.Skin{
 }
 declare class BattleUISkin extends eui.Skin{
 }
+declare class FriendItemSkin extends eui.Skin{
+}
+declare class FriendSkin extends eui.Skin{
+}
 declare class GuiScreenSkin extends eui.Skin{
 }
 declare class IndexSkin extends eui.Skin{

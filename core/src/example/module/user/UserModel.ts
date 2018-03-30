@@ -4,6 +4,7 @@ class UserModel extends BaseModel
     public uid:string;
     public name:string;
     public icon:string;
+    public contextId:string;
     /**
      * 构造函数
      * @param $controller 所属模块
@@ -18,6 +19,7 @@ class UserModel extends BaseModel
         this.uid = data.uid;
         this.name = data.name;
         this.icon = data.icon;
+        this.contextId = data.rid;
     }
 
     public isOwn(uid:string):boolean

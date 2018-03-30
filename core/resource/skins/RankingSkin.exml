@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="FriendSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+
+	<e:Image source="index_bg_jpg" x="0" y="0" />
+	<e:Group id="indexGroup" width="640" height="1136">
+		<e:Image id="btnClose" source="single_png" x="81" y="930" anchorOffsetX="0" width="447" anchorOffsetY="0" height="107"/>
+		<e:Image id="btnGroup" source="pk_png" x="105" y="222" anchorOffsetX="0" width="164" anchorOffsetY="0" height="54"/>
+		<e:Image id="btnFriends" source="pk_png" x="304.5" y="222" anchorOffsetX="0" width="164" anchorOffsetY="0" height="54"/>
+	</e:Group>
+	<e:Group id="matchGroup" width="640" height="1136">
+		<e:Label text="排行榜" x="224" y="46"/>
+		<e:Label text="本周" x="251" y="116" size="18"/>
+		<e:List id="list" width="418" height="456" x="95.5" y="344" anchorOffsetX="0" anchorOffsetY="0"/>
+	</e:Group>
+	
+
+</e:Skin>

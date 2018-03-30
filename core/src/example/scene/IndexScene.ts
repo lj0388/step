@@ -5,9 +5,12 @@ class IndexScene extends BaseScene
 		super();
 	}
 
-	public onEnter():void
+
+	public onEnter(...param:any[]):void
 	{
 		super.onEnter();
+
+	    var data:any = param[0];
 		
 		this.addLayerAt(LayerManager.Game_Main, 0);
         this.addLayer(LayerManager.UI_Main);
@@ -19,7 +22,7 @@ class IndexScene extends BaseScene
        // App.ControllerManager.applyFunc(ControllerConst.RpgGame, RpgGameConst.GameInit, mapId);
 
         //开启UI部分
-        App.ViewManager.open(ViewConst.Index);
+        App.ViewManager.open(ViewConst.Index, data);
 
         //播放背景音乐
         App.SoundManager.playBg("sound_bg");

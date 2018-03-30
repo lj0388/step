@@ -1,0 +1,4 @@
+class RankingProxy {
+	public constructor() {
+	}
+}

@@ -34,6 +34,9 @@ class StepFBTest
             GlobalData.userIcon = egretfb.EgretFBInstant.player.getPhoto();
             GlobalData.contextId = egretfb.EgretFBInstant.context.getID();
             GlobalData.contextType = egretfb.EgretFBInstant.context.getType();  
+            var data:any = egretfb.EgretFBInstant.getEntryPointData();
+            if (data.hasOwnProperty("senderId"))
+                GlobalData.senderId = data.senderId;
 
             this.startGame();
         }      
@@ -103,6 +106,7 @@ class StepFBTest
         App.ControllerManager.register(ControllerConst.Login, new UserController());
         App.ControllerManager.register(ControllerConst.Index, new IndexController());
         App.ControllerManager.register(ControllerConst.Battle, new BattleController());
+        App.ControllerManager.register(ControllerConst.Friend, new FriendController());
      
     }
 }

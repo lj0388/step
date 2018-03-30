@@ -62,9 +62,12 @@ class BaseSpriteView extends egret.DisplayObjectContainer implements IBaseView {
      * @param param 所需参数
      *
      */
-    public applyControllerFunc(controllerKey:number, key:any, ...param:any[]):any {
+    public applyControllerFunc(controllerKey:number, ...param:any[]):any {
         return this._controller.applyControllerFunc.apply(this._controller, arguments);
     }
+    // public applyControllerFunc(controllerKey:number, key:any, ...param:any[]):any {
+    //     return this._controller.applyControllerFunc.apply(this._controller, arguments);
+    // }
 
     /**
      * 面板是否显示
