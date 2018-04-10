@@ -27,11 +27,7 @@ class LoginScene extends BaseScene{
         // {
         //     egretfb.EgretFBInstant.player
         // }
-        // var uid:string = (Math.random()* 100000).toString();
-        // //var uid:string = GlobalData.testUid;
-        // var name:string = "name_" + uid;
-        // var icon:string = "icon_" + uid;
-        // var rid:string = "0";
+      
         // if (!GlobalData.isDev)
         // {
         //     rid = egretfb.EgretFBInstant.context.getID();
@@ -43,15 +39,24 @@ class LoginScene extends BaseScene{
         var contextId:string = GlobalData.contextId;
         var senderId:string = GlobalData.senderId;
 
+        if (GlobalData.isDev)
+        {
+            uid = (Math.random()* 100000).toString();
+            name = "name_" + uid;
+            icon = "icon_" + uid;     
+            App.ControllerManager.applyFunc(ControllerConst.Login, UserConst.LOGIN_C2S, uid,name,icon);
+            return;      
+        }
+
         //请求数据
 
         if (GlobalData.senderId != null)
         {
-            App.ControllerManager.applyFunc(UserConst.Invite_LOGIN_C2S, uid,name,icon,contextId,senderId);
+            App.ControllerManager.applyFunc(ControllerConst.Login, UserConst.Invite_LOGIN_C2S, uid,name,icon,contextId,senderId);
         }
         else
         {
-            App.ControllerManager.applyFunc(UserConst.LOGIN_C2S, uid,name,icon);
+            App.ControllerManager.applyFunc(ControllerConst.Login, UserConst.LOGIN_C2S, uid,name,icon);
         }       
     }
 

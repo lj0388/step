@@ -5,19 +5,14 @@ class RecordView extends BaseEuiView
 	{
 		super(controller, parent);
 
-		this.skinName = "resource/skins/FriendSkin.exml";
+		this.skinName = "resource/skins/RecordSkin.exml";
 	}
 
   
     public btnRandom:eui.Button;
 
     public list:eui.List;
-	public btnFriend:eui.Button;    //挑战好友
     public btnBack:eui.Button;
-
-	public imgIcon:eui.Image;
-	public lblTime:eui.Label;
-
 	
 
 	public initUI():void 
@@ -25,7 +20,6 @@ class RecordView extends BaseEuiView
 		super.initUI();
 		
         this.list.addEventListener(eui.ItemTapEvent.ITEM_TAP,this.onChange,this);
-		this.btnFriend.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnFriendClick, this);
 		this.btnBack.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnBackClick, this);
 	}
 
@@ -43,8 +37,8 @@ class RecordView extends BaseEuiView
         // var dp1:eui.ArrayCollection = new eui.ArrayCollection();
         // dp1.addItem({contextId: "1"});      
         
-        this.list.itemRenderer = FriendItemRender;
-        this.list.itemRendererSkinName = "resource/skins/FriendItemSkin.exml";
+        this.list.itemRenderer = RecordItemRender;
+        this.list.itemRendererSkinName = "resource/skins/RecordItemSkin.exml";
         
 
         // var layout:eui.TileLayout = new eui.TileLayout();
@@ -75,48 +69,6 @@ class RecordView extends BaseEuiView
         // this.list.dataProvider = dp;
 		//list.data = 
     }
-	
-    private contextArr:string[] = []; 
-
-	private btnFriendClick(e:egret.TouchEvent):void
-	{
-		this.applyFunc(IndexConst.Match_Click);
-
-        egret.log('context.id now:', egretfb.EgretFBInstant.context.getID())
-
-        egretfb.EgretFBInstant.context.chooseAsync().then(() => 
-        {
-            //var saveData = { score: 123, value: Math.floor(Math.random() * 100) }
-
-            //  egretfb.EgretFBInstant.player.getDataAsync(['context']).then((data) =>
-            //  {
-            //      egret.log('getDataAsync', data['context'])
-            //  })
-
-            var contextId = egretfb.EgretFBInstant.context.getID();
-            this.contextArr.push(contextId);
-            
-            var saveData = {context: this.contextArr};
-
-            egretfb.EgretFBInstant.player.setDataAsync(saveData).then(() => 
-            {
-                egretfb.EgretFBInstant.player.getDataAsync(['context']).then((data) =>
-                {
-                    egret.log('getDataAsync', data['context'])
-                })
-                
-                egret.log('data is set');
-            })
-
-            egret.log('context.id chooseAsync:', egretfb.EgretFBInstant.context.getID());
-
-        }, (err) =>
-        {
-            egret.log('chooseAsync error', JSON.stringify(err));
-        })
-
-		//App.SceneManager.runScene(SceneConsts.Battle);	
-	}
 
 	private btnBackClick(e:egret.TouchEvent):void
 	{

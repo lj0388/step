@@ -29,7 +29,7 @@ class IndexProxy extends BaseProxy
 		obj.groupId = groupId;
 		obj.confirm = confirmType;
 
-		this.sendSocketMsg(ServerConst.Match_Invite_C2S, obj);
+		this.sendSocketMsg(ServerConst.Match_Confirm_C2S, obj);
 	}
 
 

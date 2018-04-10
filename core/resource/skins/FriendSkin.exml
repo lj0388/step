@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="FriendSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 
-	<e:Image source="index_bg_jpg" x="0" y="0" />
-	<e:Image id="imgIcon" source="icon_bg_png" x="65" y="149.68" anchorOffsetX="0" width="86" anchorOffsetY="0" height="84.65"/>
-	<e:Group id="indexGroup" width="640" height="1136">
-		<e:Image id="btnFriend" source="single_png" x="72" y="831" anchorOffsetX="0" width="447" anchorOffsetY="0" height="107"/>
-		<e:Image id="btnBack" source="single_png" x="144" y="972"/>
-		<e:Image id="btnRandom" source="pk_png" x="275" y="165" anchorOffsetX="0" width="222" anchorOffsetY="0" height="54"/>
-	</e:Group>
-	<e:Group id="matchGroup" width="640" height="1136">
-		<e:Label text="聊天小组" x="224" y="46"/>
-		<e:Label text="随机对手" x="72" y="116" size="18"/>
-		<e:Label text="朋友" x="72" y="309" size="18"/>
-		<e:List id="list" width="418" height="456" x="95.5" y="344" anchorOffsetX="0" anchorOffsetY="0"/>
-	</e:Group>
+	<e:Image x="0" y="0"  source="02主画面--好友列表_jpg" visible="false"/>
+	<e:Image x="0" y="0" source="01_jpg"/>
+	<e:Image source="好友选择背景_png" x="0" y="0"/>
+	<e:Image source="底01_png" x="40" y="184"/>
+	<e:List id="list" width="567" height="472" x="40" y="368" anchorOffsetX="0" anchorOffsetY="0"/>
+	<e:Image source="好友_png" x="60" y="330"/>
+	<e:Image id="btnRandomMatch" source="双人对决按钮_png" x="397.5" y="203.83" anchorOffsetX="0" width="188" anchorOffsetY="0" height="64.91"/>
+	<e:Image source="底02_png" x="40" y="363"/>
+	<e:Image source="随机好友_png" x="54" y="146"/>
+	<e:Image id="btnBack" x="503" y="1001" source="返回按钮_png"/>
+	<e:Image id="btnFriend" source="挑战好友_png" x="130" y="880.5"/>
+	<e:Image source="头像随机-2_png" x="60" y="192.16" anchorOffsetX="0" width="86.84" anchorOffsetY="0" height="89.68"/>
 	
 
 </e:Skin>

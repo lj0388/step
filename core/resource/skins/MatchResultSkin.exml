@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MatchResultSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+    
+    <e:Image x="0" y="0"  source="file:///d%3A/H5/step/core/resource/assets/stepGame/design/03-%E5%8C%B9%E9%85%8D%E5%A5%BD%E5%8F%8B%E6%8B%92%E7%BB%9D.jpg" visible="false"/>
+	<e:Image source="01_jpg" x="0" y="0"/>
+	<e:Image source="logo_png" x="0" y="26"/>
+	
+	<e:Group id="friendGroup" width="640" height="1136">
+		<e:Image source="匹配-底03_png" x="0" y="344" scaleX="1" scaleY="1"/>
+		<e:Image source="vs_png" x="236" y="429" scaleX="1" scaleY="1"/>
+		<e:Image id="imgIcon" source="icon_bg_png" x="36" y="393" scaleX="1" scaleY="1"/>
+		<e:Image id="imgFriendIcon" x="412.5" y="390" source="头像随机-2_png"/>
+		<e:Image x="28" y="608" source="拒绝请求_png"/>
+		<e:Image x="25.5" y="605" source="邀请过期_png" visible="false"/>
+		<e:Label id="lblName" text="QQ" x="57.5" y="575" anchorOffsetX="0" width="151" textAlign="center"/>
+		<e:Label id="lblState" text="xxx Refusing your challenge" x="42.5" y="709.5" anchorOffsetX="0" width="551" textAlign="center" fontFamily="Microsoft YaHei"/>
+		<e:Image id="btnCancel" x="171" y="823.5" source="取消按钮_png"/>
+		<e:Image id="btnRandomMatch" source="随机好友按钮_png" x="92.5" y="945"/>
+	</e:Group>
+
+
+</e:Skin>

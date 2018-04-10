@@ -21,8 +21,8 @@ class GameTest
         //App.SceneManager.runScene(SceneConsts.Battle);
 
         //音乐音效处理
-        //App.SoundManager.setBgOn(false);
-        //App.SoundManager.setEffectOn(false);   
+        App.SoundManager.setBgOn(false);
+        App.SoundManager.setEffectOn(false);   
     }
 
     /**
@@ -83,5 +83,6 @@ class GameTest
         App.ControllerManager.register(ControllerConst.Index, new IndexController());
         App.ControllerManager.register(ControllerConst.Battle, new BattleController());
         App.ControllerManager.register(ControllerConst.Friend, new FriendController());
+        App.ControllerManager.register(ControllerConst.Record, new RecordController());
     }
 }

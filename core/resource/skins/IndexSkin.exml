@@ -1,22 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="IndexSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
 
-	<e:Image source="index_bg_jpg" x="0" y="0" />
-	<e:Image source="logo_png" x="0" y="58"/>
-	<e:Image id="imgIcon" source="icon_bg_png" x="38" y="432"/>
+	<e:Image x="0" y="0"  source="file:///d%3A/H5/step/core/resource/assets/stepGame/design/03-%E5%8C%B9%E9%85%8D%E5%A5%BD%E5%8F%8B%E6%8B%92%E7%BB%9D.jpg" visible="false"/>
+	<e:Image source="01_jpg" x="0" y="0"/>
+	<e:Image source="logo_png" x="0" y="26"/>
 
-	<e:Image source="vs_png" x="227" y="454"/>
+
 	<e:Group id="indexGroup" width="640" height="1136">
-		<e:Image id="btnRank" source="ranking_png" x="441" y="864"/>
-		<e:Image id="btnResult" source="result_png" x="440" y="680"/>
-		<e:Image id="btnSingle" source="single_png" x="72" y="866"/>
-		<e:Image id="btnMatch" source="pk_png" x="72" y="680"/>
-		<e:Image id="btnFriend" source="friend_png" x="440" y="425"/>
+		<e:Image id="imgIcon" source="icon_bg_png" x="36" y="392"/>
+		<e:Image source="vs_png" x="236" y="429"/>
+		<e:Image id="btnShare" x="161.5" y="933.5" source="分享按钮_png"/>
+		<e:Image id="btnResult" x="157.5" y="820" source="结果按钮_png"/>
+		<e:Image id="btnMatch" x="123.5" y="648" source="双人对决按钮_png"/>
+		<e:Image id="btnFriend" x="412.5" y="392" source="头像随机_png"/>
 	</e:Group>
-	<e:Group id="matchGroup" width="640" height="1136">
-		<e:Image source="match_png" x="275" y="824"/>
-		<e:Label id="lblTime" text="00:44" anchorOffsetX="0" width="234" anchorOffsetY="0" height="90" size="52" fontFamily="Microsoft YaHei" textAlign="center" verticalAlign="middle" horizontalCenter="8" verticalCenter="209"/>
-		<e:Label text="search..." anchorOffsetX="0" width="234" anchorOffsetY="0" height="90" size="36" fontFamily="Microsoft YaHei" horizontalCenter="12" verticalCenter="396" textAlign="center" verticalAlign="middle"/>
+	
+	<e:Group id="randomGroup" width="640" height="1136" visible="false">
+		<e:Image source="匹配-底03_png" x="0" y="344" scaleX="1" scaleY="1"/>
+		<e:Image source="vs_png" x="236" y="429" scaleX="1" scaleY="1"/>
+		<e:Image id="imgIcon2" source="icon_bg_png" x="36" y="393" scaleX="1" scaleY="1"/>
+		<e:Image id="btnFriend2" x="412.5" y="390" source="头像随机-2_png"/>
+		<e:Image source="匹配-深底_png" x="26" y="608"/>
+		<e:Image source="match_png" x="269.15" y="649" anchorOffsetX="0" width="35.85" anchorOffsetY="0" height="32"/>
+		<e:Label id="lblTime" text="00:44" x="309" y="651"/>
+		<e:Label id="lblName2" text="00:44" x="96.5" y="575"/>
+		<e:Label text="Waiting" x="270.5" y="703"/>
+		<e:Label text="..." x="311" y="741"/>
+		<e:Image id="btnCancel2" x="170" y="948.5" source="取消按钮_png"/>
+	</e:Group>
+
+	<e:Group id="friendGroup" width="640" height="1136" visible="false">
+		<e:Image source="匹配-底03_png" x="0" y="344" scaleX="1" scaleY="1" visible="false"/>
+		<e:Image source="vs_png" x="236" y="429" scaleX="1" scaleY="1"/>
+		<e:Image id="imgIcon3" source="icon_bg_png" x="36" y="393" scaleX="1" scaleY="1"/>
+		<e:Image id="btnFriend3" x="412.5" y="390" source="头像随机-2_png"/>
+		<e:Image source="匹配-深底_png" x="26" y="608"/>
+		<e:Image source="match_png" x="269.15" y="649" anchorOffsetX="0" width="35.85" anchorOffsetY="0" height="32"/>
+		<e:Label id="lblTime2" text="00:44" x="309" y="651"/>
+		<e:Label id="lblName3" text="00:44" x="96.5" y="575"/>
+		<e:Label text="Waiting" x="270.5" y="703"/>
+		<e:Label text="..." x="311" y="741"/>
+		<e:Image id="btnCancel3" x="171" y="823.5" source="取消按钮_png"/>
+		<e:Image id="btnRandom2" x="181" y="833.5" source="取消按钮_png"/>
+	</e:Group>
+	
+
+	<e:Group id="matchGroup" width="640" height="1136" visible="false">
+		
+		
 	</e:Group>
 	
 

@@ -10,7 +10,7 @@ class ServerConst
     public static Match_Invite_S2C:number = 1006;  //邀请确认 针对好友
 
     public static Match_Confirm_C2S:number = 1007;  //接受/拒绝
-    public static Match_Confirm_S2C:number = 1008;  //拒绝
+    public static Match_Confirm_S2C:number = 1008;  //失效/拒绝
 
     public static Match_Scuess_S2C:number = 1010;   //匹配成功 进入战斗
 

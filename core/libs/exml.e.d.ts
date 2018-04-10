@@ -50,11 +50,13 @@ declare module skins{
 	class VSliderSkin extends eui.Skin{
 	}
 }
-declare class BattleWin extends eui.Skin{
-}
 declare class BattleUISkin extends eui.Skin{
 }
+declare class FailSkin extends eui.Skin{
+}
 declare class FriendItemSkin extends eui.Skin{
+}
+declare class FriendMatchSkin extends eui.Skin{
 }
 declare class FriendSkin extends eui.Skin{
 }
@@ -64,11 +66,17 @@ declare class IndexSkin extends eui.Skin{
 }
 declare class LoadingUISkin extends eui.Skin{
 }
+declare class MatchInviteSkin extends eui.Skin{
+}
+declare class MatchResultSkin extends eui.Skin{
+}
 declare class MenuButtonSkin extends eui.Skin{
 }
 declare class MenuSkin extends eui.Skin{
 }
 declare class PanelSkin extends eui.Skin{
+}
+declare class RandomMatchSkin extends eui.Skin{
 }
 declare class SaleItemSkin extends eui.Skin{
 }
@@ -77,4 +85,6 @@ declare class TabBarButtonSkin extends eui.Skin{
 declare class TabBarSkin extends eui.Skin{
 }
 declare class TaskItemRendererSkin extends eui.Skin{
+}
+declare class VictorySkin extends eui.Skin{
 }

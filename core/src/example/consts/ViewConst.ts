@@ -5,6 +5,10 @@ enum ViewConst{
     Loading = 10000,
     Login,
     Index,
+    RandomMatch,
+    FriendMatch,
+    MatchInvite,
+    MatchResult,
     Home,
    
     Friend,
@@ -22,5 +26,8 @@ enum ViewConst{
     Battle = 30000,
     BattleUI,
     BattleResultUI,
-    Record
+    Record,
+
+    Victory,
+    Fail
 }

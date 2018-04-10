@@ -6,7 +6,9 @@ class BattleController extends BaseController
 	private battleView:BattleView;
     private battleUIView:BattleUIView;
 	
-    private battleResultView:BattleResultView;
+    //private battleResultView:BattleResultView;
+    private victoryView:VictoryView;
+    private failView:FailView;
 
 	public constructor() 
 	{
@@ -22,8 +24,14 @@ class BattleController extends BaseController
         this.battleUIView = new BattleUIView(this, LayerManager.UI_Main);
         App.ViewManager.register(ViewConst.BattleUI, this.battleUIView);
 
-        this.battleResultView = new BattleResultView(this, LayerManager.UI_Main);
-        App.ViewManager.register(ViewConst.BattleResultUI, this.battleResultView);
+        this.victoryView = new VictoryView(this, LayerManager.UI_Main);
+        App.ViewManager.register(ViewConst.Victory, this.victoryView);
+
+        this.failView = new FailView(this, LayerManager.UI_Main);
+        App.ViewManager.register(ViewConst.Fail, this.failView);
+
+        // this.battleResultView = new BattleResultView(this, LayerManager.UI_Main);
+        // App.ViewManager.register(ViewConst.BattleResultUI, this.battleResultView);
 
 		//注册模块消息
         //this.registerFunc(BattleConst.BattleInit, this.InitBattle, this);
@@ -38,19 +46,15 @@ class BattleController extends BaseController
     private onMoveEnd(uid:string):void
     {
         this.proxy.moveEndC2S(uid);
-        this.showBattleResultUI(true);
+        //this.showBattleResultUI(true);
+        App.ViewManager.open(ViewConst.Victory);
     }
 
     private onMoveEndMsg(data:any):void
     {
         var player:Player = this.battleView.getPlayer(data.uid);
         player.lose();
-        this.showBattleResultUI(false);
-    }
-
-    private showBattleResultUI(isWin:boolean):void
-    {
-        App.ViewManager.open(ViewConst.BattleResultUI, isWin);
+        App.ViewManager.open(ViewConst.Fail);
     }
 
 	/**

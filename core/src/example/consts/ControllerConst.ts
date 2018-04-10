@@ -14,5 +14,6 @@ enum ControllerConst{
     Mail,
     Game,
     RpgGame,
-    Battle
+    Battle,
+    Record
 }

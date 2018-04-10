@@ -17,7 +17,7 @@
 		<e:Image id="imgIcon2" source="icon_bg_png" x="488.5" y="13" anchorOffsetX="0" width="134.01" anchorOffsetY="0" height="131.9" scaleX="1" scaleY="1"/>
 		<e:Label id="lblProgress1" text="100%" x="145" y="67" fontFamily="Microsoft YaHei" size="35" scaleX="1" scaleY="1" bold="true"/>
 		<e:Label id="lblProgress2" text="100%" x="380.5" y="67" fontFamily="Microsoft YaHei" size="35" scaleX="1" scaleY="1" bold="true"/>
-		<e:Image id="btnOneStep" source="onestep_png" x="49.5" y="1000" scaleX="1" scaleY="1"/>
-		<e:Image id="btnTwoStep" source="twostep_png" x="352" y="1000" scaleX="1" scaleY="1"/>
+		<e:Image id="btnOneStep" x="33.5" y="1001" scaleX="1" scaleY="1" source="一步按钮_png"/>
+		<e:Image id="btnTwoStep" x="330" y="1000" scaleX="1" scaleY="1" source="两步按钮_png" width="282" height="109"/>
 	</e:Group>
 </e:Skin>

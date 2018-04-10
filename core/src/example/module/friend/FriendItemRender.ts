@@ -2,19 +2,14 @@
 
 class FriendItemRender extends eui.ItemRenderer 
 {
-    // public titleDisplay:eui.Label;
-    // public priceDisplay:eui.Label;
-    // public timeDisplay:eui.Label;
-    // public iconDisplay:eui.Image;
-
-    public imgGroup:eui.Group;
+    public hbox:eui.Group;
     public lblNum:eui.Label;
-    public btnBattle:eui.Button;
+    public btnFriendMatch:eui.Button;
 
     public constructor() 
     {
         super();
-        this.imgGroup.touchEnabled = false;
+        this.hbox.touchEnabled = false;
         this.lblNum.touchEnabled = false;
     }
 
@@ -23,20 +18,10 @@ class FriendItemRender extends eui.ItemRenderer
     {
         super.dataChanged();
        
-        if (this.imgGroup) 
-        {
-           
-        }
-      
         if (this.lblNum) 
         {
            
-        }
-        if (this.btnBattle) 
-        {
-           
-        }        
-       
+        }         
     }
 
     public partAdded(partName:string, instance:any):void 
@@ -69,7 +54,7 @@ class FriendItemRender extends eui.ItemRenderer
         let texture = new egret.Texture();
         texture._setBitmapData(imageLoader.data);
         var bitmap:egret.Bitmap = new egret.Bitmap(texture);
-        this.imgGroup.addChild(bitmap);
+        this.hbox.addChild(bitmap);
     }
 
       // if (this.imgGroup) 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="FailSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image width="640" height="1136" x="0" y="0" source="05-lose_jpg" visible="false"/>
+    <e:Rect width="640" height="1136" x="0" y="0" fillAlpha="0.5"/>
+    <e:Image source="胜利徽章_png" x="366.35" y="204" anchorOffsetX="0" width="213.3" anchorOffsetY="0" height="206"/>
+	<e:Image source="失败_png" x="161" y="107"/>
+	<e:Image source="失败徽章_png" x="117" y="208"/>
+	<e:Image source="icon_bg_png" x="176" y="265" anchorOffsetX="0" width="179.06" anchorOffsetY="0" height="176.25"/>
+	<e:Image source="icon_bg_png" x="431.97" y="265.88" anchorOffsetX="0" width="92.06" anchorOffsetY="0" height="90.62"/>
+	<e:Image source="时间框_png" x="181" y="568.5"/>
+	<e:Image source="结果-vs_png" x="397" y="452"/>
+	<e:Image id="btnPlay" source="再玩一次_png" x="186" y="743"/>
+	<e:Image id="btnBack" source="返回按钮_png" x="361.06" y="904"/>
+	<e:Image id="btnShare" source="分享按钮2_png" x="188" y="901"/>
+	<e:Label id="lblTime" text="00:21" x="227.5" y="645" anchorOffsetX="0" width="209" fontFamily="Microsoft YaHei" textAlign="center" size="30" textColor="0x000000"/>
+	<e:Image id="imgIcon" width="136" height="116" x="198" y="294" anchorOffsetX="0" anchorOffsetY="0"/>
+	<e:Image id="imgIcon2" width="78.55" height="67" x="438.73" y="273.5" anchorOffsetX="0" anchorOffsetY="0"/>
+
+</e:Skin>

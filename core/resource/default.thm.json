@@ -29,9 +29,10 @@
     "resource/eui_skins/ToggleSwitchSkin.exml",
     "resource/eui_skins/VScrollBarSkin.exml",
     "resource/eui_skins/VSliderSkin.exml",
-    "resource/skins/BattleResultSkin.exml",
     "resource/skins/BattleUISkin.exml",
+    "resource/skins/FailSkin.exml",
     "resource/skins/FriendItemSkin.exml",
+    "resource/skins/FriendMatchSkin.exml",
     "resource/skins/FriendSkin.exml",
     "resource/skins/MenuSkin.exml",
     "resource/skins/MenuButtonSkin.exml",
@@ -39,12 +40,16 @@
     "resource/skins/IndexSkin.exml",
     "resource/skins/LoadingUISkin.exml",
     "resource/skins/LoginSkin.exml",
+    "resource/skins/MatchInviteSkin.exml",
+    "resource/skins/MatchResultSkin.exml",
     "resource/skins/PanelSkin.exml",
+    "resource/skins/RandomMatchSkin.exml",
     "resource/skins/RankingSkin.exml",
     "resource/skins/SaleItemSkin.exml",
     "resource/skins/TabBarButtonSkin.exml",
     "resource/skins/TabBarSkin.exml",
-    "resource/skins/TaskItemRendererSkin.exml"
+    "resource/skins/TaskItemRendererSkin.exml",
+    "resource/skins/VictorySkin.exml"
   ],
   "path": "resource/default.thm.json"
 }

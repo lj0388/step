@@ -8,21 +8,17 @@ class FriendView extends BaseEuiView
 	}
 
   
-    public btnRandom:eui.Button;
-
+    public btnRandomMatch:eui.Button;
     public list:eui.List;
 	public btnFriend:eui.Button;    //挑战好友
     public btnBack:eui.Button;
-
-	public imgIcon:eui.Image;
-	public lblTime:eui.Label;
-
 	
 
 	public initUI():void 
 	{
 		super.initUI();
 		
+        this.btnRandomMatch.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnRandomMatchClick, this);
         this.list.addEventListener(eui.ItemTapEvent.ITEM_TAP,this.onChange,this);
 		this.btnFriend.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnFriendClick, this);
 		this.btnBack.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnBackClick, this);
@@ -74,6 +70,11 @@ class FriendView extends BaseEuiView
         
         this.list.dataProvider = dp;
 		//list.data = 
+    }
+
+    private btnRandomMatchClick(e:egret.TouchEvent):void
+	{
+        
     }
 	
     private contextArr:string[] = []; 

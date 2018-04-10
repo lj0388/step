@@ -14,5 +14,5 @@ class GlobalData
 	public static contextType:string;
 	public static senderId:string = null;				//好友邀请你
 
-	public static isDev:boolean = false;		//开发环境
+	public static isDev:boolean = true;					//开发环境
 }

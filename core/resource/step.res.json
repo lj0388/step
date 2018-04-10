@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "attack_json,tile_down,sound_bg,sound_readygo,global_json,battle_bg_jpg,btn_back_png,btn_share_png,friend_png,head_bg_png,icon_bg_png,index_bg_jpg,logo_png,match_png,onestep_png,lost_png,win_png,vs_png,twostep_png,time_png,single_png,result_png,ranking_png,pk_png,hero_png,monster_png,hero_json,monster_json,tile_narmal,tile_trap,tile_twosign,tile_end,hero2_png,hero2_json",
+			"keys": "attack_json,tile_down,sound_bg,sound_readygo,global_json,battle_bg_jpg,btn_back_png,btn_share_png,friend_png,head_bg_png,icon_bg_png,index_bg_jpg,logo_png,match_png,onestep_png,lost_png,win_png,vs_png,twostep_png,time_png,single_png,result_png,ranking_png,pk_png,hero_png,monster_png,hero_json,monster_json,tile_narmal,tile_trap,tile_twosign,tile_end,hero2_png,hero2_json,tile_trap2_png,tile_start_png,tile_narmal2_png,sign_png,ready_png,GO_png,CarterOne_ttf,01_jpg,02_jpg,底01_png,底02_png,返回按钮_png,分享按钮_png,好友_png,好友选择背景_png,接受按钮_png,结果按钮_png,拒绝请求_png,两步按钮_png,领先于对手话框_png,落后于对手话框_png,匹配-底03_png,匹配-深底_png,取消按钮_png,双人对决按钮_png,随机好友_png,随机好友按钮_png,挑战好友_png,头像_png,头像随机-2_png,头像随机_png,邀请过期_png,一步按钮_png,游戏--头像底图_png,05-win_jpg,05-lose_jpg,02主画面.jpg,光芒_png,再玩一次_png,分享按钮2_png,失败_png,失败徽章_png,时间框_png,结果-vs_png,胜利徽章_png,页面02_png",
 			"name": "step"
 		}
 	],
@@ -217,6 +217,291 @@
 			"url": "assets/stepGame/mc/hero2.png",
 			"type": "image",
 			"name": "hero2_png"
+		},
+		{
+			"url": "assets/stepGame/design/02主画面--好友列表.jpg",
+			"type": "image",
+			"name": "02主画面--好友列表_jpg"
+		},
+		{
+			"url": "assets/stepGame/design/02主画面--结果列表.jpg",
+			"type": "image",
+			"name": "02主画面--结果列表_jpg"
+		},
+		{
+			"url": "assets/stepGame/design/02主画面-2.jpg",
+			"type": "image",
+			"name": "02主画面-2_jpg"
+		},
+		{
+			"url": "assets/stepGame/design/02主画面.jpg",
+			"type": "image",
+			"name": "02主画面_jpg"
+		},
+		{
+			"url": "assets/stepGame/design/03-匹配多个好友.jpg",
+			"type": "image",
+			"name": "03-匹配多个好友_jpg"
+		},
+		{
+			"url": "assets/stepGame/design/03-匹配好友已过期.jpg",
+			"type": "image",
+			"name": "03-匹配好友已过期_jpg"
+		},
+		{
+			"url": "assets/stepGame/design/03-匹配好友拒绝.jpg",
+			"type": "image",
+			"name": "03-匹配好友拒绝_jpg"
+		},
+		{
+			"url": "assets/stepGame/design/03-匹配好友接受信息.jpg",
+			"type": "image",
+			"name": "03-匹配好友接受信息_jpg"
+		},
+		{
+			"url": "assets/stepGame/design/03-匹配随机好友.jpg",
+			"type": "image",
+			"name": "03-匹配随机好友_jpg"
+		},
+		{
+			"url": "assets/stepGame/design/03匹配.jpg",
+			"type": "image",
+			"name": "03匹配_jpg"
+		},
+		{
+			"url": "assets/stepGame/design/04-游戏go.jpg",
+			"type": "image",
+			"name": "04-游戏go_jpg"
+		},
+		{
+			"url": "assets/stepGame/design/04-游戏ready.jpg",
+			"type": "image",
+			"name": "04-游戏ready_jpg"
+		},
+		{
+			"url": "assets/stepGame/design/04游戏.jpg",
+			"type": "image",
+			"name": "04游戏_jpg"
+		},
+		{
+			"url": "assets/stepGame/design/05win.jpg",
+			"type": "image",
+			"name": "05win_jpg"
+		},
+		{
+			"url": "assets/stepGame/design/06lost.jpg",
+			"type": "image",
+			"name": "06lost_jpg"
+		},
+		{
+			"url": "assets/stepGame/ui/01.jpg",
+			"type": "image",
+			"name": "01_jpg"
+		},
+		{
+			"url": "assets/stepGame/ui/02.jpg",
+			"type": "image",
+			"name": "02_jpg"
+		},
+		{
+			"url": "assets/stepGame/ui/02主画面-2.jpg",
+			"type": "image",
+			"name": "02主画面.jpg"
+		},
+		{
+			"url": "assets/stepGame/ui/CarterOne.ttf",
+			"type": "bin",
+			"name": "CarterOne_ttf"
+		},
+		{
+			"url": "assets/stepGame/ui/GO.png",
+			"type": "image",
+			"name": "GO_png"
+		},
+		{
+			"url": "assets/stepGame/ui/ready.png",
+			"type": "image",
+			"name": "ready_png"
+		},
+		{
+			"url": "assets/stepGame/ui/一步按钮.png",
+			"type": "image",
+			"name": "一步按钮_png"
+		},
+		{
+			"url": "assets/stepGame/ui/两步按钮.png",
+			"type": "image",
+			"name": "两步按钮_png"
+		},
+		{
+			"url": "assets/stepGame/ui/分享按钮.png",
+			"type": "image",
+			"name": "分享按钮_png"
+		},
+		{
+			"url": "assets/stepGame/ui/匹配-底03.png",
+			"type": "image",
+			"name": "匹配-底03_png"
+		},
+		{
+			"url": "assets/stepGame/ui/匹配-深底.png",
+			"type": "image",
+			"name": "匹配-深底_png"
+		},
+		{
+			"url": "assets/stepGame/ui/双人对决按钮.png",
+			"type": "image",
+			"name": "双人对决按钮_png"
+		},
+		{
+			"url": "assets/stepGame/ui/取消按钮.png",
+			"type": "image",
+			"name": "取消按钮_png"
+		},
+		{
+			"url": "assets/stepGame/ui/头像.png",
+			"type": "image",
+			"name": "头像_png"
+		},
+		{
+			"url": "assets/stepGame/ui/头像随机-2.png",
+			"type": "image",
+			"name": "头像随机-2_png"
+		},
+		{
+			"url": "assets/stepGame/ui/头像随机.png",
+			"type": "image",
+			"name": "头像随机_png"
+		},
+		{
+			"url": "assets/stepGame/ui/好友.png",
+			"type": "image",
+			"name": "好友_png"
+		},
+		{
+			"url": "assets/stepGame/ui/好友选择背景.png",
+			"type": "image",
+			"name": "好友选择背景_png"
+		},
+		{
+			"url": "assets/stepGame/ui/底01.png",
+			"type": "image",
+			"name": "底01_png"
+		},
+		{
+			"url": "assets/stepGame/ui/底02.png",
+			"type": "image",
+			"name": "底02_png"
+		},
+		{
+			"url": "assets/stepGame/ui/拒绝请求.png",
+			"type": "image",
+			"name": "拒绝请求_png"
+		},
+		{
+			"url": "assets/stepGame/ui/挑战好友.png",
+			"type": "image",
+			"name": "挑战好友_png"
+		},
+		{
+			"url": "assets/stepGame/ui/接受按钮.png",
+			"type": "image",
+			"name": "接受按钮_png"
+		},
+		{
+			"url": "assets/stepGame/ui/游戏--头像底图.png",
+			"type": "image",
+			"name": "游戏--头像底图_png"
+		},
+		{
+			"url": "assets/stepGame/ui/结果按钮.png",
+			"type": "image",
+			"name": "结果按钮_png"
+		},
+		{
+			"url": "assets/stepGame/ui/落后于对手话框.png",
+			"type": "image",
+			"name": "落后于对手话框_png"
+		},
+		{
+			"url": "assets/stepGame/ui/返回按钮.png",
+			"type": "image",
+			"name": "返回按钮_png"
+		},
+		{
+			"url": "assets/stepGame/ui/邀请过期.png",
+			"type": "image",
+			"name": "邀请过期_png"
+		},
+		{
+			"url": "assets/stepGame/ui/随机好友.png",
+			"type": "image",
+			"name": "随机好友_png"
+		},
+		{
+			"url": "assets/stepGame/ui/随机好友按钮.png",
+			"type": "image",
+			"name": "随机好友按钮_png"
+		},
+		{
+			"url": "assets/stepGame/ui/领先于对手话框.png",
+			"type": "image",
+			"name": "领先于对手话框_png"
+		},
+		{
+			"url": "assets/stepGame/design/05-win.jpg",
+			"type": "image",
+			"name": "05-win_jpg"
+		},
+		{
+			"url": "assets/stepGame/design/05-lose.jpg",
+			"type": "image",
+			"name": "05-lose_jpg"
+		},
+		{
+			"url": "assets/stepGame/ui/光芒.png",
+			"type": "image",
+			"name": "光芒_png"
+		},
+		{
+			"url": "assets/stepGame/ui/再玩一次.png",
+			"type": "image",
+			"name": "再玩一次_png"
+		},
+		{
+			"url": "assets/stepGame/ui/分享按钮2.png",
+			"type": "image",
+			"name": "分享按钮2_png"
+		},
+		{
+			"url": "assets/stepGame/ui/失败.png",
+			"type": "image",
+			"name": "失败_png"
+		},
+		{
+			"url": "assets/stepGame/ui/失败徽章.png",
+			"type": "image",
+			"name": "失败徽章_png"
+		},
+		{
+			"url": "assets/stepGame/ui/时间框.png",
+			"type": "image",
+			"name": "时间框_png"
+		},
+		{
+			"url": "assets/stepGame/ui/结果-vs.png",
+			"type": "image",
+			"name": "结果-vs_png"
+		},
+		{
+			"url": "assets/stepGame/ui/胜利徽章.png",
+			"type": "image",
+			"name": "胜利徽章_png"
+		},
+		{
+			"url": "assets/stepGame/ui/页面02.png",
+			"type": "image",
+			"name": "页面02_png"
 		}
 	]
 }
