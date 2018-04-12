@@ -43,7 +43,10 @@ class IndexController extends BaseController
 
 
 		this.registerFunc(IndexConst.Match_Click, this.onMatchClick, this);						//点击匹配对战
+		this.registerFunc(IndexConst.Match_Mode, this.onMatchMode, this);						//点击匹配对战
+
 		this.registerFunc(IndexConst.Match_Cancel, this.onMatchCancel, this);					//点击匹配取消
+		this.registerFunc(IndexConst.Match_Cancel_S2C, this.onMatchCancelS2C, this);			//匹配取消 关闭邀请界面
 		this.registerFunc(IndexConst.Match_TimeOver, this.onMatchTimeOver, this);				//匹配超时        
 
 		this.registerFunc(IndexConst.Match_Invite_S2C, this.onMatchInviteS2C, this);			//匹配邀请	       
@@ -56,36 +59,65 @@ class IndexController extends BaseController
 	}
 
 	
+	//private mode:string = MatchType.Random;
+
 	//匹配对战
 	private onMatchClick():void
 	{
 		// this.indexView.showMatchUI();
 		// this.indexView.showMatchTime(30);		//30秒倒计时
 		
-		if (GlobalData.contextId != null)		//匹配好友
+		if (GlobalData.contextId != "-1")		//匹配好友
 		{
+			GlobalData.matchMode = MatchType.Friends;
 			App.ViewManager.open(ViewConst.FriendMatch);
 			this.proxy.matchPlayer(GlobalData.userModel.uid, GlobalData.contextId, MatchType.Friends);
 		}
 		else
 		{
+			GlobalData.matchMode = MatchType.Random;
 			App.ViewManager.open(ViewConst.RandomMatch);
 			this.proxy.matchPlayer(GlobalData.userModel.uid, GlobalData.contextId, MatchType.Random);	//匹配陌生人
 		}	
     }
 
+	private onMatchMode(mode:string):void
+	{
+		if (mode == MatchType.Random)
+		{
+			GlobalData.matchMode = MatchType.Random;
+			App.ViewManager.open(ViewConst.RandomMatch);
+			this.proxy.matchPlayer(GlobalData.userModel.uid, GlobalData.contextId, MatchType.Random);	
+		}
+		else
+		{
+			GlobalData.matchMode = MatchType.Friends;
+			App.ViewManager.open(ViewConst.FriendMatch);
+			this.proxy.matchPlayer(GlobalData.userModel.uid, GlobalData.contextId, MatchType.Friends);
+		}
+	}
+
 	//匹配取消
 	private onMatchCancel():void
 	{
+		this.proxy.matchCancel(GlobalData.userModel.uid);
+		
 		App.ViewManager.close(ViewConst.RandomMatch);
 		App.ViewManager.close(ViewConst.FriendMatch);
 	}
 
+	//关闭邀请界面
+	private onMatchCancelS2C(data:any):void
+	{
+		App.ViewManager.close(ViewConst.MatchInvite);
+	}
+
+
 	//点击 接受/拒绝 邀请
-	private onMatchConfirmClick(confirm:string):void
+	private onMatchConfirmClick(confirm:string, data:any):void
 	{
 		egret.log("confirmType: " + confirm);
-		this.proxy.matchConfirm(GlobalData.userId, GlobalData.contextId, confirm);
+		this.proxy.matchConfirm(GlobalData.userModel.uid, GlobalData.userModel.contextId, confirm, data.senderId);
 	}
 
 	//从好友邀请转战随机邀请
@@ -121,6 +153,8 @@ class IndexController extends BaseController
 	//匹配成功
 	private onMatchSuccess(data:any):void
 	{
+		this.randomMatchView.matchSuccess();
+
 		GlobalData.battleModel.updateData(data);    
 
 		App.SceneManager.runScene(SceneConsts.Battle, data);

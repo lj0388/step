@@ -45,6 +45,8 @@
     "resource/skins/PanelSkin.exml",
     "resource/skins/RandomMatchSkin.exml",
     "resource/skins/RankingSkin.exml",
+    "resource/skins/RecordItemSkin.exml",
+    "resource/skins/RecordSkin.exml",
     "resource/skins/SaleItemSkin.exml",
     "resource/skins/TabBarButtonSkin.exml",
     "resource/skins/TabBarSkin.exml",

@@ -32,9 +32,6 @@ class IndexView extends BaseEuiView
 	public btnResult:eui.Button;	//战绩
 	public btnShare:eui.Button;
 	
-
-
-	
 	
 
 	public initUI():void 
@@ -62,7 +59,7 @@ class IndexView extends BaseEuiView
 		// 	this.showIndexUI();
 		// }	
 
-		this.updateBattleRoles(data.groupId);		//更新对战角色信息
+		//this.updateBattleRoles(data.groupId);		//更新对战角色信息
     }
 	
 	private btnMatchClick(e:egret.TouchEvent):void

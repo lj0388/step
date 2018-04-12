@@ -42,6 +42,7 @@ class Main extends egret.DisplayObjectContainer {
 
     private onAddToStage(event: egret.Event) 
     {
+        this.stage.orientation = egret.OrientationMode.AUTO;
         //注入自定义的素材解析器
         egret.registerImplementation("eui.IAssetAdapter", new AssetAdapter());
         egret.registerImplementation("eui.IThemeAdapter", new ThemeAdapter());

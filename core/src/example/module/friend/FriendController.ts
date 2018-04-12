@@ -19,7 +19,7 @@ class FriendController extends BaseController
         this.friendView = new FriendView(this, LayerManager.UI_Popup);
         App.ViewManager.register(ViewConst.Friend, this.friendView);
 
-        this.registerFunc(FriendConst.OpenFriendView, this.openFriendView, this);
+        this.registerFunc(FriendConst.OPEN_FRIEND_VIEW, this.openFriendView, this);
         this.registerFunc(FriendConst.GET_Friends_S2C, this.getFriendsS2C, this);
 		// this.registerFunc(IndexConst.Match_Random_Click, this.onRandomMatch, this);		//单击匹配
 		// this.registerFunc(IndexConst.Match_TimeOver, this.onMatchTimeOver, this);		//匹配超时        		
@@ -28,7 +28,8 @@ class FriendController extends BaseController
 
     private openFriendView():void
     {
-        this.proxy.requestFriendList(GlobalData.userId);
+        //this.proxy.requestFriendList(GlobalData.userId);
+        this.proxy.requestFriendList("u0001");
     }
 
     private getFriendsS2C():void

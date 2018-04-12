@@ -78,6 +78,10 @@ declare class PanelSkin extends eui.Skin{
 }
 declare class RandomMatchSkin extends eui.Skin{
 }
+declare class RecordItemSkin extends eui.Skin{
+}
+declare class RecordSkin extends eui.Skin{
+}
 declare class SaleItemSkin extends eui.Skin{
 }
 declare class TabBarButtonSkin extends eui.Skin{

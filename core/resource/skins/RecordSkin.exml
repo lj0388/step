@@ -4,8 +4,13 @@
 	<e:Image x="0" y="0"  source="02主画面--结果列表_jpg"/>
 	<e:Image x="0" y="0" source="01_jpg"/>
 	<e:Image source="好友选择背景_png" x="0" y="0"/>
-	<e:List id="list" width="567" height="811" x="36.5" y="156" anchorOffsetX="0" anchorOffsetY="0"/>
 	<e:Image id="btnBack" x="503" y="1001" source="返回按钮_png"/>
-	
+	<e:Scroller width="570" height="814" x="35" y="155" anchorOffsetX="0" anchorOffsetY="0" scrollPolicyH="off">	
+		<e:List id="list" width="567" height="811" x="36.5" y="156" anchorOffsetX="0" anchorOffsetY="0"> 
+			<e:layout>
+				<e:VerticalLayout horizontalAlign="center" verticalAlign="top"/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
 
 </e:Skin>

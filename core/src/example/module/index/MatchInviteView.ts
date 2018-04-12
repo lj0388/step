@@ -21,21 +21,25 @@ class MatchInviteView extends BaseEuiView
 		this.btnCancel.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnCancelClick, this);
 	}
 
+	private data:any;
+
 	public open(...param:any[]):void 
 	{
-		var data:any = param[0];
+		this.data = param[0];
 
 		//this.updateBattleRoles(data.groupId);		//更新对战角色信息
     }
 
 	private btnAcceptClick(e:egret.TouchEvent):void
 	{
-		this.applyFunc(IndexConst.Match_Confirm_Click, ConfirmType.Accept);
+		this.applyFunc(IndexConst.Match_Confirm_Click, ConfirmType.Accept, this.data);
+		App.ViewManager.closeView(this);
 	}
 
 	private btnCancelClick(e:egret.TouchEvent):void
 	{
-		this.applyFunc(IndexConst.Match_Confirm_Click, ConfirmType.Refuse);
+		this.applyFunc(IndexConst.Match_Confirm_Click, ConfirmType.Refuse, this.data);
+		App.ViewManager.closeView(this);
 	}
 }
 

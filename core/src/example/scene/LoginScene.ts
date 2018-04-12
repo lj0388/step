@@ -41,10 +41,18 @@ class LoginScene extends BaseScene{
 
         if (GlobalData.isDev)
         {
-            uid = (Math.random()* 100000).toString();
+            // uid = (Math.random()* 100000).toString();
+            // name = "name_" + uid;
+            // icon = "icon_" + uid;     
+            // App.ControllerManager.applyFunc(ControllerConst.Login, UserConst.LOGIN_C2S, uid,name,icon);
+
+            uid = "u0002";
+            contextId = "c0001";
+            GlobalData.contextId = contextId;
             name = "name_" + uid;
-            icon = "icon_" + uid;     
-            App.ControllerManager.applyFunc(ControllerConst.Login, UserConst.LOGIN_C2S, uid,name,icon);
+            icon = "https://image.flaticon.com/icons/png/512/809/809476.png";     
+            App.ControllerManager.applyFunc(ControllerConst.Login, UserConst.LOGIN_C2S, uid, name, icon);
+
             return;      
         }
 

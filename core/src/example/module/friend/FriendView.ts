@@ -27,54 +27,37 @@ class FriendView extends BaseEuiView
     private onChange(e:eui.PropertyEvent):void
     {
         //获取点击消息
-        //console.log(this.list.selectedItem,this.list.selectedIndex)
+        //e.stopImmediatePropagation();
+        console.log(this.list.selectedItem,this.list.selectedIndex);
+
+        //fb switch group api   
+        //this.applyControllerFunc(ControllerConst.Index, IndexConst.Match_Mode, MatchType.Friends);
         
     }
 
     public initData():void 
     {
         super.initData();
-
-        // var dp1:eui.ArrayCollection = new eui.ArrayCollection();
-        // dp1.addItem({contextId: "1"});      
-        
-        this.list.itemRenderer = FriendItemRender;
-        this.list.itemRendererSkinName = "resource/skins/FriendItemSkin.exml";
-        
-
-        // var layout:eui.TileLayout = new eui.TileLayout();
-        // layout.requestedColumnCount = 1;
-
-        // var taskList:eui.List = new eui.List();
-        // taskList.layout = layout;
-        // taskList.itemRenderer = FriendItemRender;
-        // taskList.itemRendererSkinName = "resource/skins/FriendItemSkin.exml";
-        // taskList.dataProvider = dp1;
-        // this.addChild(taskList);
-
        
-
-        // var scroller:eui.Scroller = new eui.Scroller();
-        // scroller.percentWidth = scroller.percentHeight = 100;
-        // scroller.viewport = taskList;
+        this.list.itemRenderer = FriendItemRender;
+        this.list.itemRendererSkinName = "resource/skins/FriendItemSkin.exml";    
     }
 
     
  	public open(...param:any[]):void 
 	{
         var model:FriendModel = param[0];
-
-        //var contextArr:string[] = param[0];
         
         var dp:eui.ArrayCollection = new eui.ArrayCollection(model.getFriendsList());
         
         this.list.dataProvider = dp;
-		//list.data = 
     }
 
     private btnRandomMatchClick(e:egret.TouchEvent):void
 	{
-        
+        App.ViewManager.closeView(this);
+
+        this.applyControllerFunc(ControllerConst.Index, IndexConst.Match_Mode, MatchType.Random)
     }
 	
     private contextArr:string[] = []; 
@@ -121,20 +104,21 @@ class FriendView extends BaseEuiView
 
 	private btnBackClick(e:egret.TouchEvent):void
 	{
-        var groupId = e.data.groupId;
+        // var groupId = e.data.groupId;
 
-        if (GlobalData.contextId != groupId)
-        {
-            egretfb.EgretFBInstant.context.switchAsync(groupId).then
-            {
-                GlobalData.contextId = groupId;
-                this.applyControllerFunc(IndexConst.Match_Invite_C2S);
-            }
-        }
-        else
-        {
-             this.applyControllerFunc(IndexConst.Match_Invite_C2S);
-        }
+        // if (GlobalData.contextId != groupId)
+        // {
+        //     egretfb.EgretFBInstant.context.switchAsync(groupId).then
+        //     {
+        //         GlobalData.contextId = groupId;
+        //         this.applyControllerFunc(IndexConst.Match_Invite_C2S);
+        //     }
+        // }
+        // else
+        // {
+        //      this.applyControllerFunc(IndexConst.Match_Invite_C2S);
+        // }
+        App.ViewManager.closeView(this);
 	}
 
 }

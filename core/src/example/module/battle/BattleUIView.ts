@@ -12,7 +12,7 @@ class BattleUIView extends BaseEuiView
     // private bg:egret.Bitmap;
     // private objectContainer:egret.DisplayObjectContainer;
     private player:Player;
-    
+    private enemy:Player;
     // private btnOneStep:egret.Bitmap;
     // private btnTwoStep:egret.Bitmap;
     public imgIcon1:eui.Image;
@@ -22,6 +22,14 @@ class BattleUIView extends BaseEuiView
     public btnOneStep:eui.Image;
     public btnTwoStep:eui.Image;  
 
+    public imgReady:eui.Image;  
+    public imgGo:eui.Image;  
+
+    public imgHigh:eui.Image;
+    public imgLow:eui.Image;
+    public lblHigh:eui.Label;
+    public lblLow:eui.Label;
+
     // public enemys:Array<Enemy>;
   
 
@@ -29,8 +37,72 @@ class BattleUIView extends BaseEuiView
     {
         super.initData();
 
-        this.player = this.applyFunc(BattleConst.Get_Player);
+        
     }
+
+    public open(...param:any[]):void 
+    {
+        this.touchEnabled = false;
+        this.imgReady.visible = false;
+        this.imgGo.visible = false;
+        this.lblHigh.visible = false;
+        this.lblLow.visible = false;
+        this.imgHigh.visible = false;
+        this.imgLow.visible = false;
+
+        var ownVo:PlayerVO = GlobalData.battleModel.own;
+        var enemyVo:PlayerVO = GlobalData.battleModel.enemy;
+
+        this.player = this.applyFunc(BattleConst.Get_Player, ownVo.uid);
+        this.enemy = this.applyFunc(BattleConst.Get_Player, enemyVo.uid);
+      
+        //egret.Tween.get(this.imgReady).to({"visible":true},1000).to({"x":300},1000);  
+        egret.Tween.get(this.imgReady).wait(100).to({"visible":true}).wait(500).to({"visible":false});
+        egret.Tween.get(this.imgGo).wait(700).to({"visible":true}).wait(500).to({"visible":false}).call(this.gameStart);  
+
+         App.TimerManager.doTimer(100, -1, this.enterFrame, this);
+    }
+
+    public gameStart():void
+    {
+        this.touchEnabled = true;       
+    }
+
+    public gameOver():void
+    {
+        App.TimerManager.remove(this.enterFrame, this);
+    }
+
+    private enterFrame():void
+    {
+        this.lblProgress1.text = Math.round(this.player.currentIndex / 112 * 100).toString() + "%";
+        this.lblProgress1.text = Math.round(this.enemy.currentIndex / 112 * 100).toString() + "%";
+
+        var diff:number = this.player.currentIndex - this.enemy.currentIndex;
+        
+        console.log("own: " + this.player.currentIndex + " enemy: " + this.enemy.currentIndex);
+
+        if (diff >= 10)
+        {
+            this.imgHigh.visible = true;
+            this.lblHigh.visible = true;
+            this.lblHigh.text = Math.abs(diff).toString();
+        }
+        else if (diff <= -10)
+        {
+            this.imgLow.visible = true;
+            this.lblLow.visible = true;
+            this.lblLow.text = Math.abs(diff).toString();
+        }
+        else
+        {
+            this.imgHigh.visible = false;
+            this.lblHigh.visible = false;
+            this.imgLow.visible = false;
+            this.lblLow.visible = false;
+        }
+    }
+   
 
 
     public initUI():void
@@ -44,7 +116,6 @@ class BattleUIView extends BaseEuiView
     // public initUI():void 
     // {
     //     super.initUI();  
-
     //     this.btnOneStep = new egret.Bitmap();
     //     this.btnOneStep.touchEnabled = true;
     //     this.btnOneStep.texture = RES.getRes("ui_btnAttack_png");

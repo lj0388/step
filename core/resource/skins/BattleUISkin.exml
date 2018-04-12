@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="BattleUISkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image source="battle_bg_jpg" x="0" y="0" visible="false"/>
-	<e:Image source="04游戏_jpg" x="0" y="0" scaleX="1" scaleY="1" visible="false"/>
-	<e:Group id="mapGroup" width="640" height="1136" x="0" y="0"/>
-	<e:Image source="tile_narmal2_png" x="332" y="292" visible="false"/>
-	<e:Image source="tile_narmal2_png" x="30" y="292" visible="false"/>
-	<e:Image source="tile_narmal2_png" x="182" y="292" visible="false"/>
-	<e:Image source="tile_narmal2_png" x="482" y="292" visible="false"/>
-	<e:Image source="tile_narmal2_png" x="482" y="160.69" visible="false"/>
-	<e:Image source="tile_trap2_png" x="182" y="306" visible="false"/>
 	<e:Group id="uiGroup" width="640" height="1136" x="0" y="0">
 		<e:Image source="head_bg_png" x="39.5" y="29" scaleX="1" scaleY="1"/>
 		<e:Image source="head_bg_png" x="358" y="29" scaleX="1" scaleY="1"/>
@@ -19,5 +10,11 @@
 		<e:Label id="lblProgress2" text="100%" x="380.5" y="67" fontFamily="Microsoft YaHei" size="35" scaleX="1" scaleY="1" bold="true"/>
 		<e:Image id="btnOneStep" x="33.5" y="1001" scaleX="1" scaleY="1" source="一步按钮_png"/>
 		<e:Image id="btnTwoStep" x="330" y="1000" scaleX="1" scaleY="1" source="两步按钮_png" width="282" height="109"/>
+		<e:Image id="imgHigh" source="领先于对手话框_png" x="149.5" y="116.9"/>
+		<e:Image id="imgLow" source="落后于对手话框_png" x="157.5" y="896"/>
+		<e:Image id="imgGo" source="GO_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image id="imgReady" source="ready_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Label id="lblHigh" text="10" x="203" y="169.4" textColor="0x110f0f" bold="true" fontFamily="Microsoft YaHei"/>
+		<e:Label id="lblLow" text="10" x="210" y="915.5" textColor="0x110F0F" bold="true" fontFamily="Microsoft YaHei"/>
 	</e:Group>
 </e:Skin>

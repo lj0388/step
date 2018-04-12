@@ -10,7 +10,7 @@ class IndexScene extends BaseScene
 	{
 		super.onEnter();
 
-	    var data:any = param[0];
+	    var mode:any = param[0];
 		
 		this.addLayerAt(LayerManager.Game_Main, 0);
         this.addLayer(LayerManager.UI_Main);
@@ -22,7 +22,13 @@ class IndexScene extends BaseScene
        // App.ControllerManager.applyFunc(ControllerConst.RpgGame, RpgGameConst.GameInit, mapId);
 
         //开启UI部分
-        App.ViewManager.open(ViewConst.Index, data);
+		App.ViewManager.open(ViewConst.Index);
+			
+		if (mode == "replay")
+		{
+			App.ControllerManager.applyFunc(ControllerConst.Index, IndexConst.Match_Mode, GlobalData.matchMode);
+		}
+			
 
         //播放背景音乐
         App.SoundManager.playBg("sound_bg");

@@ -25,7 +25,7 @@ class FriendMatchView extends BaseEuiView
 	{
 		var data:any = param[0];
 
-		this.updateBattleRoles(data.groupId);		//更新对战角色信息
+		//this.updateBattleRoles(data.groupId);		//更新对战角色信息
 
 		this.showMatchTime(30);
     }
@@ -74,7 +74,15 @@ class FriendMatchView extends BaseEuiView
 
 	private onMatchTimeOver():void
 	{
-		this.lblTime.text = App.DateUtils.getFormatBySecond(0, 3);	
-		this.applyFunc(IndexConst.Match_TimeOver);
-	}
+		App.TimerManager.remove(this.onMatchTime, this);
+		//this.lblTime.text = App.DateUtils.getFormatBySecond(0, 3);	
+		//this.applyFunc(IndexConst.Match_TimeOver);
+	}	
+
+	public close(...param:any[]):void 
+	{
+		App.TimerManager.remove(this.onMatchTime, this);
+    }
+
+
 }

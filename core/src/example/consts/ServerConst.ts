@@ -12,6 +12,9 @@ class ServerConst
     public static Match_Confirm_C2S:number = 1007;  //接受/拒绝
     public static Match_Confirm_S2C:number = 1008;  //失效/拒绝
 
+    public static Match_Cancel_C2S:number = 1201;   //取消匹配
+    public static Match_Cancel_S2C:number = 1202;   //消除匹配邀请界面
+
     public static Match_Scuess_S2C:number = 1010;   //匹配成功 进入战斗
 
 

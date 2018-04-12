@@ -1,6 +1,5 @@
 class FriendProxy extends BaseProxy
 {
-
 	public constructor(controller:BaseController) 
 	{
 		super(controller);

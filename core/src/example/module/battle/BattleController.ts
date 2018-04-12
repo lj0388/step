@@ -36,7 +36,7 @@ class BattleController extends BaseController
 		//注册模块消息
         //this.registerFunc(BattleConst.BattleInit, this.InitBattle, this);
 	    this.registerFunc(BattleConst.Move_End, this.onMoveEnd, this);		        //移动终点
-        this.registerFunc(BattleConst.Get_Player, this.getOwnPlayer, this);       
+        this.registerFunc(BattleConst.Get_Player, this.getPlayer, this);       
 
         this.registerFunc(BattleConst.MovePlayer_S2C, this.onMovePlayerMsg, this);     //远程角色移动
         this.registerFunc(BattleConst.MoveEnd_S2C, this.onMoveEndMsg, this);     //远程角色移动
@@ -45,25 +45,34 @@ class BattleController extends BaseController
 
     private onMoveEnd(uid:string):void
     {
+        
         this.proxy.moveEndC2S(uid);
         //this.showBattleResultUI(true);
-        App.ViewManager.open(ViewConst.Victory);
+        //App.ViewManager.open(ViewConst.Victory);
     }
 
     private onMoveEndMsg(data:any):void
-    {
+    {        
         var player:Player = this.battleView.getPlayer(data.uid);
-        player.lose();
-        App.ViewManager.open(ViewConst.Fail);
+        if (data.win == "1")
+        {
+            player.win();
+            App.ViewManager.open(ViewConst.Victory);               
+        }
+        else
+        {
+            player.lose();
+            App.ViewManager.open(ViewConst.Fail);
+        }      
     }
 
 	/**
      * 获取主角
      * @returns {Hero}
      */
-    private getOwnPlayer():Player 
+    private getPlayer(uid:string):Player 
 	{
-        return this.battleView.getPlayer(GlobalData.userModel.uid);
+        return this.battleView.getPlayer(uid);
     }
 
     private onMovePlayerMsg(data:any):void

@@ -29,11 +29,11 @@ class MatchResultView extends BaseEuiView
 		
 		if (data.state == MatchState.Invalid)
 		{
-			//this.lblState.text = "invited Invalid";
+			this.lblState.text = "invited Invalid";
 		}
 		else if (data.state == MatchState.Refuse)
 		{
-			//this.lblState.text = "xxx refuse your invited";
+			this.lblState.text = "xxx refuse your invited";
 		}
 		
 

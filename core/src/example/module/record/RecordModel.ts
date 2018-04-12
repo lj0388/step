@@ -9,12 +9,10 @@ class RecordModel extends BaseModel
         super($controller);
     }
 
-	public groups:string[];
-	public friends:any[];
+	public records:any[];
 
 	public updateRecordData(data:any):void
 	{
-		this.groups = data.groups;
-		this.friends = data.friends;	
+		this.records = data;
 	}
 }

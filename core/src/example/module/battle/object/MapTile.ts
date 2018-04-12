@@ -38,7 +38,7 @@ class MapTile extends egret.Bitmap
         
         if (this.type == TileType.Normal)
         {
-            this.texture = RES.getRes("tile_down");
+            this.texture = RES.getRes("tile_narmal");
         }
         else if(this.type == TileType.Trap)
         {

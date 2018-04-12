@@ -13,7 +13,8 @@ class VictoryView extends BaseEuiView
 
 	public btnShare:eui.Image;
     public btnBack:eui.Image;  
- 	
+ 	public btnPlay:eui.Image; 
+
     /**
      *对面板进行显示初始化，用于子类继承
      *
@@ -23,7 +24,8 @@ class VictoryView extends BaseEuiView
         super.initUI();
       
      	this.btnShare.addEventListener(egret.TouchEvent.TOUCH_TAP,this.shareClickHandler,this);       
-        this.btnBack.addEventListener(egret.TouchEvent.TOUCH_TAP,this.backClickHandler,this);        
+        this.btnBack.addEventListener(egret.TouchEvent.TOUCH_TAP,this.backClickHandler,this);     
+        this.btnPlay.addEventListener(egret.TouchEvent.TOUCH_TAP,this.playClickHandler,this);      
     }
 
     public open(...param:any[]):void 
@@ -47,5 +49,13 @@ class VictoryView extends BaseEuiView
 	{
         // this.playSound();
         // App.ViewManager.open(ViewConst.Warehouse);
+        
+    }
+
+    private playClickHandler(e:egret.TouchEvent):void
+	{
+        //this.playSound();
+        //App.ViewManager.open(ViewConst.Shop);
+        App.SceneManager.runScene(SceneConsts.Index, "replay");
     }
 }

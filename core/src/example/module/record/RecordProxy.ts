@@ -12,6 +12,7 @@ class RecordProxy extends BaseProxy
 	{
 		var obj:any = {};
 	 	obj.uid = uid;
+		obj.groupId = "c0001";
 		this.sendSocketMsg(ServerConst.GET_Results_C2S, obj);
 	}
 

@@ -63,6 +63,9 @@ class RecordView extends BaseEuiView
 	{
         var model:RecordModel = param[0];
 
+        var dp:eui.ArrayCollection = new eui.ArrayCollection(model.records);
+        
+        this.list.dataProvider = dp;
         //var contextArr:string[] = param[0];
         
         // var dp:eui.ArrayCollection = new eui.ArrayCollection(model.getFriendsList());        
@@ -72,20 +75,21 @@ class RecordView extends BaseEuiView
 
 	private btnBackClick(e:egret.TouchEvent):void
 	{
-        var groupId = e.data.groupId;
+        // var groupId = e.data.groupId;
 
-        if (GlobalData.contextId != groupId)
-        {
-            egretfb.EgretFBInstant.context.switchAsync(groupId).then
-            {
-                GlobalData.contextId = groupId;
-                this.applyControllerFunc(IndexConst.Match_Invite_C2S);
-            }
-        }
-        else
-        {
-             this.applyControllerFunc(IndexConst.Match_Invite_C2S);
-        }
+        // if (GlobalData.contextId != groupId)
+        // {
+        //     egretfb.EgretFBInstant.context.switchAsync(groupId).then
+        //     {
+        //         GlobalData.contextId = groupId;
+        //         this.applyControllerFunc(IndexConst.Match_Invite_C2S);
+        //     }
+        // }
+        // else
+        // {
+        //      this.applyControllerFunc(IndexConst.Match_Invite_C2S);
+        // }
+        App.ViewManager.closeView(this);
 	}
 
 }

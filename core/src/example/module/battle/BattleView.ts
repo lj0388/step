@@ -24,7 +24,7 @@ class BattleView extends BaseSpriteView
         super.initUI();
 
         this.background = new egret.Bitmap();
-        this.background.texture = RES.getRes("battle_bg_jpg");
+        this.background.texture = RES.getRes("02");
         this.addChild(this.background);
 
         var maskLayer:egret.DisplayObjectContainer = new egret.DisplayObjectContainer();
