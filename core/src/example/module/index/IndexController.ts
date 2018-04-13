@@ -54,7 +54,7 @@ class IndexController extends BaseController
 		this.registerFunc(IndexConst.Match_Confirm_S2C, this.onMatchConfirm, this);				//匹配失败 失效/拒绝
 		this.registerFunc(IndexConst.Match_Scuess_S2C, this.onMatchSuccess, this);				//匹配成功战斗开始
 
-		this.registerFunc(IndexConst.Random_Match, this.OnRandeomMatch, this);					//从好友邀请转向随机匹配
+		//this.registerFunc(IndexConst.Random_Match, this.OnRandeomMatch, this);					//从好友邀请转向随机匹配
 		this.registerFunc(IndexConst.Match_Invite_C2S, this.OnMatchInviteC2S, this);			//切换好友组 进行匹配
 	}
 
@@ -83,6 +83,10 @@ class IndexController extends BaseController
 
 	private onMatchMode(mode:string):void
 	{
+		App.ViewManager.close(ViewConst.RandomMatch);
+		App.ViewManager.close(ViewConst.FriendMatch);
+		App.ViewManager.close(ViewConst.MatchResult);
+		
 		if (mode == MatchType.Random)
 		{
 			GlobalData.matchMode = MatchType.Random;
@@ -104,6 +108,7 @@ class IndexController extends BaseController
 		
 		App.ViewManager.close(ViewConst.RandomMatch);
 		App.ViewManager.close(ViewConst.FriendMatch);
+		App.ViewManager.close(ViewConst.MatchResult);
 	}
 
 	//关闭邀请界面
@@ -121,13 +126,13 @@ class IndexController extends BaseController
 	}
 
 	//从好友邀请转战随机邀请
-	private OnRandeomMatch():void
-	{
-		App.ViewManager.close(ViewConst.FriendMatch);
-		App.ViewManager.open(ViewConst.RandomMatch);
+	// private OnRandeomMatch():void
+	// {
+	// 	App.ViewManager.close(ViewConst.FriendMatch);
+	// 	App.ViewManager.open(ViewConst.RandomMatch);
 
-		this.proxy.matchPlayer(GlobalData.userModel.uid, GlobalData.contextId, MatchType.Random);	//匹配陌生人
-	}
+	// 	this.proxy.matchPlayer(GlobalData.userModel.uid, GlobalData.contextId, MatchType.Random);	//匹配陌生人
+	// }
 
 
 	//匹配邀请

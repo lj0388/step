@@ -30,6 +30,39 @@ class FriendView extends BaseEuiView
         //e.stopImmediatePropagation();
         console.log(this.list.selectedItem,this.list.selectedIndex);
 
+        var groupId:string = this.list.selectedItem.data.groupId;
+
+        if (!GlobalData.isDev)
+        {
+            if (GlobalData.contextId != groupId)
+            {
+                egretfb.EgretFBInstant.context.switchAsync(groupId).then(() => 
+                {
+                   egret.log('context.id switch:', egretfb.EgretFBInstant.context.getID());
+                   
+                   GlobalData.contextId = groupId;
+                
+                   this.applyControllerFunc(ControllerConst.Index, IndexConst.Match_Mode, MatchType.Friends);
+
+                }, (err) => 
+                {
+                    egret.log('switchAsync error', JSON.stringify(err));
+                })
+            }
+            else
+            {
+                this.applyControllerFunc(ControllerConst.Index, IndexConst.Match_Mode, MatchType.Friends);
+            }
+        }
+        else
+        {
+            GlobalData.contextId = groupId;
+
+            this.applyControllerFunc(ControllerConst.Index, IndexConst.Match_Mode, MatchType.Friends);
+        }
+
+        App.ViewManager.closeView(this);
+       
         //fb switch group api   
         //this.applyControllerFunc(ControllerConst.Index, IndexConst.Match_Mode, MatchType.Friends);
         

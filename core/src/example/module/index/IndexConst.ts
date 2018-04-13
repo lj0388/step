@@ -15,7 +15,7 @@ class IndexConst
     
     public static Match_Cancel_S2C = 212;
 
-    public static Random_Match = 220;
+    //public static Random_Match = 220;
     
     public static Match_Mode = 230;
 

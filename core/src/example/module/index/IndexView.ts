@@ -30,9 +30,10 @@ class IndexView extends BaseEuiView
 	public btnMatch:eui.Button;
 	public btnFriend:eui.Button;
 	public btnResult:eui.Button;	//战绩
-	public btnShare:eui.Button;
+	public btnShare:eui.Button;	
 	
-	
+	public hbox:eui.Group;
+	public btnSwitch:eui.Button;
 
 	public initUI():void 
 	{

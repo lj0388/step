@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "attack_json,tile_down,sound_bg,sound_readygo,global_json,btn_back_png,btn_share_png,friend_png,head_bg_png,icon_bg_png,index_bg_jpg,logo_png,match_png,onestep_png,lost_png,win_png,vs_png,twostep_png,time_png,single_png,result_png,ranking_png,pk_png,hero_png,monster_png,hero_json,monster_json,tile_narmal,tile_trap,tile_twosign,tile_end,hero2_png,hero2_json,tile_trap2_png,tile_start_png,tile_narmal2_png,sign_png,ready_png,GO_png,CarterOne_ttf,01_jpg,底01_png,底02_png,返回按钮_png,分享按钮_png,好友_png,好友选择背景_png,接受按钮_png,结果按钮_png,拒绝请求_png,两步按钮_png,领先于对手话框_png,落后于对手话框_png,匹配-底03_png,匹配-深底_png,取消按钮_png,双人对决按钮_png,随机好友_png,随机好友按钮_png,挑战好友_png,头像_png,random_icon_png,头像随机_png,邀请过期_png,一步按钮_png,游戏--头像底图_png,05-win_jpg,05-lose_jpg,02主画面.jpg,光芒_png,再玩一次_png,分享按钮2_png,失败_png,失败徽章_png,时间框_png,结果-vs_png,胜利徽章_png,页面02_png,02",
+			"keys": "attack_json,tile_down,sound_bg,sound_readygo,global_json,btn_back_png,btn_share_png,friend_png,head_bg_png,icon_bg_png,index_bg_jpg,logo_png,match_png,onestep_png,lost_png,win_png,vs_png,twostep_png,time_png,single_png,result_png,ranking_png,pk_png,hero_png,monster_png,hero_json,monster_json,tile_narmal,tile_trap,tile_twosign,tile_end,hero2_png,hero2_json,tile_trap2_png,tile_start_png,tile_narmal2_png,sign_png,ready_png,GO_png,01_jpg,底01_png,底02_png,返回按钮_png,分享按钮_png,好友_png,好友选择背景_png,接受按钮_png,结果按钮_png,拒绝请求_png,两步按钮_png,领先于对手话框_png,落后于对手话框_png,匹配-底03_png,匹配-深底_png,取消按钮_png,双人对决按钮_png,随机好友_png,随机好友按钮_png,挑战好友_png,头像_png,random_icon_png,头像随机_png,邀请过期_png,一步按钮_png,游戏--头像底图_png,05-win_jpg,05-lose_jpg,02主画面.jpg,光芒_png,再玩一次_png,分享按钮2_png,失败_png,失败徽章_png,时间框_png,结果-vs_png,胜利徽章_png,页面02_png,02,人物随机_png,警告框_png,警告标示_png,沙漏_png",
 			"name": "step"
 		}
 	],
@@ -507,6 +507,31 @@
 			"url": "assets/stepGame/design/04-游戏.jpg",
 			"type": "image",
 			"name": "04-游戏_jpg"
+		},
+		{
+			"url": "assets/stepGame/ui/人物随机.png",
+			"type": "image",
+			"name": "人物随机_png"
+		},
+		{
+			"url": "assets/stepGame/ui/警告框.png",
+			"type": "image",
+			"name": "警告框_png"
+		},
+		{
+			"url": "assets/stepGame/ui/警告标示.png",
+			"type": "image",
+			"name": "警告标示_png"
+		},
+		{
+			"url": "assets/stepGame/ui/沙漏.png",
+			"type": "image",
+			"name": "沙漏_png"
+		},
+		{
+			"url": "font/CarterOne.ttf",
+			"type": "bin",
+			"name": "CarterOne_ttf"
 		}
 	]
 }

@@ -4,17 +4,18 @@
 
     <e:Image x="0" y="0"  source="03-匹配好友接受信息_jpg" visible="false"/>
 	<e:Image source="01_jpg" x="0" y="0"/>
-	<e:Image source="logo_png" x="0" y="26"/>
+	<e:Image source="logo_png" x="28" y="26"/>
 	
 	
 	<e:Group id="randomGroup" width="640" height="1136">
 		<e:Image source="匹配-底03_png" x="0" y="344" scaleX="1" scaleY="1"/>
 		<e:Image source="vs_png" x="236" y="429" scaleX="1" scaleY="1"/>
 		<e:Image id="imgIcon" source="icon_bg_png" x="36" y="393" scaleX="1" scaleY="1"/>
-		<e:Image id="imgFriendIcon" x="412.5" y="390" source="头像随机-2_png"/>
+		<e:Image id="imgIcon2" source="icon_bg_png" x="409" y="393" scaleX="1" scaleY="1"/>
 		<e:Image source="匹配-深底_png" x="26" y="608"/>
-		<e:Label id="lblTime" text="Your friend sends a challenge \n to you" x="92.5" y="679" textColor="0x000000" fontFamily="Microsoft YaHei" bold="true" textAlign="center"/>
-		<e:Label id="lblName" text="QQ" x="76.5" y="575" textAlign="center" anchorOffsetX="0" width="123"/>
+		<e:Label id="lblTime" text="Your friend is challenging you \n to a duel!" x="103.5" y="679" textColor="0x000000" textAlign="center" bold="true"/>
+		<e:Label id="lblName" text="QQ" x="76.5" y="575" textAlign="center" anchorOffsetX="0" width="123" textColor="0x000000"/>
+		<e:Label id="lblName2" text="QQ" x="443" y="575" textAlign="center" anchorOffsetX="0" width="123" textColor="0x000000"/>
 		<e:Image id="btnCancel" x="322" y="953.5" source="取消按钮_png" anchorOffsetX="0" width="280.23" anchorOffsetY="0" height="97.15"/>
 		<e:Image id="btnAccept" source="接受按钮_png" x="39" y="953.5"/>
 	</e:Group>

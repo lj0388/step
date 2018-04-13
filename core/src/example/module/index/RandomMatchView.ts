@@ -23,7 +23,17 @@ class RandomMatchView extends BaseEuiView
 	{
 		var data:any = param[0];
 
-		//this.updateBattleRoles(data.groupId);		//更新对战角色信息
+		let imgLoader:egret.ImageLoader = new egret.ImageLoader();
+		imgLoader.crossOrigin = "anonymous";
+		imgLoader.once(egret.Event.COMPLETE, (evt:egret.Event) =>
+		{
+			var loader:egret.ImageLoader = <egret.ImageLoader>evt.currentTarget;
+			this.imgIcon.bitmapData = loader.data;			
+		}, this);		
+
+		imgLoader.load(GlobalData.userModel.icon);
+
+		this.lblName.text = GlobalData.userModel.name;
 
 		this.showMatchTime(30);
     }
@@ -31,18 +41,6 @@ class RandomMatchView extends BaseEuiView
 	private btnCancelClick(e:egret.TouchEvent):void
 	{
 		this.applyFunc(IndexConst.Match_Cancel);
-	}
-
-	public updateBattleRoles(groupId:string)
-	{
-		if (groupId == null)
-		{
-			//img random
-		}
-		else
-		{
-			//好友数据&头像集合
-		}
 	}
 
 	private lastTime = 0;
@@ -67,7 +65,7 @@ class RandomMatchView extends BaseEuiView
 
 	private onMatchTimeOver():void
 	{
-		this.lblTime.text = App.DateUtils.getFormatBySecond(0, 3);	
+		this.lblTime.text = "00:00";	
 		this.applyFunc(IndexConst.Match_TimeOver);
 	}
 }
