@@ -53,16 +53,18 @@ class BattleController extends BaseController
 
     private onMoveEndMsg(data:any):void
     {        
+        this.battleUIView.gameOver();
+        
         var player:Player = this.battleView.getPlayer(data.uid);
         if (data.win == "1")
         {
             player.win();
-            App.ViewManager.open(ViewConst.Victory);               
+            App.ViewManager.open(ViewConst.Victory, data);               
         }
         else
         {
             player.lose();
-            App.ViewManager.open(ViewConst.Fail);
+            App.ViewManager.open(ViewConst.Fail, data);
         }      
     }
 

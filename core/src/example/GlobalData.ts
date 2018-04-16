@@ -4,6 +4,8 @@ class GlobalData
 	{
 	}
 
+	public static isDev:boolean = true;					//开发环境
+
 	public static userModel:UserModel;
 	public static battleModel:BattleModel;
 
@@ -12,10 +14,11 @@ class GlobalData
 	public static userIcon:string;
 	public static contextId:string = "-1";
 	public static contextType:string;
-	public static senderId:string = null;				//好友邀请你
+	public static senderId:string = "-1";				//好友邀请你
+	
+	public static matchMode:string;						//随机 or 好友
+	public static battleStartTime:number;				//战斗开始的时间
 
-	public static isDev:boolean = true;					//开发环境
-
-	public static matchMode:string;			//随机 or 好友
+	public static matchTime:number = 45;
 
 }

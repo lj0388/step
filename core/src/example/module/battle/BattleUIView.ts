@@ -15,8 +15,8 @@ class BattleUIView extends BaseEuiView
     private enemy:Player;
     // private btnOneStep:egret.Bitmap;
     // private btnTwoStep:egret.Bitmap;
-    public imgIcon1:eui.Image;
-    public imgIcon2:eui.Image;
+    public imgIcon1:IconImg;
+    public imgIcon2:IconImg;
     public lblProgress1:eui.Label;
     public lblProgress2:eui.Label;
     public btnOneStep:eui.Image;
@@ -50,6 +50,7 @@ class BattleUIView extends BaseEuiView
         this.imgHigh.visible = false;
         this.imgLow.visible = false;
 
+        GlobalData.battleStartTime = egret.getTimer();
         var ownVo:PlayerVO = GlobalData.battleModel.own;
         var enemyVo:PlayerVO = GlobalData.battleModel.enemy;
 
@@ -60,7 +61,10 @@ class BattleUIView extends BaseEuiView
         egret.Tween.get(this.imgReady).wait(100).to({"visible":true}).wait(500).to({"visible":false});
         egret.Tween.get(this.imgGo).wait(700).to({"visible":true}).wait(500).to({"visible":false}).call(this.gameStart);  
 
-         App.TimerManager.doTimer(100, -1, this.enterFrame, this);
+        App.TimerManager.doTimer(100,0, this.enterFrame, this);
+
+        this.imgIcon1.loadImage(ownVo.icon);
+        this.imgIcon2.loadImage(enemyVo.icon);                        
     }
 
     public gameStart():void
@@ -75,8 +79,8 @@ class BattleUIView extends BaseEuiView
 
     private enterFrame():void
     {
-        this.lblProgress1.text = Math.round(this.player.currentIndex / 112 * 100).toString() + "%";
-        this.lblProgress1.text = Math.round(this.enemy.currentIndex / 112 * 100).toString() + "%";
+        this.lblProgress1.text = Math.floor((this.player.currentIndex - 1) / 112 * 100).toString() + "%";
+        this.lblProgress2.text = Math.floor((this.enemy.currentIndex - 1) / 112 * 100).toString() + "%";
 
         var diff:number = this.player.currentIndex - this.enemy.currentIndex;
         
@@ -88,13 +92,15 @@ class BattleUIView extends BaseEuiView
             this.lblHigh.visible = true;
             this.lblHigh.text = Math.abs(diff).toString();
         }
-        else if (diff <= -10)
+        
+        if (diff <= -10)
         {
             this.imgLow.visible = true;
             this.lblLow.visible = true;
             this.lblLow.text = Math.abs(diff).toString();
         }
-        else
+
+        if (Math.abs(diff) < 10)
         {
             this.imgHigh.visible = false;
             this.lblHigh.visible = false;

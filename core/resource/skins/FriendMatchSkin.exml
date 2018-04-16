@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="FriendMatchSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+<e:Skin class="FriendMatchSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
     
     <e:Image x="0" y="0"  source="file:///d%3A/H5/step/core/resource/assets/stepGame/design/03-%E5%8C%B9%E9%85%8D%E5%A5%BD%E5%8F%8B%E6%8B%92%E7%BB%9D.jpg" visible="false"/>
 	<e:Image source="01_jpg" x="0" y="0"/>
@@ -8,7 +8,7 @@
 	<e:Group id="friendGroup" width="640" height="1136">
 		<e:Image source="匹配-底03_png" x="0" y="345.52" scaleX="1" scaleY="1"/>
 		<e:Image source="vs_png" x="235" y="429" scaleX="1" scaleY="1"/>
-		<e:Image id="imgIcon" source="icon_bg_png" x="36" y="393" scaleX="1" scaleY="1"/>
+		<ns1:IconImg id="imgIcon" source="icon_bg_png" x="36" y="393" scaleX="1" scaleY="1"/>
 		<e:Image source="匹配-深底_png" x="26" y="608"/>
 		<e:Label id="lblTime" text="00:44" x="309" y="651" textColor="0x000000" size="32"/>
 		<e:Label id="lblName" text="QQ" x="52.5" y="575" anchorOffsetX="0" width="164" textAlign="center" textColor="0x000000"/>
@@ -19,9 +19,9 @@
 		<e:Label text="Waiting for the invite to be \n accepted..." x="130" y="706.5" textColor="0x000000" textAlign="center" size="32"/>
 	</e:Group>
 	<e:Group id="hbox" width="242" height="187" touchEnabled="false" touchChildren="false" anchorOffsetX="0" anchorOffsetY="0" y="392" x="380">
-		<e:Image x="30.5" y="2" source="random_icon_png" scaleX="1" scaleY="1"/>
-		<e:Image x="40.5" y="12" source="random_icon_png" scaleX="1" scaleY="1"/>
-		<e:Image x="50.5" y="22" source="random_icon_png" scaleX="1" scaleY="1"/>
+		<ns1:IconImg x="30.5" y="2" source="random_icon_png" scaleX="1" scaleY="1"/>
+		<ns1:IconImg x="40.5" y="12" source="random_icon_png" scaleX="1" scaleY="1"/>
+		<ns1:IconImg x="50.5" y="22" source="random_icon_png" scaleX="1" scaleY="1"/>
 		<e:layout>
 		<e:HorizontalLayout gap="-149" paddingLeft="0" horizontalAlign="center" verticalAlign="middle"/>
 		</e:layout>

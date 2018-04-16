@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="RandomMatchSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+<e:Skin class="RandomMatchSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
 
     <e:Image x="0" y="0"  source="file:///d%3A/H5/step/core/resource/assets/stepGame/design/03-%E5%8C%B9%E9%85%8D%E5%A5%BD%E5%8F%8B%E6%8B%92%E7%BB%9D.jpg" visible="false"/>
 	<e:Image source="01_jpg" x="0" y="0"/>
@@ -10,7 +10,7 @@
 	<e:Group id="randomGroup" width="640" height="1136">
 		<e:Image source="匹配-底03_png" x="0" y="344" scaleX="1" scaleY="1"/>
 		<e:Image source="vs_png" x="236" y="429" scaleX="1" scaleY="1"/>
-		<e:Image id="imgIcon" source="icon_bg_png" x="36" y="393" scaleX="1" scaleY="1"/>
+		<ns1:IconImg id="imgIcon" source="icon_bg_png" x="36" y="393" scaleX="1" scaleY="1"/>
 		<e:Image id="imgIcon0" x="408" y="393" scaleX="1" scaleY="1" source="random_icon_png"/>
 		<e:Image id="btnFriend" x="412.5" y="390" source="头像随机-2_png"/>
 		<e:Image source="匹配-深底_png" x="26" y="608"/>

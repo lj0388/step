@@ -1,6 +1,6 @@
 class RandomMatchView extends BaseEuiView
 {
-	public imgIcon:eui.Image;
+	public imgIcon:IconImg;
 	public lblName:eui.Label;
 	public lblTime:eui.Label;
 	public btnCancel:eui.Button;
@@ -23,19 +23,11 @@ class RandomMatchView extends BaseEuiView
 	{
 		var data:any = param[0];
 
-		let imgLoader:egret.ImageLoader = new egret.ImageLoader();
-		imgLoader.crossOrigin = "anonymous";
-		imgLoader.once(egret.Event.COMPLETE, (evt:egret.Event) =>
-		{
-			var loader:egret.ImageLoader = <egret.ImageLoader>evt.currentTarget;
-			this.imgIcon.bitmapData = loader.data;			
-		}, this);		
-
-		imgLoader.load(GlobalData.userModel.icon);
+		this.imgIcon.loadImage(GlobalData.userModel.icon);
 
 		this.lblName.text = GlobalData.userModel.name;
 
-		this.showMatchTime(30);
+		this.showMatchTime(GlobalData.matchTime);
     }
 	
 	private btnCancelClick(e:egret.TouchEvent):void
@@ -49,6 +41,7 @@ class RandomMatchView extends BaseEuiView
 	{
 		this.lastTime = time;
 		this.lblTime.text = App.DateUtils.getFormatBySecond(this.lastTime, 3);
+
 		App.TimerManager.doTimer(1000, time, this.onMatchTime, this, this.onMatchTimeOver);
 	}
 
@@ -58,14 +51,16 @@ class RandomMatchView extends BaseEuiView
 		this.lblTime.text = App.DateUtils.getFormatBySecond(this.lastTime, 3);
 	}
 
-	public matchSuccess():void
-	{
-		App.TimerManager.remove(this.onMatchTime, this);
-	}
-
 	private onMatchTimeOver():void
 	{
+		App.TimerManager.remove(this.onMatchTime, this);
+
 		this.lblTime.text = "00:00";	
-		this.applyFunc(IndexConst.Match_TimeOver);
+		this.applyFunc(IndexConst.Match_TimeOver);		
 	}
+
+	public close(...param:any[]):void 
+	{
+		App.TimerManager.remove(this.onMatchTime, this);
+    }
 }

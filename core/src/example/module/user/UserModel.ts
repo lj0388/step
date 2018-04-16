@@ -20,7 +20,6 @@ class UserModel extends BaseModel
         this.name = data.name;
         this.icon = data.icon;
         this.contextId = data.rid;
-        this.contextId = "c0001";
     }
 
     public isOwn(uid:string):boolean

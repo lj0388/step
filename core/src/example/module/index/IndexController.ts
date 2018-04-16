@@ -43,7 +43,7 @@ class IndexController extends BaseController
 
 
 		this.registerFunc(IndexConst.Match_Click, this.onMatchClick, this);						//点击匹配对战
-		this.registerFunc(IndexConst.Match_Mode, this.onMatchMode, this);						//点击匹配对战
+		this.registerFunc(IndexConst.Match_Mode, this.onMatchMode, this);						//匹配模式 随机/好友
 
 		this.registerFunc(IndexConst.Match_Cancel, this.onMatchCancel, this);					//点击匹配取消
 		this.registerFunc(IndexConst.Match_Cancel_S2C, this.onMatchCancelS2C, this);			//匹配取消 关闭邀请界面
@@ -51,10 +51,9 @@ class IndexController extends BaseController
 
 		this.registerFunc(IndexConst.Match_Invite_S2C, this.onMatchInviteS2C, this);			//匹配邀请	       
 		this.registerFunc(IndexConst.Match_Confirm_Click, this.onMatchConfirmClick, this);		//点击匹配接受/拒绝		
-		this.registerFunc(IndexConst.Match_Confirm_S2C, this.onMatchConfirm, this);				//匹配失败 失效/拒绝
-		this.registerFunc(IndexConst.Match_Scuess_S2C, this.onMatchSuccess, this);				//匹配成功战斗开始
+		this.registerFunc(IndexConst.Match_Confirm_S2C, this.onMatchConfirmS2C, this);				//匹配失败 失效/拒绝
+		this.registerFunc(IndexConst.Match_Scuess_S2C, this.onMatchSuccessS2C, this);				//匹配成功战斗开始
 
-		//this.registerFunc(IndexConst.Random_Match, this.OnRandeomMatch, this);					//从好友邀请转向随机匹配
 		this.registerFunc(IndexConst.Match_Invite_C2S, this.OnMatchInviteC2S, this);			//切换好友组 进行匹配
 	}
 
@@ -63,11 +62,8 @@ class IndexController extends BaseController
 
 	//匹配对战
 	private onMatchClick():void
-	{
-		// this.indexView.showMatchUI();
-		// this.indexView.showMatchTime(30);		//30秒倒计时
-		
-		if (GlobalData.contextId != "-1")		//匹配好友
+	{		
+		if (GlobalData.contextId != "-1")						//匹配好友
 		{
 			GlobalData.matchMode = MatchType.Friends;
 			App.ViewManager.open(ViewConst.FriendMatch);
@@ -83,9 +79,7 @@ class IndexController extends BaseController
 
 	private onMatchMode(mode:string):void
 	{
-		App.ViewManager.close(ViewConst.RandomMatch);
-		App.ViewManager.close(ViewConst.FriendMatch);
-		App.ViewManager.close(ViewConst.MatchResult);
+		this.closeAll();
 		
 		if (mode == MatchType.Random)
 		{
@@ -104,11 +98,9 @@ class IndexController extends BaseController
 	//匹配取消
 	private onMatchCancel():void
 	{
-		this.proxy.matchCancel(GlobalData.userModel.uid);
-		
-		App.ViewManager.close(ViewConst.RandomMatch);
-		App.ViewManager.close(ViewConst.FriendMatch);
-		App.ViewManager.close(ViewConst.MatchResult);
+		this.closeAll();
+
+		this.proxy.matchCancel(GlobalData.userModel.uid);	
 	}
 
 	//关闭邀请界面
@@ -117,23 +109,12 @@ class IndexController extends BaseController
 		App.ViewManager.close(ViewConst.MatchInvite);
 	}
 
-
 	//点击 接受/拒绝 邀请
 	private onMatchConfirmClick(confirm:string, data:any):void
 	{
 		egret.log("confirmType: " + confirm);
 		this.proxy.matchConfirm(GlobalData.userModel.uid, GlobalData.userModel.contextId, confirm, data.senderId);
 	}
-
-	//从好友邀请转战随机邀请
-	// private OnRandeomMatch():void
-	// {
-	// 	App.ViewManager.close(ViewConst.FriendMatch);
-	// 	App.ViewManager.open(ViewConst.RandomMatch);
-
-	// 	this.proxy.matchPlayer(GlobalData.userModel.uid, GlobalData.contextId, MatchType.Random);	//匹配陌生人
-	// }
-
 
 	//匹配邀请
 	private OnMatchInviteC2S(data:any):void
@@ -144,22 +125,18 @@ class IndexController extends BaseController
 	//匹配邀请        		
 	private onMatchInviteS2C(data:any):void
 	{
-		//this.indexView.showInviteUI(data);
 		App.ViewManager.open(ViewConst.MatchInvite, data);
 	}
 
 	//匹配拒绝/过期        		
-	private onMatchConfirm(data:any):void
+	private onMatchConfirmS2C(data:any):void
 	{
-		//this.indexView.showInviteResultUI(data);
 		App.ViewManager.open(ViewConst.MatchResult, data);
 	}
 
 	//匹配成功
-	private onMatchSuccess(data:any):void
+	private onMatchSuccessS2C(data:any):void
 	{
-		this.randomMatchView.matchSuccess();
-
 		GlobalData.battleModel.updateData(data);    
 
 		App.SceneManager.runScene(SceneConsts.Battle, data);
@@ -168,8 +145,14 @@ class IndexController extends BaseController
 	//匹配超时        		
 	private onMatchTimeOver():void
 	{
-		//this.indexView.showIndexUI();
 		App.ViewManager.close(ViewConst.RandomMatch);
 		App.ViewManager.close(ViewConst.FriendMatch);
+	}
+
+	private closeAll():void
+	{
+		App.ViewManager.close(ViewConst.RandomMatch);
+		App.ViewManager.close(ViewConst.FriendMatch);
+		App.ViewManager.close(ViewConst.MatchResult);
 	}
 }

@@ -1,6 +1,6 @@
 class FriendMatchView extends BaseEuiView
 {
-	public imgIcon:eui.Image;
+	public imgIcon:IconImg;
 	public lblName:eui.Label;
 	public lblName2:eui.Label;
 
@@ -29,25 +29,13 @@ class FriendMatchView extends BaseEuiView
 	{
 		var data:any = param[0];
 
-		if (!GlobalData.isDev)
-		{
-			let imgLoader:egret.ImageLoader = new egret.ImageLoader();
-			imgLoader.crossOrigin = "anonymous";
-			imgLoader.once(egret.Event.COMPLETE, (evt:egret.Event) =>
-			{
-				var loader:egret.ImageLoader = <egret.ImageLoader>evt.currentTarget;
-				this.imgIcon.bitmapData = loader.data;			
-			}, this);		
+		this.imgIcon.loadImage(GlobalData.userModel.icon);
 
-			imgLoader.load(GlobalData.userModel.icon);
+		this.lblName.text = GlobalData.userModel.name;
 
-			this.lblName.text = GlobalData.userModel.name;
-		}
-		
+		this.showMatchTime(GlobalData.matchTime);		
 
 		this.updateGroupRoles(GlobalData.contextId);		//更新对战角色信息
-
-		this.showMatchTime(30);
     }
 
 	private btnCancelClick(e:egret.TouchEvent):void
@@ -63,46 +51,30 @@ class FriendMatchView extends BaseEuiView
 	
 	public updateGroupRoles(groupId:string)
 	{	
-
-		if (GlobalData.isDev)
+		if (GlobalData.contextId == "-1")
 			return;
 		
 		this.hbox.removeChildren();
 
 		var j:number = 0;
 
-		egretfb.EgretFBInstant.context.getPlayersAsync().then((players) => 
+		FBInstant.context.getPlayersAsync().then((players) => 
 		{
+			this.lblName2.text = players.length.toString() + " friends";
+
 			for (var i:number = 0; i < players.length; i++)
 			{
 				if (i >= 3)
 					break;
 
-				this.loadImg(players[i].getPhoto());
+				var img:IconImg = new IconImg();
+				img.width = 182;
+				img.height = 182;
+				img.loadImage(players[i].getPhoto());
+				this.hbox.addChild(img);				
 			}			
-
-			this.lblName2.text = players.length.toString() + " friends";
 		});		
 	}
-
-	private loadImg(icon:string):void
-	{
-		let imgLoader:egret.ImageLoader = new egret.ImageLoader();
-		imgLoader.crossOrigin = "anonymous";
-		imgLoader.once(egret.Event.COMPLETE, (evt:egret.Event) =>
-		{
-			var loader:egret.ImageLoader = <egret.ImageLoader>evt.currentTarget;
-			
-			var img:eui.Image = new eui.Image();
-			img.width = 182;
-			img.height = 182;
-			img.bitmapData = loader.data;
-			this.hbox.addChild(img);		
-		
-		}, this);		
-		imgLoader.load(icon);
-	}
-
 
 	private lastTime = 0;
 
@@ -110,6 +82,7 @@ class FriendMatchView extends BaseEuiView
 	{
 		this.lastTime = time;
 		this.lblTime.text = App.DateUtils.getFormatBySecond(this.lastTime, 3);
+
 		App.TimerManager.doTimer(1000, time, this.onMatchTime, this, this.onMatchTimeOver);
 	}
 
@@ -117,11 +90,6 @@ class FriendMatchView extends BaseEuiView
 	{
 		this.lastTime--;
 		this.lblTime.text = App.DateUtils.getFormatBySecond(this.lastTime, 3);
-	}
-
-	public matchSuccess():void
-	{
-		App.TimerManager.remove(this.onMatchTime, this);
 	}
 
 	private onMatchTimeOver():void
@@ -136,6 +104,5 @@ class FriendMatchView extends BaseEuiView
 	{
 		App.TimerManager.remove(this.onMatchTime, this);
     }
-
 
 }

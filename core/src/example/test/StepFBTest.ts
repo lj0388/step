@@ -7,7 +7,7 @@ class StepFBTest
 
     private initSDK()
     {
-        egretfb.EgretFBInstant.initializeAsync().then
+        FBInstant.initializeAsync().then
         {
             this.loadAssets();
         }
@@ -22,19 +22,21 @@ class StepFBTest
 
     private onResourceLoadProgress(itemsLoaded:number, itemsTotal:number):void 
     {
-         egretfb.EgretFBInstant.setLoadingProgress(itemsLoaded / itemsTotal);        
+         FBInstant.setLoadingProgress(itemsLoaded / itemsTotal);
     }
 
     private onResourceLoadComplete():void 
-    {
-        egretfb.EgretFBInstant.startGameAsync().then
+    {      
+        
+        FBInstant.startGameAsync().then
         {
-            GlobalData.userId = egretfb.EgretFBInstant.player.getID();
-            GlobalData.userName = egretfb.EgretFBInstant.player.getName();
-            GlobalData.userIcon = egretfb.EgretFBInstant.player.getPhoto();
-            GlobalData.contextId = egretfb.EgretFBInstant.context.getID();
-            GlobalData.contextType = egretfb.EgretFBInstant.context.getType();  
-            var data:any = egretfb.EgretFBInstant.getEntryPointData();
+            GlobalData.userId = FBInstant.player.getID();
+            GlobalData.userName = FBInstant.player.getName();
+            GlobalData.userIcon = FBInstant.player.getPhoto();
+            GlobalData.contextId = FBInstant.context.getID();
+            GlobalData.contextType = FBInstant.context.getType();  
+        
+            var data:any = FBInstant.getEntryPointData();
             if (data.hasOwnProperty("senderId"))
                 GlobalData.senderId = data.senderId;
 
@@ -44,23 +46,23 @@ class StepFBTest
 
     private startGame()
     {
+        App.Init();
+
         this.initModule();       
-	    App.Init();
+	   
 		this.initSocket();
 
-		//App.SceneManager.runScene(SceneConsts.Battle);
         //App.SoundManager.setBgOn(false);
         //App.SoundManager.setEffectOn(false);  
+
+        //App.SceneManager.runScene(SceneConsts.Battle);
     }
 
 	private serverUrl:string = "wss://sdk.vrseastar.com/step";
 
 	private initSocket():void
 	{
-		if (GlobalData.isDev)
-			App.Socket.connect();
-		else
-			App.Socket.connectByUrl(this.serverUrl);
+		App.Socket.connectByUrl(this.serverUrl);
 		
         App.MessageCenter.addListener(SocketConst.SOCKET_CONNECT, ()=>
 		{

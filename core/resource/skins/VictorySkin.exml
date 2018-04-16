@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="VictorySkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+<e:Skin class="VictorySkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
 	<e:Image width="640" height="1136" x="0" y="0" source="05-lose_jpg" visible="false"/>
     <e:Rect width="640" height="1136" x="0" y="0" fillAlpha="0.5"/>
     <e:Image x="375.35" y="213.02" anchorOffsetX="0" width="203.3" anchorOffsetY="0" height="196.34" source="失败徽章_png"/>
@@ -13,7 +13,7 @@
 	<e:Image id="btnBack" source="返回按钮_png" x="361.06" y="904"/>
 	<e:Image id="btnShare" source="分享按钮2_png" x="188" y="901"/>
 	<e:Label id="lblTime" text="00:21" x="227.5" y="645" anchorOffsetX="0" width="209" fontFamily="Microsoft YaHei" textAlign="center" size="30" textColor="0x000000"/>
-	<e:Image id="imgIcon" width="136" height="116" x="198" y="294" anchorOffsetX="0" anchorOffsetY="0"/>
-	<e:Image id="imgIcon2" width="78.55" height="67" x="438.73" y="273.5" anchorOffsetX="0" anchorOffsetY="0"/>
+	<ns1:IconImg id="imgIcon" width="136" height="116" x="198" y="294" anchorOffsetX="0" anchorOffsetY="0"/>
+	<ns1:IconImg id="imgIcon2" width="78.55" height="67" x="438.73" y="273.5" anchorOffsetX="0" anchorOffsetY="0"/>
 
 </e:Skin>

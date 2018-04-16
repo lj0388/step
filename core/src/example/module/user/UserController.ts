@@ -23,20 +23,11 @@ class UserController extends BaseController
       
         this.registerFunc(UserConst.LOGIN_C2S, this.onLogin, this);
         this.registerFunc(UserConst.LOGIN_S2C, this.loginSuccess, this);
-
-        this.registerFunc(UserConst.Invite_LOGIN_C2S, this.onInviteLogin, this);
-        this.registerFunc(UserConst.Invite_LOGIN_S2C, this.loginSuccess, this);
-        //this.registerFunc(UserConst.Invite_LOGIN_S2C, this.inviteLoginSuccess, this);
     }
 
-	private onLogin(uid:string, name:string, icon:string):void
+	private onLogin(uid:string, name:string, icon:string, rid:string, sid:string):void
 	{
-        this.userProxy.login(uid, name, icon);
-    }
-
-    private onInviteLogin(uid:string, name:string, icon:string, rid:string, sid:string):void
-	{
-        this.userProxy.login(uid, name, icon);
+        this.userProxy.login(uid, name, icon, rid, sid);
     }
 
     /**
@@ -46,19 +37,7 @@ class UserController extends BaseController
 	{
         //保存数据
 		this.userModel.updateData(data);
-        //本模块UI处理
-        //this.userView.loginSuccess();
-        //UI跳转
-        //App.ViewManager.close(ViewConst.Login);
-        //var model:BaseModel = this.getControllerModel(ControllerConst.Login);
+      
 		App.SceneManager.runScene(SceneConsts.Index, data);
     }
-
-    // private inviteLoginSuccess(data:any):void
-	// {
-    //     this.userModel.updateData(data);
-    //     App.SceneManager.runScene(SceneConsts.Index, data);
-    // }
-   
-
 }

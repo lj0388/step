@@ -7,8 +7,8 @@ class FailView extends BaseEuiView
         this.skinName = "resource/skins/FailSkin.exml";
     }
 
-    public imgIcon:eui.Image;
-    public imgIcon2:eui.Image;
+    public imgIcon:IconImg;
+    public imgIcon2:IconImg;
     public lblTime:eui.Label;
 
 	public btnShare:eui.Image;
@@ -30,7 +30,15 @@ class FailView extends BaseEuiView
 
     public open(...param:any[]):void 
     {
-       
+        var data:any = param[0];
+        var ownVo:PlayerVO = GlobalData.battleModel.own;
+        var enemyVo:PlayerVO = GlobalData.battleModel.enemy;
+
+        this.imgIcon.loadImage(ownVo.icon);
+        this.imgIcon2.loadImage(enemyVo.icon);
+
+        var time:number = egret.getTimer() - GlobalData.battleStartTime;
+        this.lblTime.text = App.DateUtils.getFormatBySecond(time / 1000, 3);
     }
 
     private playSound():void

@@ -6,7 +6,6 @@ class UserProxy extends BaseProxy
 
         //注册从服务器返回消息的监听
         this.receiveServerMsg(ServerConst.LOGIN_S2C, this.loginSuccess, this);
-        this.receiveServerMsg(ServerConst.Invite_LOGIN_S2C, this.inviteLoginSuccess, this);
     }
 
     /**
@@ -14,16 +13,25 @@ class UserProxy extends BaseProxy
      * @param userName
      * @param pwd
      */
-    public login(uid:string, name:string, icon:string):void
+    public login(uid:string, name:string, icon:string, rid:string, sid:string):void
 	{
         var paramObj:any = 
 		{
             "uid":uid,
             "name":name,
-			"icon":icon         
+			"icon":icon,
+            "rid":rid
         };
 
-        this.sendSocketMsg(ServerConst.LOGIN_C2S, paramObj);
+        if (sid != "-1")
+        {
+            paramObj.sid = sid;
+            this.sendSocketMsg(ServerConst.Invite_LOGIN_C2S, paramObj);
+        }
+        else
+        {
+             this.sendSocketMsg(ServerConst.LOGIN_C2S, paramObj);
+        }
     }
 
     /**
@@ -32,36 +40,5 @@ class UserProxy extends BaseProxy
     public loginSuccess(obj:any):void
 	{
         this.applyFunc(UserConst.LOGIN_S2C, obj);
-    }
-
-
-    /**
-     * 邀请登陆
-     * @param userName
-     * @param pwd
-     */
-    public inviteLogin(uid:string, name:string, icon:string, rid:string, sid:string):void
-	{
-        var paramObj:any = 
-		{
-            "uid":uid,
-            "name":name,
-			"icon":icon,
-            "rid":rid,
-            "sid":sid
-        };
-
-        this.sendSocketMsg(ServerConst.Invite_LOGIN_C2S, paramObj);
-    }
-    
-    /**
-     * 邀请登陆成功
-     * @param userName
-     * @param pwd
-     */
-    public inviteLoginSuccess(obj:any):void
-	{
-        this.applyFunc(UserConst.Invite_LOGIN_S2C, obj);
-    }
-    
+    }    
 }

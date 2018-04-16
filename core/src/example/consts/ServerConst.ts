@@ -4,7 +4,7 @@ class ServerConst
     public static LOGIN_S2C:number = 1002;
 
     public static Invite_LOGIN_C2S:number = 1003;
-    public static Invite_LOGIN_S2C:number = 1004;
+    //public static Invite_LOGIN_S2C:number = 1004;
 
 	public static Match_Invite_C2S:number = 1005;  //匹配邀请
     public static Match_Invite_S2C:number = 1006;  //邀请确认 针对好友
