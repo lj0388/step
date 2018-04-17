@@ -51,10 +51,12 @@ class IndexController extends BaseController
 
 		this.registerFunc(IndexConst.Match_Invite_S2C, this.onMatchInviteS2C, this);			//匹配邀请	       
 		this.registerFunc(IndexConst.Match_Confirm_Click, this.onMatchConfirmClick, this);		//点击匹配接受/拒绝		
-		this.registerFunc(IndexConst.Match_Confirm_S2C, this.onMatchConfirmS2C, this);				//匹配失败 失效/拒绝
-		this.registerFunc(IndexConst.Match_Scuess_S2C, this.onMatchSuccessS2C, this);				//匹配成功战斗开始
+		this.registerFunc(IndexConst.Match_Confirm_S2C, this.onMatchConfirmS2C, this);			//匹配失败 失效/拒绝
+		this.registerFunc(IndexConst.Match_Scuess_S2C, this.onMatchSuccessS2C, this);			//匹配成功战斗开始
 
-		this.registerFunc(IndexConst.Match_Invite_C2S, this.OnMatchInviteC2S, this);			//切换好友组 进行匹配
+		//this.registerFunc(IndexConst.Match_Invite_C2S, this.OnMatchInviteC2S, this);			//切换好友组 进行匹配
+		
+		this.registerFunc(IndexConst.Update_IndexView, this.OnUpdateIndexView, this);			//更新首屏页面信息 如好友头像
 	}
 
 	
@@ -112,15 +114,34 @@ class IndexController extends BaseController
 	//点击 接受/拒绝 邀请
 	private onMatchConfirmClick(confirm:string, data:any):void
 	{
-		egret.log("confirmType: " + confirm);
-		this.proxy.matchConfirm(GlobalData.userModel.uid, GlobalData.userModel.contextId, confirm, data.senderId);
+		if (confirm == ConfirmType.Accept)
+		{
+			FBInstant.context.switchAsync(data.groupId).then(() => 
+            {
+                egret.log('context.id switch:', egretfb.EgretFBInstant.context.getID());
+                
+                GlobalData.contextId = data.groupId;
+				
+				this.OnUpdateIndexView();
+                this.proxy.matchConfirm(GlobalData.userModel.uid, GlobalData.userModel.contextId, confirm, data.senderId);
+
+            }, (err) => 
+            {
+                egret.log('switchAsync error', JSON.stringify(err));
+            })
+		}
+		else
+		{
+			this.proxy.matchConfirm(GlobalData.userModel.uid, GlobalData.userModel.contextId, confirm, data.senderId);
+		}
+		
 	}
 
 	//匹配邀请
-	private OnMatchInviteC2S(data:any):void
-	{
-		this.proxy.matchPlayer(GlobalData.userModel.uid, GlobalData.contextId, MatchType.Friends);
-	}
+	// private OnMatchInviteC2S(data:any):void
+	// {
+	// 	this.proxy.matchPlayer(GlobalData.userModel.uid, GlobalData.contextId, MatchType.Friends);
+	// }
 
 	//匹配邀请        		
 	private onMatchInviteS2C(data:any):void
@@ -147,6 +168,12 @@ class IndexController extends BaseController
 	{
 		App.ViewManager.close(ViewConst.RandomMatch);
 		App.ViewManager.close(ViewConst.FriendMatch);
+	}
+
+	//更新首页信息（好友头像)
+	private OnUpdateIndexView():void
+	{
+		this.indexView.updateGroupRoles(GlobalData.contextId);
 	}
 
 	private closeAll():void

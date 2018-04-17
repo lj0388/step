@@ -19,53 +19,37 @@ class FriendView extends BaseEuiView
 		super.initUI();
 		
         this.btnRandomMatch.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnRandomMatchClick, this);
-        this.list.addEventListener(eui.ItemTapEvent.ITEM_TAP,this.onChange,this);
+        this.list.addEventListener(eui.ItemTapEvent.ITEM_TAP,this.onItemClick,this);
 		this.btnFriend.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnFriendClick, this);
 		this.btnBack.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnBackClick, this);
 	}
 
-    private onChange(e:eui.PropertyEvent):void
+    private onItemClick(e:eui.ItemTapEvent):void
     {
-        //获取点击消息
-        //e.stopImmediatePropagation();
-        console.log(this.list.selectedItem,this.list.selectedIndex);
+        var groupId:string = e.itemRenderer.data.groupId;
 
-        var groupId:string = this.list.selectedItem.data.groupId;
-
-        if (!GlobalData.isDev)
+        if (GlobalData.contextId != groupId)
         {
-            if (GlobalData.contextId != groupId)
+            FBInstant.context.switchAsync(groupId).then(() => 
             {
-                egretfb.EgretFBInstant.context.switchAsync(groupId).then(() => 
-                {
-                   egret.log('context.id switch:', egretfb.EgretFBInstant.context.getID());
-                   
-                   GlobalData.contextId = groupId;
+                egret.log('context.id switch:', egretfb.EgretFBInstant.context.getID());
                 
-                   this.applyControllerFunc(ControllerConst.Index, IndexConst.Match_Mode, MatchType.Friends);
-
-                }, (err) => 
-                {
-                    egret.log('switchAsync error', JSON.stringify(err));
-                })
-            }
-            else
-            {
+                GlobalData.contextId = groupId;
+                
+                this.applyControllerFunc(ControllerConst.Index, IndexConst.Update_IndexView);
                 this.applyControllerFunc(ControllerConst.Index, IndexConst.Match_Mode, MatchType.Friends);
-            }
+
+            }, (err) => 
+            {
+                egret.log('switchAsync error', JSON.stringify(err));
+            })
         }
         else
         {
-            GlobalData.contextId = groupId;
-
             this.applyControllerFunc(ControllerConst.Index, IndexConst.Match_Mode, MatchType.Friends);
         }
 
-        App.ViewManager.closeView(this);
-       
-        //fb switch group api   
-        //this.applyControllerFunc(ControllerConst.Index, IndexConst.Match_Mode, MatchType.Friends);
-        
+        App.ViewManager.closeView(this);        
     }
 
     public initData():void 
@@ -97,60 +81,26 @@ class FriendView extends BaseEuiView
 
 	private btnFriendClick(e:egret.TouchEvent):void
 	{
-		this.applyFunc(IndexConst.Match_Click);
-
         egret.log('context.id now:', egretfb.EgretFBInstant.context.getID())
 
-        egretfb.EgretFBInstant.context.chooseAsync().then(() => 
+        FBInstant.context.chooseAsync().then(() => 
         {
-            //var saveData = { score: 123, value: Math.floor(Math.random() * 100) }
-
-            //  egretfb.EgretFBInstant.player.getDataAsync(['context']).then((data) =>
-            //  {
-            //      egret.log('getDataAsync', data['context'])
-            //  })
-
             var contextId = egretfb.EgretFBInstant.context.getID();
-            this.contextArr.push(contextId);
-            
-            var saveData = {context: this.contextArr};
-
-            egretfb.EgretFBInstant.player.setDataAsync(saveData).then(() => 
-            {
-                egretfb.EgretFBInstant.player.getDataAsync(['context']).then((data) =>
-                {
-                    egret.log('getDataAsync', data['context'])
-                })
-                
-                egret.log('data is set');
-            })
-
+            GlobalData.contextId = contextId;
             egret.log('context.id chooseAsync:', egretfb.EgretFBInstant.context.getID());
+           
+            this.applyControllerFunc(ControllerConst.Index, IndexConst.Match_Mode, MatchType.Friends)
+            
+            App.ViewManager.closeView(this);
 
         }, (err) =>
         {
             egret.log('chooseAsync error', JSON.stringify(err));
         })
-
-		//App.SceneManager.runScene(SceneConsts.Battle);	
 	}
 
 	private btnBackClick(e:egret.TouchEvent):void
 	{
-        // var groupId = e.data.groupId;
-
-        // if (GlobalData.contextId != groupId)
-        // {
-        //     egretfb.EgretFBInstant.context.switchAsync(groupId).then
-        //     {
-        //         GlobalData.contextId = groupId;
-        //         this.applyControllerFunc(IndexConst.Match_Invite_C2S);
-        //     }
-        // }
-        // else
-        // {
-        //      this.applyControllerFunc(IndexConst.Match_Invite_C2S);
-        // }
         App.ViewManager.closeView(this);
 	}
 

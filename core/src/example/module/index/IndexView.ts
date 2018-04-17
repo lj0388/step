@@ -43,7 +43,10 @@ class IndexView extends BaseEuiView
 		super.initUI();
 		
 		this.btnMatch.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnMatchClick, this);
+
 		this.btnSwitch.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnFriendClick, this);
+		this.hbox.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnFriendClick, this);
+		
 		this.btnResult.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnResultClick, this);
 		this.btnShare.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnShareClick, this);
 	}

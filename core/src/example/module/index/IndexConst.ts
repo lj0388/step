@@ -8,16 +8,15 @@ class IndexConst
     public static Match_Confirm_Click:number = 203;
     public static Match_Confirm_S2C:number = 204;      //拒绝邀请
     public static Match_Scuess_S2C:number = 206;       //匹配成功 进入战斗
-
     public static Match_TimeOver = 210;
 
-    public static Match_Cancel = 211;
-    
+    public static Match_Cancel = 211;    
     public static Match_Cancel_S2C = 212;
 
-    //public static Random_Match = 220;
-    
+    //public static Random_Match = 220;    
     public static Match_Mode = 230;
+
+    public static Update_IndexView = 240;
 
     // public static Match_C2S:number = 1005;  //匹配邀请
     // public static Match_S2C:number = 1006;  //邀请确认 针对好友

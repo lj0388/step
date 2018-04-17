@@ -31,13 +31,19 @@ class BattleUIView extends BaseEuiView
     public lblLow:eui.Label;
 
     // public enemys:Array<Enemy>;
-  
+    
+    public initUI():void
+	{
+        super.initUI();
+      
+        this.btnOneStep.addEventListener(egret.TouchEvent.TOUCH_TAP,this.btnOneStepClick,this);
+        this.btnTwoStep.addEventListener(egret.TouchEvent.TOUCH_TAP,this.btnTwoStepClick,this);
+    }
+
 
     public initData():void 
     {
-        super.initData();
-
-        
+        super.initData();        
     }
 
     public open(...param:any[]):void 
@@ -108,51 +114,14 @@ class BattleUIView extends BaseEuiView
             this.lblLow.visible = false;
         }
     }
-   
-
-
-    public initUI():void
-	{
-        super.initUI();
-      
-        this.btnOneStep.addEventListener(egret.TouchEvent.TOUCH_TAP,this.btnOneStepClick,this);
-        this.btnTwoStep.addEventListener(egret.TouchEvent.TOUCH_TAP,this.btnTwoStepClick,this);
-    }
-
-    // public initUI():void 
-    // {
-    //     super.initUI();  
-    //     this.btnOneStep = new egret.Bitmap();
-    //     this.btnOneStep.touchEnabled = true;
-    //     this.btnOneStep.texture = RES.getRes("ui_btnAttack_png");
-    //     this.btnOneStep.x = 100;
-    //     this.btnOneStep.y = App.StageUtils.getHeight() - 150;      
-    //     this.btnOneStep.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnOneStepClick, this);
-    //     this.addChild(this.btnOneStep);
-       
-
-    //     this.btnTwoStep = new egret.Bitmap();
-    //     this.btnTwoStep.touchEnabled = true;
-    //     this.btnTwoStep.texture = RES.getRes("ui_btnAttack_png");
-    //     this.btnTwoStep.x =   App.StageUtils.getWidth() - 200;
-    //     this.btnTwoStep.y = App.StageUtils.getHeight() - 150;      
-    //     this.addChild(this.btnTwoStep);
-    //     this.btnTwoStep.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnTwoStepClick, this);
-    // }
 
     private btnOneStepClick(e:egret.TouchEvent):void
-	{
-		//this.applyFunc(LoginConst.LOGIN_C2S);
-		//App.SceneManager.runScene(SceneConsts.Battle);
-        console.log(1);
+	{	
         this.player.nextStep(1);
 	}
 
     private btnTwoStepClick(e:egret.TouchEvent):void
-	{
-        console.log(2);
+	{      
         this.player.nextStep(2);
-		//this.applyFunc(LoginConst.LOGIN_C2S);
-		//App.SceneManager.runScene(SceneConsts.Battle);	
 	}
 }

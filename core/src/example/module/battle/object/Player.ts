@@ -38,16 +38,16 @@ class Player extends egret.DisplayObjectContainer
 	public isLose:boolean = false;		//是否输了-远程角色
 
 	public currentIndex:number = 1;		//当前步
-	private currentRow:number = 1;			//当前行
+	private currentRow:number = 1;		//当前行
 	private currentCol:number = 1; 		//当前列
-	private direction:number = 1;			//当前朝向
+	private direction:number = 1;		//当前朝向
 
-	private offsetX:number = 68;	//动物初始坐标与地格00点偏移量X
-	private offsetY:number = 20;	//动物初始坐标与地格00点偏移量Y
+	private offsetX:number = 68;		//动物初始坐标与地格00点偏移量X
+	private offsetY:number = 20;		//动物初始坐标与地格00点偏移量Y
 
-	private oldTile:MapTile;		//上一个地格
-	private currentTile:MapTile;	//当前地格
-	private currentStep:number;		//当前几步
+	private oldTile:MapTile;			//上一个地格
+	private currentTile:MapTile;		//当前地格
+	private currentStep:number;			//当前几步
 	
 
 	public constructor() 
@@ -67,8 +67,7 @@ class Player extends egret.DisplayObjectContainer
 		}
 		else
 		{
-			//this.mc = App.MovieClipFactory.createMC("monster", "monster");
-			this.mc = App.MovieClipFactory.createMC("hero", "hero");			
+			this.mc = App.MovieClipFactory.createMC("yangtuo", "yangtuo");			
 			this.alpha = 0.5;
 		}			
 		
@@ -277,43 +276,6 @@ class Player extends egret.DisplayObjectContainer
 			this.changePlayerState(MovieType.Move5);
 	}
 
-	// private hurtCD():void
-	// {
-	// 	this.currentTile.hide();
-		
-	// 	var lastTile:MapTile = this.view.cells[this.currentIndex - this.currentStep];		
-
-	// 	var posX = (lastTile.col - 1) * BattleData.tileWidth + this.offsetX;
-    //     var posY = -(lastTile.row - 1) * BattleData.tileHeight + this.offsetY;
-
-	// 	//egret.Tween.removeTweens(this);
-	// 	var tw = egret.Tween.get(this);
-		
-	// 	tw.wait(48/30*1000).to({x:posX, y:posY}).call(function (player:Player) 
-	// 	{
-	// 		player.isTrap = false;
-	// 		player.changePlayerState(MovieType.Idle);
-	// 		player.x = posX;
-	// 		player.y = posY;
-	// 		player.changeDirection(lastTile.face);
-	// 		player.oldTile = lastTile;
-	// 	    player.currentIndex -= player.currentStep;		
-	// 		this.currentTile.show();
-	// 	}, this, [this]);
-	// 	//App.TimerManager.doTimer(2000, 1, this.waitOver, this);
-	// }
-
-	// private onHurtComplete():void
-	// {
-	// 	this.lastStep(this.currentStep);
-	// 	//this.mc.removeEventListener(egret.Event.COMPLETE,this.onHurtComplete,this);		
-	// }
-
-	// private changeTileState(tile:MapTile)
-	// {
-	// 	this.oldTile.up();
-	// 	tile.down();
-	// }
 	
 	private tw:egret.Tween = null;
 

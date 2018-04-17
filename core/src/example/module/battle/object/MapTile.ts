@@ -9,19 +9,24 @@ enum TileType
     End = 3         //终点
 }
 
-class MapTile extends egret.Bitmap 
+class MapTile extends egret.DisplayObjectContainer
 {
 	public index:number;
     public col: number;
     public row: number;
 	public type:number;
     public face:number;
+    public sign:boolean = false;
 
-    private tileResKey: string;
+    private tileBitmap:egret.Bitmap;
+    private signBitmap:egret.Bitmap;
 
     public constructor() 
 	{
         super();
+        
+        this.tileBitmap = new egret.Bitmap();
+        this.addChild(this.tileBitmap);
     }
 
 	public initData(cellData:any):void
@@ -38,15 +43,27 @@ class MapTile extends egret.Bitmap
         
         if (this.type == TileType.Normal)
         {
-            this.texture = RES.getRes("tile_narmal");
+            this.tileBitmap.texture = RES.getRes("tile_narmal");
         }
         else if(this.type == TileType.Trap)
         {
-            this.texture = RES.getRes("tile_trap");
+            this.tileBitmap.texture = RES.getRes("tile_trap");
+            
+            if (this.index == 113)
+                this.alpha = 0;
+
+            if (this.sign)
+            {
+                this.signBitmap = new egret.Bitmap();
+                this.signBitmap.texture = RES.getRes("sign");
+                this.y -= 30;
+                this.addChild(this.signBitmap);
+            }
         }
         else if(this.type == TileType.End)
         {
-            this.texture = RES.getRes("tile_end");
+            this.tileBitmap.texture = RES.getRes("tile_end");
+            this.y -= 50;
         }
 	}
 
@@ -55,7 +72,7 @@ class MapTile extends egret.Bitmap
         if (this.type == TileType.Trap)
             return;
 
-        this.texture = RES.getRes("tile_narmal");
+        this.tileBitmap.texture = RES.getRes("tile_narmal");
     }
 
     public down()
@@ -63,7 +80,7 @@ class MapTile extends egret.Bitmap
         if (this.type == TileType.Trap)
             return;
 
-        this.texture = RES.getRes("tile_down");
+        this.tileBitmap.texture = RES.getRes("tile_down");
     }
 
     public show():void
@@ -75,29 +92,4 @@ class MapTile extends egret.Bitmap
     {
         this.visible = false;
     }
-    // public init(mapId: number, col: number, row: number) 
-	// {
-    //     this.col = col;
-    //     this.row = row;
-    //     this.x = this.col * RpgGameData.GameTileWidth;
-    //     this.y = this.row * RpgGameData.GameTileHeight;
-
-    //     var tileResName: string = row + "_" + col + ".jpg";
-    //     var tileResPath: string = "resource/assets/rpgGame/map/" + mapId + "/" + tileResName;
-    //     this.tileResKey = "map_" + mapId + "_" + tileResName;
-
-    //     //异步加载
-    //     App.ResourceUtils.createResource(this.tileResKey, "image", tileResPath);
-    //     RES.getResAsync(this.tileResKey, function (img: egret.Texture) 
-	// 	{
-    //         this.texture = img;
-    //     }, this);
-    // }
-
-    // public destory(): void 
-	// {
-    //     App.DisplayUtils.removeFromParent(this);
-    //     RES.destroyRes(this.tileResKey);
-    //     this.texture = null;
-    // }
 }

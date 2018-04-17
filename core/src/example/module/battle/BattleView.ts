@@ -2,14 +2,12 @@ class BattleView extends BaseSpriteView
 {
     private controller:BaseController;
 
-    private bg:egret.Bitmap;
     private background: egret.Bitmap;
+
     public gameObjcetLayer: egret.DisplayObjectContainer;
-    private gameEffectLayer: egret.DisplayObjectContainer;
-    private blocksData: number[][];
-    //public  player: Player;
-    private enemys: RpgMonster[];
-   
+    //private gameEffectLayer: egret.DisplayObjectContainer;   
+
+    public cells:Object = {};
     public players:Object = {};
 
     public constructor($controller:BaseController, $parent:egret.DisplayObjectContainer) 
@@ -34,19 +32,14 @@ class BattleView extends BaseSpriteView
         this.gameObjcetLayer = new egret.DisplayObjectContainer();       
         maskLayer.addChild(this.gameObjcetLayer);
 
-        this.gameEffectLayer = new egret.DisplayObjectContainer();
-        this.addChild(this.gameEffectLayer);
+        // this.gameEffectLayer = new egret.DisplayObjectContainer();
+        // this.addChild(this.gameEffectLayer);
     }
 
 
     public initData(): void
     {
         super.initData();
-        this.initMap();
-        this.initPlayers();
-        //this.createPlayer();
-        //this.createBeginMc();
-        //this.monsters = [];
     }
 
     /**
@@ -57,34 +50,28 @@ class BattleView extends BaseSpriteView
     {
         super.open(param);
 
-        
-        //var gameModel:BattleModel = param[0];
-
-        // this.initBackground(gameModel.mapId);
-        // this.initBlocks(gameModel.mapId);
-       // this.createPlayer(gameModel.playerData);
-        // this.createMonsters(gameModel.monsterNum);
+        this.initMap();
+        this.initEyu();
+        this.initPlayers();
     }
-
-    
-    private oldTile:MapTile = null;
-   
-    public cells:Object = {};
-
+  
+    //地图
     private initMap():void
     {
-        var seed:number = 5;   
-        function aaa (max, min) {   
-        max = max || 1;  
-        min = min || 0;   
-        seed = (seed * 9301 + 49297) % 233280;   
-        var rnd = seed / 233280.0;  
-        return min + rnd * (max - min);   
+        var oldTile:MapTile = null;
+        var seed:number = 5;   //随机种子 保证随机数相同
+        function aaa (max, min) 
+        {   
+            max = max || 1;  
+            min = min || 0;   
+            seed = (seed * 9301 + 49297) % 233280;   
+            var rnd = seed / 233280.0;  
+            return min + rnd * (max - min);   
         };  
-
 
         var arr:any[] = BattleData.mapData;
         var len = arr.length;
+
         for (var i:number = 0; i < len; i++)
         {
             var cellData:any = arr[i];
@@ -92,50 +79,57 @@ class BattleView extends BaseSpriteView
 
             var tile:MapTile = new MapTile();
             
-            if (this.oldTile != null && this.oldTile.type != TileType.Trap)
-            {
-               
-                //if (Math.random() > 0.6)
+            if (i > 10 && oldTile != null && oldTile.type != TileType.Trap)
+            {           
                 if (aaa(10,1) >= 5)
-                {
                     cellData.type = TileType.Trap;
-                }
             }
             
-            if (i == len -1)
+            if (i == 8)
+            {
+                 cellData.type = TileType.Trap;
+                 tile.sign = true;
+            }
+               
+
+            if (i == len - 2)
                 cellData.type = TileType.End;
 
-            // if (i == 3)
-            //     cellData.type = TileType.End;
-                
+            if (i == len - 1)
+                cellData.type = TileType.Trap;
+
             tile.initData(cellData);
+
             this.gameObjcetLayer.addChild(tile);
-            this.oldTile = tile;
+        
             this.cells[tile.index] = tile;
+
+            oldTile = tile;
         }            
         
         this.gameObjcetLayer.x =  40;
         this.gameObjcetLayer.y = App.StageUtils.getHeight() - 350;
-
-        // var bit:egret.Bitmap = new egret.Bitmap();  
-        // bit.texture = RES.getRes("tile_narmal");
-        // this.gameObjcetLayer.addChild(bit);
     }
 
-  
-    private getRandom (max, min):number
-    {   
-        var seed:number = 5;   
-        max = max || 1;  
-        min = min || 0;   
-        seed = (seed * 9301 + 49297) % 233280;   
-        var rnd = seed / 233280.0;  
-        return min + rnd * (max - min);   
-    };  
+    //鳄鱼
+    private initEyu():void
+    {
+        for (var i:number = 1; i <= 20; i++)
+        {
+            var y:number = i * BattleData.tileHeight;
+            var x:number = (i % 2 == 0 ? 500 : 100);
+            var yu:Eyu = new Eyu();
+            yu.x = x;
+            yu.y = y;
+            this.gameObjcetLayer.addChild(yu);
+        }
+    }
 
+    //角色
     private initPlayers():void
     {
         var data:PlayerVO[] = GlobalData.battleModel.players;
+
         for (var i:number = 0; i < data.length; i++)
         {
             var d = data[i];
@@ -158,20 +152,16 @@ class BattleView extends BaseSpriteView
         return null;
     }
 
-    // private createPlayer():void
+    // private createBeginMc():void
     // {
-    //     this.player = new Player();
-    //     this.player.view = this;
-    //     this.player.initData({});   //test
-    //     this.player.initPosition(this.cells[1]);
-    //     this.gameObjcetLayer.addChild(this.player);
+    //     App.SoundManager.playEffect("sound_readygo");
     // }
 
-    private createBeginMc():void
+    public close(...param:any[]):void 
     {
-        App.SoundManager.playEffect("sound_readygo");
-        //this.player.isStart = true;
+        this.gameObjcetLayer.removeChildren();
     }
+
     // private createPlayer(data:any)
     // {
     //      //创建主角
