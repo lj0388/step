@@ -66,10 +66,10 @@ class Main extends egret.DisplayObjectContainer {
         
         //初始化
         this.initScene();
-        this.initModule();
+        //this.initModule();
 
         //设置加载进度界面
-        App.SceneManager.runScene(SceneConsts.LOADING);
+        //App.SceneManager.runScene(SceneConsts.LOADING);
 
         this.loadResVersionComplate();
         // //设置加载进度界面
@@ -106,7 +106,6 @@ class Main extends egret.DisplayObjectContainer {
         theme.addEventListener(eui.UIEvent.COMPLETE, this.onThemeLoadComplete, this);
     }
 
-
     /**
    * 主题文件加载完成
    */
@@ -117,22 +116,12 @@ class Main extends egret.DisplayObjectContainer {
     
     private onThemeLoadComplete(): void 
     {
-        //new RpgTest();
-        //new ActTest();
-
-        // var seed:number = 5;   
-        // function aa (max, min) {   
-        // max = max || 1;  
-        // min = min || 0;   
-        // seed = (seed * 9301 + 49297) % 233280;   
-        // var rnd = seed / 233280.0;  
-        // return min + rnd * (max - min);   
-        // };  
-        // for (var i= 0; i<10; i++) {  
-        //     console.log(aa(10, 1));   
-        // } 
-        new GameTest();
-        //new StepFBTest();
+        //new GameTest();
+        new StepFBTest();
+        // FBInstant.startGameAsync().then(function ()
+        // {
+        //     new StepFBTest();
+        // });        
     }
 
     /**
@@ -140,11 +129,8 @@ class Main extends egret.DisplayObjectContainer {
      */
     private initScene(): void 
     {
-        App.SceneManager.register(SceneConsts.LOADING, new LoadingScene());
+        //App.SceneManager.register(SceneConsts.LOADING, new LoadingScene());
         App.SceneManager.register(SceneConsts.Login, new LoginScene());
-        // App.SceneManager.register(SceneConsts.UI, new UIScene());
-        // App.SceneManager.register(SceneConsts.Game, new GameScene());
-        // App.SceneManager.register(SceneConsts.RpgGame, new RpgGameScene());
         App.SceneManager.register(SceneConsts.Index, new IndexScene());
         App.SceneManager.register(SceneConsts.Battle, new BattleScene());
     }

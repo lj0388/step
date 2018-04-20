@@ -15,6 +15,8 @@ class Eyu extends egret.DisplayObjectContainer
 
 		this.addChild(this.mc);
 
+		this.mc.play();
+		
 		this.addEventListener(egret.Event.ENTER_FRAME,this.onEnterFrame,this);
 	}
 

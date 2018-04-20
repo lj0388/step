@@ -27,11 +27,13 @@ class FriendMatchView extends BaseEuiView
 
 	public open(...param:any[]):void 
 	{
+		console.log("friendMatch");
+		
 		var data:any = param[0];
 
-		this.imgIcon.loadImage(GlobalData.userModel.icon);
+		this.imgIcon.loadImage(GlobalData.userIcon);
 
-		this.lblName.text = GlobalData.userModel.name;
+		this.lblName.text = GlobalData.userName;
 
 		this.showMatchTime(GlobalData.matchTime);		
 
@@ -51,28 +53,61 @@ class FriendMatchView extends BaseEuiView
 	
 	public updateGroupRoles(groupId:string)
 	{	
-		if (GlobalData.contextId == "-1")
-			return;
+		// if (GlobalData.contextId == "-1")
+		// 	return;
 		
 		this.hbox.removeChildren();
 
-		var j:number = 0;
-
 		FBInstant.context.getPlayersAsync().then((players) => 
 		{
-			this.lblName2.text = players.length.toString() + " friends";
+			var len:number = players.length;
 
-			for (var i:number = 0; i < players.length; i++)
+			if (len == 1)
 			{
-				if (i >= 3)
-					break;
-
 				var img:IconImg = new IconImg();
-				img.width = 182;
-				img.height = 182;
-				img.loadImage(players[i].getPhoto());
-				this.hbox.addChild(img);				
-			}			
+				img.width = img.height = 190;			
+				this.hbox.addChild(img);			
+				this.lblName2.text = "";
+			}
+
+			if (len == 2)
+			{
+				for (var i:number = 0; i < 2; i++)
+				{
+					if (players[i].getID() != GlobalData.userId)
+					{
+						var img:IconImg = new IconImg();	
+						img.width = img.height = 190;				
+						img.loadImage(players[i].getPhoto());
+						this.hbox.addChild(img);		
+
+						this.lblName2.text = players[i].getName();
+					}
+				}
+			}
+
+			if (len > 2)
+			{
+				var j:number = 0;
+
+				for (var i:number = 0; i < players.length; i++)
+				{
+					if (players[i].getID() == GlobalData.userId)
+						continue;
+					
+					if (j <= 2)
+					{
+						var img:IconImg = new IconImg();		
+						img.width = img.height = 190;				
+						img.loadImage(players[i].getPhoto());
+						this.hbox.addChild(img);	
+						j++;
+					}								
+				}			
+				
+				this.lblName2.text = players.length.toString() + " friends";
+			}
+			
 		});		
 	}
 

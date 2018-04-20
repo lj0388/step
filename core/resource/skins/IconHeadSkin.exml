@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="IconHeadSkin" width="191" height="188" xmlns:e="http://ns.egret.com/eui"  xmlns:ns1="*">
+    
+    <e:Group width="191" height="188" x="0" y="0">
+		<ns1:IconImg source="icon_bg_png" x="0" y="0" scaleX="1" scaleY="1"/>
+		<ns1:IconImg id="imgIcon" source="icon_bg_png" mask="imgMask" scaleX="1" scaleY="1" width="160" height="160" horizontalCenter="0" verticalCenter="0"/>
+		<ns1:IconImg id="imgMask" source="icon_bg_png" scaleX="1" scaleY="1" width="160" height="160" horizontalCenter="0" verticalCenter="0"/>
+	</e:Group>
+
+</e:Skin>

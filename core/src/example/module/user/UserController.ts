@@ -35,6 +35,8 @@ class UserController extends BaseController
      */
     private loginSuccess(data:any):void
 	{
+        console.log("logSuccess: " + data);
+        
         //保存数据
 		this.userModel.updateData(data);
       

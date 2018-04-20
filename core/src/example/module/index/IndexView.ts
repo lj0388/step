@@ -25,7 +25,8 @@ class IndexView extends BaseEuiView
 		this.skinName = "resource/skins/IndexSkin.exml";
 	}
 
-	public imgIcon:eui.Image;
+	public imgIcon:IconImg;
+	//public iconHead:IconHead;
 	public hbox:eui.Group;
 	public btnSwitch:eui.Button;
 
@@ -37,6 +38,7 @@ class IndexView extends BaseEuiView
 	public btnResult:eui.Button;	//战绩
 	public btnShare:eui.Button;	
 	
+	public imgRandom:eui.Image;
 
 	public initUI():void 
 	{
@@ -54,6 +56,10 @@ class IndexView extends BaseEuiView
  	public open(...param:any[]):void 
 	{
 		var data:any = param[0];
+
+		this.imgIcon.loadImage(GlobalData.userModel.icon);
+
+		this.lblName.text = GlobalData.userModel.name;
 
 		this.updateGroupRoles(GlobalData.contextId);
     }
@@ -84,29 +90,85 @@ class IndexView extends BaseEuiView
 
 
 	public updateGroupRoles(groupId:string)
-	{	
+	{			
 		if (GlobalData.contextId == "-1")
+		{
+			this.imgRandom.visible = true;
+			//this.btnSwitch.visible = true;
+			this.hbox.visible = false;
+			this.lblName2.visible = false;
+			console.log("indexGroups null");
+			
 			return;
+		}
+
+		this.imgRandom.visible = false;
+		//this.btnSwitch.visible = true;
+		this.hbox.visible = true;
+		this.lblName2.visible = true;
 		
 		this.hbox.removeChildren();
 
-		var j:number = 0;
-
 		FBInstant.context.getPlayersAsync().then((players) => 
 		{
-			this.lblName2.text = players.length.toString() + " friends";
+			var len:number = players.length;
 
-			for (var i:number = 0; i < players.length; i++)
+			console.log("indexGroups " + len);
+
+			if (len == 1)
 			{
-				if (i >= 3)
-					break;
-
 				var img:IconImg = new IconImg();
-				img.width = 182;
-				img.height = 182;
-				img.loadImage(players[i].getPhoto());
-				this.hbox.addChild(img);				
-			}			
-		});		
+				img.width = img.height = 190;					
+				this.hbox.addChild(img);			
+				this.lblName2.text = "";
+			}
+
+			if (len == 2)
+			{
+				for (var i:number = 0; i < 2; i++)
+				{
+					if (players[i].getID() != GlobalData.userId)
+					{
+						var img:IconImg = new IconImg();	
+						img.width = img.height = 190;				
+						img.loadImage(players[i].getPhoto());
+						this.hbox.addChild(img);		
+
+						this.lblName2.text = players[i].getName();
+					}
+				}
+			}
+
+			if (len > 2)
+			{
+				var j:number = 0;
+
+				for (var i:number = 0; i < players.length; i++)
+				{
+					if (players[i].getID() == GlobalData.userId)
+						continue;
+					
+					if (j <= 2)
+					{
+						var img:IconImg = new IconImg();	
+						img.width = img.height = 190;					
+						img.loadImage(players[i].getPhoto());
+						this.hbox.addChild(img);	
+						j++;
+					}								
+				}			
+				
+				this.lblName2.text = players.length.toString() + " friends";
+			}
+			
+		}).catch(function(e) 
+        {
+            console.log(e);
+        });		
 	}
+
+	
+
+
+	
 }

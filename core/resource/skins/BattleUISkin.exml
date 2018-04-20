@@ -3,17 +3,20 @@
 	<w:Declarations>
 	</w:Declarations>
 	<e:Group id="uiGroup" width="640" height="1136" x="0" y="0">
-		<e:Image source="head_bg_png" x="39.5" y="29" scaleX="1" scaleY="1"/>
-		<e:Image source="head_bg_png" x="358" y="29" scaleX="1" scaleY="1"/>
+		<e:Image x="39.5" y="29" scaleX="1" scaleY="1" source="headbg_png"/>
+		<e:Image x="358" y="29" scaleX="1" scaleY="1" source="headbg_png"/>
 		<e:Image source="vs_png" x="248" y="32" anchorOffsetX="0" width="143.73" anchorOffsetY="0" height="96.31" scaleX="1" scaleY="1"/>
-		<ns1:IconImg id="imgIcon1" source="icon_bg_png" x="10" y="13" anchorOffsetX="0" width="134.01" anchorOffsetY="0" height="131.9" scaleX="1" scaleY="1"/>
-		<ns1:IconImg id="imgIcon2" source="icon_bg_png" x="488.5" y="13" anchorOffsetX="0" width="134.01" anchorOffsetY="0" height="131.9" scaleX="1" scaleY="1"/>
+		<!--<ns1:IconImg id="imgIcon1" source="icon_bg_png" x="10" y="13" anchorOffsetX="0" width="134.01" anchorOffsetY="0" height="131.9" scaleX="1" scaleY="1"/>
+		<ns1:IconImg id="imgIcon2" source="icon_bg_png" x="488.5" y="13" anchorOffsetX="0" width="134.01" anchorOffsetY="0" height="131.9" scaleX="1" scaleY="1"/>-->
+		<ns1:IconImg id="imgIcon1" x="10" y="13"  width="134.01" height="131.9"/>
+		<ns1:IconImg id="imgIcon2"  x="488.5" y="13" width="134.01"  height="131.9"/>
+
 		<e:Label id="lblProgress1" text="100%" x="145" y="67" fontFamily="Microsoft YaHei" size="35" scaleX="1" scaleY="1" bold="true"/>
 		<e:Label id="lblProgress2" text="100%" x="380.5" y="67" fontFamily="Microsoft YaHei" size="35" scaleX="1" scaleY="1" bold="true"/>
-		<e:Image id="btnOneStep" x="33.5" y="1001" scaleX="1" scaleY="1" source="一步按钮_png"/>
-		<e:Image id="btnTwoStep" x="330" y="1000" scaleX="1" scaleY="1" source="两步按钮_png" width="282" height="109"/>
-		<e:Image id="imgHigh" source="领先于对手话框_png" x="149.5" y="116.9"/>
-		<e:Image id="imgLow" source="落后于对手话框_png" x="157.5" y="896"/>
+		<e:Image id="btnOneStep" x="33.5" y="1001" scaleX="1" scaleY="1" source="btnonestep_png"/>
+		<e:Image id="btnTwoStep" x="330" y="1000" scaleX="1" scaleY="1" width="282" height="109" source="twostep_png"/>
+		<e:Image id="imgHigh" x="149.5" y="116.9" source="bglingxian_png"/>
+		<e:Image id="imgLow" x="157.5" y="896" source="bgluohou_png"/>
 		<e:Image id="imgGo" source="GO_png" horizontalCenter="0" verticalCenter="0"/>
 		<e:Image id="imgReady" source="ready_png" horizontalCenter="0" verticalCenter="0"/>
 		<e:Label id="lblHigh" text="10" x="203" y="169.4" textColor="0x110f0f" bold="true" fontFamily="Microsoft YaHei"/>

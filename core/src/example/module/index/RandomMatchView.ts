@@ -21,11 +21,13 @@ class RandomMatchView extends BaseEuiView
 
 	public open(...param:any[]):void 
 	{
+		console.log("randomMatch");
+
 		var data:any = param[0];
 
-		this.imgIcon.loadImage(GlobalData.userModel.icon);
+		this.imgIcon.loadImage(GlobalData.userIcon);
 
-		this.lblName.text = GlobalData.userModel.name;
+		this.lblName.text = GlobalData.userName;
 
 		this.showMatchTime(GlobalData.matchTime);
     }

@@ -20,12 +20,14 @@ class UserProxy extends BaseProxy
             "uid":uid,
             "name":name,
 			"icon":icon,
-            "rid":rid
+            "groupId":rid
         };
+
+        console.log("userNameC2S: " + paramObj.name);
 
         if (sid != "-1")
         {
-            paramObj.sid = sid;
+            paramObj.senderId = sid;
             this.sendSocketMsg(ServerConst.Invite_LOGIN_C2S, paramObj);
         }
         else

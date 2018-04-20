@@ -41,7 +41,7 @@ class GameTest
 		{
             Log.trace("与服务器连接上");
             //send();
-			 //进入游戏
+			//进入游戏
 	        App.SceneManager.runScene(SceneConsts.Login);
 
 

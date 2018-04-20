@@ -7,14 +7,15 @@ class StepFBTest
 
     private initSDK()
     {
-        FBInstant.initializeAsync().then
-        {
-            this.loadAssets();
-        }
+        console.log("initSDK ");
+        
+        this.loadAssets();
     }
 
-    private loadAssets()
+    private loadAssets():void
     {
+        console.log("load ");
+
         var groupName:string = "preload";
         var subGroups:Array<string> = ["step"];
         App.ResourceUtils.loadGroups(groupName, subGroups, this.onResourceLoadComplete, this.onResourceLoadProgress, this);
@@ -22,31 +23,53 @@ class StepFBTest
 
     private onResourceLoadProgress(itemsLoaded:number, itemsTotal:number):void 
     {
-         FBInstant.setLoadingProgress(itemsLoaded / itemsTotal);
+         FBInstant.setLoadingProgress(itemsLoaded / itemsTotal * 100);
     }
 
     private onResourceLoadComplete():void 
-    {      
-        
-        FBInstant.startGameAsync().then
+    {   
+        console.log("loadcomplete ");
+
+    
+        var j:any = this;
+
+        FBInstant.startGameAsync().then(function()
         {
-            GlobalData.userId = FBInstant.player.getID();
-            GlobalData.userName = FBInstant.player.getName();
-            GlobalData.userIcon = FBInstant.player.getPhoto();
-            GlobalData.contextId = FBInstant.context.getID();
-            GlobalData.contextType = FBInstant.context.getType();  
-        
-            var data:any = FBInstant.getEntryPointData();
-            if (data.hasOwnProperty("senderId"))
-                GlobalData.senderId = data.senderId;
-
-            this.startGame();
-        }      
-    }
-
-    private startGame()
+            j.startGame();
+        }
+        ).catch(function(e) 
+        {
+            console.log(e);
+        });
+    }     
+    
+    private startGame():void
     {
+        GlobalData.userId = FBInstant.player.getID();
+        console.log("userId: " + FBInstant.player.getID());
+        
+        GlobalData.userName = FBInstant.player.getName();
+        console.log("userName: " + FBInstant.player.getName());
+        
+        GlobalData.userIcon = FBInstant.player.getPhoto();
+        console.log("userIcon: " + FBInstant.player.getPhoto())
+        
+        if (FBInstant.context.getID() != null)
+        {
+            GlobalData.contextId = FBInstant.context.getID();
+        }
+        
+        GlobalData.contextType = FBInstant.context.getType();  
+
+        
+        var data:any = FBInstant.getEntryPointData();
+        if (data != null && data.hasOwnProperty("senderId"))
+            GlobalData.senderId = data.senderId;
+
+        console.log("startgame ");
+
         App.Init();
+        //App.Socket.initServer(App.GlobalData.SocketServer, App.GlobalData.SocketPort, new UTFMsgByJson());
 
         this.initModule();       
 	   
@@ -69,6 +92,7 @@ class StepFBTest
             Log.trace("与服务器连接上");
             //send();
 			 //进入游戏
+            console.log("与服务器连接上 ");
 	        App.SceneManager.runScene(SceneConsts.Login);
 
         }, this);
@@ -109,6 +133,6 @@ class StepFBTest
         App.ControllerManager.register(ControllerConst.Index, new IndexController());
         App.ControllerManager.register(ControllerConst.Battle, new BattleController());
         App.ControllerManager.register(ControllerConst.Friend, new FriendController());
-     
+        App.ControllerManager.register(ControllerConst.Record, new RecordController());     
     }
 }

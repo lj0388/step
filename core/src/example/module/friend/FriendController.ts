@@ -28,8 +28,8 @@ class FriendController extends BaseController
 
     private openFriendView():void
     {
-        //this.proxy.requestFriendList(GlobalData.userId);
-        this.proxy.requestFriendList("u0001");
+        this.proxy.requestFriendList(GlobalData.userId);
+        //this.proxy.requestFriendList("u0001");
     }
 
     private getFriendsS2C():void

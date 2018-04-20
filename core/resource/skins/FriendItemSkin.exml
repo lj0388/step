@@ -1,18 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
 <e:Skin class="FriendItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" width="568" height="108">
-	<e:Image source="底01_png" x="0" y="0" touchEnabled="false"/>
+	<e:Image x="0" y="0" touchEnabled="false" source="bg01_png"/>
 	
 	<e:Image id="iconDisplay" touchEnabled="false" source="icon_fertilizer02" horizontalCenter="0" verticalCenter="5"/>
-	<e:Image source="icon_diamond" scaleX="0.5" touchEnabled="false" scaleY="0.5" width="60" y="56" x="123"/>
+	<e:Image source="icon_diamond" scaleX="0.5" touchEnabled="false" scaleY="0.5" width="60" y="56" x="123" visible="false"/>
 	<e:Image source="icon_02" x="8" y="134" touchEnabled="false"/>
 	<e:Label id="lblNum" text="3" x="254" y="38.6" touchEnabled="false" anchorOffsetX="0" width="84" textAlign="center" textColor="0x1c0202" fontFamily="Microsoft YaHei" size="28" bold="true"/>
-	<e:Image id="btnFriendMatch" source="双人对决按钮_png" x="358" y="22" anchorOffsetX="0" width="188.78" anchorOffsetY="0" height="65.18"/>
+	<e:Image id="btnFriendMatch" x="358" y="22" anchorOffsetX="0" width="188.78" anchorOffsetY="0" height="65.18" source="btnpk_png"/>
 	<e:Group id="hbox" width="259" height="88" touchEnabled="false" touchChildren="false" anchorOffsetX="0" anchorOffsetY="0" y="9" x="9">
-		<ns1:IconImg source="头像_png" x="71.5" y="5.45" anchorOffsetX="0" width="86" anchorOffsetY="0" height="86"/>
-		<ns1:IconImg source="头像_png" x="81.5" y="15.45" anchorOffsetX="0" width="86" anchorOffsetY="0" height="86"/>
-		<ns1:IconImg source="头像_png" x="91.5" y="25.45" anchorOffsetX="0" width="86" anchorOffsetY="0" height="86"/>
-		<ns1:IconImg source="头像_png" x="101.5" y="35.45" anchorOffsetX="0" width="86" anchorOffsetY="0" height="86"/>
-		<ns1:IconImg source="头像_png" x="111.5" y="45.45" anchorOffsetX="0" width="86" anchorOffsetY="0" height="86"/>
+		<ns1:IconImg x="71.5" y="5.45" anchorOffsetX="0" width="86" anchorOffsetY="0" height="86"/>
+		<ns1:IconImg x="81.5" y="15.45" anchorOffsetX="0" width="86" anchorOffsetY="0" height="86"/>
+		<ns1:IconImg x="91.5" y="25.45" anchorOffsetX="0" width="86" anchorOffsetY="0" height="86"/>
+		<ns1:IconImg x="101.5" y="35.45" anchorOffsetX="0" width="86" anchorOffsetY="0" height="86"/>
+		<ns1:IconImg x="111.5" y="45.45" anchorOffsetX="0" width="86" anchorOffsetY="0" height="86"/>
 		<e:layout>
 			<e:HorizontalLayout gap="-44" paddingLeft="11"/>
 		</e:layout>

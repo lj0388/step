@@ -60,7 +60,7 @@ declare class FriendMatchSkin extends eui.Skin{
 }
 declare class FriendSkin extends eui.Skin{
 }
-declare class GuiScreenSkin extends eui.Skin{
+declare class IconHeadSkin extends eui.Skin{
 }
 declare class IndexSkin extends eui.Skin{
 }
@@ -70,25 +70,11 @@ declare class MatchInviteSkin extends eui.Skin{
 }
 declare class MatchResultSkin extends eui.Skin{
 }
-declare class MenuButtonSkin extends eui.Skin{
-}
-declare class MenuSkin extends eui.Skin{
-}
-declare class PanelSkin extends eui.Skin{
-}
 declare class RandomMatchSkin extends eui.Skin{
 }
 declare class RecordItemSkin extends eui.Skin{
 }
 declare class RecordSkin extends eui.Skin{
-}
-declare class SaleItemSkin extends eui.Skin{
-}
-declare class TabBarButtonSkin extends eui.Skin{
-}
-declare class TabBarSkin extends eui.Skin{
-}
-declare class TaskItemRendererSkin extends eui.Skin{
 }
 declare class VictorySkin extends eui.Skin{
 }

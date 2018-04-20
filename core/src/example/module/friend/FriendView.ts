@@ -32,6 +32,8 @@ class FriendView extends BaseEuiView
         {
             FBInstant.context.switchAsync(groupId).then(() => 
             {
+                App.ViewManager.closeView(this); 
+
                 egret.log('context.id switch:', egretfb.EgretFBInstant.context.getID());
                 
                 GlobalData.contextId = groupId;
@@ -48,8 +50,7 @@ class FriendView extends BaseEuiView
         {
             this.applyControllerFunc(ControllerConst.Index, IndexConst.Match_Mode, MatchType.Friends);
         }
-
-        App.ViewManager.closeView(this);        
+               
     }
 
     public initData():void 
@@ -81,23 +82,29 @@ class FriendView extends BaseEuiView
 
 	private btnFriendClick(e:egret.TouchEvent):void
 	{
-        egret.log('context.id now:', egretfb.EgretFBInstant.context.getID())
-
-        FBInstant.context.chooseAsync().then(() => 
+        //egret.log('context.id now:', egretfb.EgretFBInstant.context.getID())
+        var j:any = this;
+        FBInstant.context.chooseAsync().then(function()
         {
-            var contextId = egretfb.EgretFBInstant.context.getID();
-            GlobalData.contextId = contextId;
-            egret.log('context.id chooseAsync:', egretfb.EgretFBInstant.context.getID());
-           
-            this.applyControllerFunc(ControllerConst.Index, IndexConst.Match_Mode, MatchType.Friends)
-            
-            App.ViewManager.closeView(this);
-
-        }, (err) =>
+            j.changeContext();
+        }
+        ).catch(function(e) 
         {
-            egret.log('chooseAsync error', JSON.stringify(err));
-        })
+            console.log(e);
+        });
 	}
+
+    private changeContext():void
+    {
+        App.ViewManager.closeView(this);
+
+        var contextId = FBInstant.context.getID();
+        console.log("context.id: " + contextId);
+        GlobalData.contextId = contextId;
+        
+        this.applyControllerFunc(ControllerConst.Index, IndexConst.Update_IndexView);       
+        this.applyControllerFunc(ControllerConst.Index, IndexConst.Match_Mode, MatchType.Friends);       
+    }
 
 	private btnBackClick(e:egret.TouchEvent):void
 	{

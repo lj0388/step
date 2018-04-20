@@ -91,7 +91,7 @@ class ViewManager extends BaseClass {
             view.open.apply(view, param);
         }
         else {
-            App.EasyLoading.showLoading();
+            //App.EasyLoading.showLoading();
             view.loadResource(function () {
                 view.setVisible(false);
                 view.addToParent();
@@ -100,7 +100,7 @@ class ViewManager extends BaseClass {
                 view.initData();
                 view.open.apply(view, param);
                 view.setVisible(true);
-                App.EasyLoading.hideLoading();
+                //App.EasyLoading.hideLoading();
             }.bind(this));
         }
 

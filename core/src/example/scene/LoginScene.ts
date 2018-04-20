@@ -22,15 +22,15 @@ class LoginScene extends BaseScene{
         App.ViewManager.open(ViewConst.Login);
 
 
-        if (GlobalData.isDev)
-        {
-            GlobalData.userId = "u0001";
-            GlobalData.contextId = "c0001";       
-            GlobalData.userName = "name: " + GlobalData.userId;
-            GlobalData.userIcon = "https://image.flaticon.com/icons/png/512/809/809476.png";     
-        }
+        // if (GlobalData.isDev)
+        // {
+        //     GlobalData.userId = "u0001";
+        //     //GlobalData.contextId = "c0001";       
+        //     GlobalData.userName = "name: " + GlobalData.userId;
+        //     GlobalData.userIcon = "https://image.flaticon.com/icons/png/512/809/809476.png";     
+        // }
         
-        App.ControllerManager.applyFunc(ControllerConst.Login, UserConst.Invite_LOGIN_C2S, GlobalData.userId,GlobalData.userName,GlobalData.userIcon,GlobalData.contextId,GlobalData.senderId);                 
+        App.ControllerManager.applyFunc(ControllerConst.Login, UserConst.LOGIN_C2S, GlobalData.userId,GlobalData.userName,GlobalData.userIcon,GlobalData.contextId,GlobalData.senderId);                 
     }
 
     /**
@@ -40,3 +40,4 @@ class LoginScene extends BaseScene{
 	{
         super.onExit();
     }
+}

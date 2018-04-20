@@ -4,7 +4,7 @@ class GlobalData
 	{
 	}
 
-	public static isDev:boolean = true;					//开发环境
+	public static isDev:boolean = false;					//开发环境
 
 	public static userModel:UserModel;
 	public static battleModel:BattleModel;

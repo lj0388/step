@@ -17,6 +17,8 @@ class BattleModel extends BaseModel
     
     public updateData(data:any):void
     {
+        this.players = new Array();
+        
         for (var i:number = 0; i < data.length; i++)
         {
             var d = data[i];

@@ -81,6 +81,8 @@ class IndexController extends BaseController
 
 	private onMatchMode(mode:string):void
 	{
+		console.log("matchMode: " + mode);
+		
 		this.closeAll();
 		
 		if (mode == MatchType.Random)
@@ -173,6 +175,8 @@ class IndexController extends BaseController
 	//更新首页信息（好友头像)
 	private OnUpdateIndexView():void
 	{
+		console.log("OnUpdateIndexView");
+		
 		this.indexView.updateGroupRoles(GlobalData.contextId);
 	}
 

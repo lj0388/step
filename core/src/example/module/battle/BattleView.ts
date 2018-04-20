@@ -85,7 +85,7 @@ class BattleView extends BaseSpriteView
                     cellData.type = TileType.Trap;
             }
             
-            if (i == 8)
+            if (i == 7)
             {
                  cellData.type = TileType.Trap;
                  tile.sign = true;
@@ -160,6 +160,7 @@ class BattleView extends BaseSpriteView
     public close(...param:any[]):void 
     {
         this.gameObjcetLayer.removeChildren();
+        this.players = {};
     }
 
     // private createPlayer(data:any)
