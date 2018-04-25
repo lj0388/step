@@ -35,14 +35,18 @@ class Main extends egret.DisplayObjectContainer {
      */
     private loadingView: LoadingUI;
 
-    public constructor() {
+    public constructor() 
+    {
         super();
+        
         this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
     }
 
     private onAddToStage(event: egret.Event) 
     {
         this.stage.orientation = egret.OrientationMode.AUTO;
+        //this.stage.scaleMode = egret.StageScaleMode.FIXED_HEIGHT;
+       this.stage.scaleMode = egret.StageScaleMode.EXACT_FIT;
         //注入自定义的素材解析器
         egret.registerImplementation("eui.IAssetAdapter", new AssetAdapter());
         egret.registerImplementation("eui.IThemeAdapter", new ThemeAdapter());
@@ -70,21 +74,23 @@ class Main extends egret.DisplayObjectContainer {
 
         //设置加载进度界面
         //App.SceneManager.runScene(SceneConsts.LOADING);
+  
+        var j:any = this;
 
-        this.loadResVersionComplate();
-        // //设置加载进度界面
-        // //Config to load process interface
-        // this.loadingView = new LoadingUI();
-        // this.stage.addChild(this.loadingView);
+        FBInstant.initializeAsync().then(function()
+        {
+            j.loadResVersion();
+            FBInstant.logEvent("initialize", 1);
+        }
+        ).catch(function(e) 
+        {
+            console.log(e);
+        });
 
-        // //初始化Resource资源加载库
-        // //initiate Resource loading library
-        // RES.addEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this);
-        // RES.loadConfig("resource/default.res.json", "resource/");
     }
 
    
-    private loadResVersionComplate(): void 
+    private loadResVersion(): void 
     {
         //初始化Resource资源加载库
         App.ResourceUtils.addConfig("resource/step.res.json", "resource/");
@@ -101,19 +107,13 @@ class Main extends egret.DisplayObjectContainer {
      */
     private onConfigComplete(): void 
     {
+        FBInstant.logEvent("configLoadComplete", 1);
         //加载皮肤主题配置文件,可以手动修改这个文件。替换默认皮肤。
         var theme = new eui.Theme("resource/default.thm.json", this.stage);
         theme.addEventListener(eui.UIEvent.COMPLETE, this.onThemeLoadComplete, this);
     }
 
-    /**
-   * 主题文件加载完成
-   */
-    private getRandom():void
-    {
 
-    }
-    
     private onThemeLoadComplete(): void 
     {
         //new GameTest();
@@ -129,7 +129,7 @@ class Main extends egret.DisplayObjectContainer {
      */
     private initScene(): void 
     {
-        //App.SceneManager.register(SceneConsts.LOADING, new LoadingScene());
+        App.SceneManager.register(SceneConsts.LOADING, new LoadingScene());
         App.SceneManager.register(SceneConsts.Login, new LoginScene());
         App.SceneManager.register(SceneConsts.Index, new IndexScene());
         App.SceneManager.register(SceneConsts.Battle, new BattleScene());
@@ -138,10 +138,10 @@ class Main extends egret.DisplayObjectContainer {
     /**
      * 初始化所有模块
      */
-    private initModule(): void 
-    {
-        App.ControllerManager.register(ControllerConst.Loading, new LoadingController());
-    }
+    // private initModule(): void 
+    // {
+    //     App.ControllerManager.register(ControllerConst.Loading, new LoadingController());
+    // }
 
     /**
      * 配置文件加载完成,开始预加载preload资源组。

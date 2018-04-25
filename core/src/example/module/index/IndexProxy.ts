@@ -20,8 +20,8 @@ class IndexProxy extends BaseProxy
 		obj.groupId = groupId;
 		obj.matchType = matchType;
 
-		console.log("matchPlayer: " + obj.uid + " " + obj.groupId  + " " + obj.matchType);
-		
+		//console.log("matchPlayer: " + obj.uid + " " + obj.groupId  + " " + obj.matchType);
+		FBInstant.logEvent("MATCH_REQUEST", 1,{"uid":uid, "gid":groupId, "type":matchType});
 		this.sendSocketMsg(ServerConst.Match_Invite_C2S, obj);
 	}
 
@@ -34,8 +34,8 @@ class IndexProxy extends BaseProxy
 		obj.confirm = confirmType;
 		obj.senderId = senderId;
 
-	    console.log("matchConfirm: " + obj.uid + " " + obj.groupId  + " " + obj.matchType);
-
+	    //console.log("matchConfirm: " + obj.uid + " " + obj.groupId  + " " + obj.matchType);
+		FBInstant.logEvent("MATCH_CONFIRM", 1,{"uid":uid, "gid":groupId, "type":confirmType});
 		this.sendSocketMsg(ServerConst.Match_Confirm_C2S, obj);
 	}
 
@@ -44,6 +44,7 @@ class IndexProxy extends BaseProxy
 	{
 		var obj:any = {};
 		obj.uid = uid;
+		FBInstant.logEvent("MATCH_CANCEL", 1,{"uid":uid});
 		this.sendSocketMsg(ServerConst.Match_Cancel_C2S, obj);
 	}
 
@@ -59,7 +60,7 @@ class IndexProxy extends BaseProxy
      */
     public matchInviteMsg(obj:any):void
 	{
-		console.log("matchInviteMsg: " + obj);
+		//console.log("matchInviteMsg: " + obj);
         this.applyFunc(IndexConst.Match_Invite_S2C, obj);
     }
 
@@ -68,7 +69,7 @@ class IndexProxy extends BaseProxy
      */
     public matchConfirmMsg(obj:any):void
 	{
-		console.log("Match_Confirm_S2C: " + obj);
+		//console.log("Match_Confirm_S2C: " + obj);
         this.applyFunc(IndexConst.Match_Confirm_S2C, obj);
     }
 
@@ -77,6 +78,7 @@ class IndexProxy extends BaseProxy
      */
     public matchSuccessMsg(obj:any):void
 	{
+		FBInstant.logEvent("MATCH_SCUESS", 1,{"uid":GlobalData.userId, "gid":GlobalData.contextId, "type":GlobalData.matchMode});
         this.applyFunc(IndexConst.Match_Scuess_S2C, obj);
     }
 }

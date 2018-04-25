@@ -2,11 +2,10 @@
 <e:Skin class="RecordItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" width="568" height="108">
 	<e:Image x="0" y="0" source="bg01_png"/>
 	
-	<e:Image id="iconDisplay" source="icon_fertilizer02" horizontalCenter="0" verticalCenter="5"/>
-	<e:Image source="icon_02" x="8" y="134"/>
 	<e:Label id="lblScore" text="4:3" x="237" y="23.5" anchorOffsetX="0" width="92" fontFamily="Microsoft YaHei" size="28" bold="true" anchorOffsetY="0" height="59" textAlign="center" verticalAlign="middle" textColor="0xffffff"/>
 	<ns1:IconImg id="imgIcon2" x="460" y="10" anchorOffsetX="0" width="86" anchorOffsetY="0" height="86"/>
 	<ns1:IconImg id="imgIcon" x="19" y="10" anchorOffsetX="0" width="86" anchorOffsetY="0" height="86"/>
 	<e:Label id="lblName" text="QQ" x="106" y="45" textColor="0x161313" anchorOffsetX="0" width="135" size="26" bold="true"/>
 	<e:Label id="lblName2" text="QQ" x="322" y="45" textColor="0x161313" anchorOffsetX="0" width="135" size="26" bold="true" textAlign="right"/>
+	<e:Image id="imgRandom" source="iconsuiji2_png" x="460" y="10" width="86" height="86" visible="false"/>
 </e:Skin>

@@ -19,8 +19,8 @@ class BattleUIView extends BaseEuiView
     public imgIcon2:IconImg;
     public lblProgress1:eui.Label;
     public lblProgress2:eui.Label;
-    public btnOneStep:eui.Image;
-    public btnTwoStep:eui.Image;  
+    public btnOneStep:eui.Button;
+    public btnTwoStep:eui.Button;  
 
     public imgReady:eui.Image;  
     public imgGo:eui.Image;  
@@ -64,9 +64,14 @@ class BattleUIView extends BaseEuiView
         this.enemy = this.applyFunc(BattleConst.Get_Player, enemyVo.uid);
       
         //egret.Tween.get(this.imgReady).to({"visible":true},1000).to({"x":300},1000);  
+   
         egret.Tween.get(this.imgReady).wait(100).to({"visible":true}).wait(500).to({"visible":false});
         egret.Tween.get(this.imgGo).wait(700).to({"visible":true}).wait(500).to({"visible":false}).call(this.gameStart);  
-
+        egret.Tween.get(this).wait(100).call(function(){
+            App.SoundManager.playEffect("ready");
+        }).wait(600).call(function(){
+            App.SoundManager.playEffect("start");
+        });
         App.TimerManager.doTimer(100,0, this.enterFrame, this);
 
         this.imgIcon1.loadImage(ownVo.icon);
@@ -90,7 +95,7 @@ class BattleUIView extends BaseEuiView
 
         var diff:number = this.player.currentIndex - this.enemy.currentIndex;
         
-        console.log("own: " + this.player.currentIndex + " enemy: " + this.enemy.currentIndex);
+        //console.log("own: " + this.player.currentIndex + " enemy: " + this.enemy.currentIndex);
 
         if (diff >= 10)
         {

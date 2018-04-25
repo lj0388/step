@@ -56,14 +56,15 @@ class MapTile extends egret.DisplayObjectContainer
             {
                 this.signBitmap = new egret.Bitmap();
                 this.signBitmap.texture = RES.getRes("tile_twosign");
-                this.signBitmap.y = -30;
+                this.signBitmap.x -= 15;
+                this.signBitmap.y = -70;
                 this.addChild(this.signBitmap);
             }
         }
         else if(this.type == TileType.End)
         {
             this.tileBitmap.texture = RES.getRes("tile_end");
-            this.y -= 50;
+            this.y -= 70;
         }
 	}
 

@@ -27,7 +27,7 @@ class FriendMatchView extends BaseEuiView
 
 	public open(...param:any[]):void 
 	{
-		console.log("friendMatch");
+		//console.log("friendMatch");
 		
 		var data:any = param[0];
 
@@ -38,6 +38,8 @@ class FriendMatchView extends BaseEuiView
 		this.showMatchTime(GlobalData.matchTime);		
 
 		this.updateGroupRoles(GlobalData.contextId);		//更新对战角色信息
+
+		this.updateMsg();
     }
 
 	private btnCancelClick(e:egret.TouchEvent):void
@@ -51,6 +53,49 @@ class FriendMatchView extends BaseEuiView
 		this.applyFunc(IndexConst.Match_Mode, MatchType.Random);
 	}
 	
+	private updateMsg():void
+	{
+		var imgLoader:egret.ImageLoader = new egret.ImageLoader();
+		imgLoader.crossOrigin = "anonymous";
+		
+		imgLoader.once(egret.Event.COMPLETE, (evt:egret.Event) =>
+		{
+			var loader:egret.ImageLoader = <egret.ImageLoader>evt.currentTarget;
+			var t:egret.Texture = new egret.Texture();
+			t.bitmapData = loader.data;			
+			var img:string = t.toDataURL("image/png", new egret.Rectangle(0,0,t.textureWidth, t.textureHeight));
+
+			FBInstant.updateAsync({
+            action: 'CUSTOM',
+            cta: "Accept " + GlobalData.userName + "'s Challenge",
+            template: 'join_fight',
+            image: img,
+            text: GlobalData.userName + " is online NOW and challenging you to a duel!",
+            data: { senderId: GlobalData.userId },
+            strategy: 'IMMEDIATE',
+            notification: 'NO_PUSH',
+
+        }).then(function () 
+		{
+            //当消息发送后，关闭游戏
+            //egretfb.EgretFBInstant.quit();
+			FBInstant.logEvent("shareGame", 1, {type:1002});
+
+        }).catch(function(e) 
+        {
+            console.log(e);
+        });
+
+		}, this);		
+
+		imgLoader.load(GlobalData.userIcon);
+
+		//var t:egret.Texture = RES.getRes("iconsuiji2");
+		
+
+		
+	}
+
 	public updateGroupRoles(groupId:string)
 	{	
 		// if (GlobalData.contextId == "-1")
@@ -118,7 +163,7 @@ class FriendMatchView extends BaseEuiView
 		this.lastTime = time;
 		this.lblTime.text = App.DateUtils.getFormatBySecond(this.lastTime, 3);
 
-		App.TimerManager.doTimer(1000, time, this.onMatchTime, this, this.onMatchTimeOver);
+		App.TimerManager.doTimer(1000, time, this.onMatchTime, this, this.onMatchTimeOver, this);
 	}
 
 	private onMatchTime():void
@@ -128,15 +173,15 @@ class FriendMatchView extends BaseEuiView
 	}
 
 	private onMatchTimeOver():void
-	{
+	{		
 		App.TimerManager.remove(this.onMatchTime, this);
 	
-		this.lblTime.text = "00:00";	
+		//this.lblTime.text = "00:00";	
 		this.applyFunc(IndexConst.Match_TimeOver);
 	}	
 
 	public close(...param:any[]):void 
-	{
+	{	
 		App.TimerManager.remove(this.onMatchTime, this);
     }
 

@@ -23,6 +23,7 @@ class BattleView extends BaseSpriteView
 
         this.background = new egret.Bitmap();
         this.background.texture = RES.getRes("02");
+        this.background.cacheAsBitmap = true;
         this.addChild(this.background);
 
         var maskLayer:egret.DisplayObjectContainer = new egret.DisplayObjectContainer();
@@ -49,6 +50,8 @@ class BattleView extends BaseSpriteView
     public open(...param: any[]): void
     {
         super.open(param);
+        
+        FBInstant.logEvent("BEGIN_BATTLE", 1,{"uid":GlobalData.userId, "gid":GlobalData.contextId, "type":GlobalData.matchMode});
 
         this.initMap();
         this.initEyu();
@@ -116,10 +119,23 @@ class BattleView extends BaseSpriteView
     {
         for (var i:number = 1; i <= 20; i++)
         {
-            var y:number = i * BattleData.tileHeight;
-            var x:number = (i % 2 == 0 ? 500 : 100);
+            var y:number = -i * BattleData.tileHeight * 2 + 30 + BattleData.tileHeight;
+            
             var yu:Eyu = new Eyu();
-            yu.x = x;
+            
+            if (i % 2 == 0)
+            {
+                yu.minX = 200;
+                yu.maxX = 500;
+                yu.x = yu.maxX;
+            }
+            else
+            {
+                yu.minX = 100;
+                yu.maxX = 400;
+                yu.x = yu.minX;
+            }        
+          
             yu.y = y;
             this.gameObjcetLayer.addChild(yu);
         }

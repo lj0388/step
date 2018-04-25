@@ -39,12 +39,16 @@ class MatchInviteView extends BaseEuiView
 
 	private btnAcceptClick(e:egret.TouchEvent):void
 	{
+		//console.log("acceptClick: ");
+		
 		this.applyFunc(IndexConst.Match_Confirm_Click, ConfirmType.Accept, this.data);
-		App.ViewManager.closeView(this);
+		//App.ViewManager.closeView(this);
 	}
 
 	private btnCancelClick(e:egret.TouchEvent):void
 	{
+		//console.log("cancelClick: ");
+		
 		this.applyFunc(IndexConst.Match_Confirm_Click, ConfirmType.Refuse, this.data);
 		App.ViewManager.closeView(this);
 	}

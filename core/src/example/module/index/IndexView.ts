@@ -62,6 +62,8 @@ class IndexView extends BaseEuiView
 		this.lblName.text = GlobalData.userModel.name;
 
 		this.updateGroupRoles(GlobalData.contextId);
+
+		
     }
 	
 	private btnMatchClick(e:egret.TouchEvent):void
@@ -74,20 +76,74 @@ class IndexView extends BaseEuiView
 	//好友面板
 	private btnFriendClick(e:egret.TouchEvent):void
 	{
+		FBInstant.logEvent("CLICK_FRIEND_GROUP", 1,{"uid":GlobalData.userId, "gid":GlobalData.contextId, "type":GlobalData.matchMode});
 		this.applyControllerFunc(ControllerConst.Friend, FriendConst.OPEN_FRIEND_VIEW);
 	}
 
 	//战斗记录
 	private btnResultClick(e:egret.TouchEvent):void
 	{
+		// var preloadedRewardedVideo = null;
+
+		// FBInstant.getRewardedVideoAsync
+		// ('956217177868389_974503196039787', // Your Ad Placement Id
+		// ).then(function(rewarded) 
+		// {
+		// 	// Load the Ad asynchronously
+		// 	preloadedRewardedVideo = rewarded;
+		// 	return preloadedRewardedVideo.loadAsync();
+		// }).then(function() 
+		// {
+		// 	console.log('Rewarded video preloaded')
+		// 	preloadedRewardedVideo.showAsync().then(function() 
+		// 	{
+		// 		// Perform post-ad success operation
+		// 		console.log('Rewarded video watched successfully');        
+		// 	}).catch(function(e) 
+		// 	{
+		// 		console.error(e.message);
+		// 	});
+
+		// }).catch(function(err)
+		// {
+		// 	console.error('Rewarded video failed to preload: ' + err.message);
+		// });
+		FBInstant.logEvent("CLICK_FRIEND_GROUP", 1,{"uid":GlobalData.userId, "gid":GlobalData.contextId, "type":GlobalData.matchMode});
+		
 		this.applyControllerFunc(ControllerConst.Record, RecordConst.OPEN_RECORD_VIEW);
 	}
 
 	private btnShareClick(e:egret.TouchEvent):void
 	{
-		//share game
-	}
+		var imgLoader:egret.ImageLoader = new egret.ImageLoader();
+		imgLoader.crossOrigin = "anonymous";
+		
+		imgLoader.once(egret.Event.COMPLETE, (evt:egret.Event) =>
+		{
+			var loader:egret.ImageLoader = <egret.ImageLoader>evt.currentTarget;
+			var t:egret.Texture = new egret.Texture();
+			t.bitmapData = loader.data;			
+			var img:string = t.toDataURL("image/png", new egret.Rectangle(0,0,t.textureWidth, t.textureHeight));
 
+			FBInstant.shareAsync({
+				intent: 'REQUEST',
+				image: img,
+				text: GlobalData.userName + " has recommended a game for you!",
+				data: {"msg":1001},
+			}).then(function () 
+			{
+				//当消息发送后，关闭游戏
+				FBInstant.logEvent("shareGame", 1, {type:1001});
+
+			}).catch(function(e) 
+			{
+				console.log(e);
+			});
+
+		}, this);		
+
+		imgLoader.load(GlobalData.userIcon);
+	}
 
 	public updateGroupRoles(groupId:string)
 	{			
@@ -97,7 +153,7 @@ class IndexView extends BaseEuiView
 			//this.btnSwitch.visible = true;
 			this.hbox.visible = false;
 			this.lblName2.visible = false;
-			console.log("indexGroups null");
+			//console.log("indexGroups null");
 			
 			return;
 		}
@@ -113,7 +169,7 @@ class IndexView extends BaseEuiView
 		{
 			var len:number = players.length;
 
-			console.log("indexGroups " + len);
+			//console.log("indexGroups " + len);
 
 			if (len == 1)
 			{

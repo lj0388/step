@@ -20,14 +20,15 @@ class SoundManager extends BaseClass {
     /**
      * 构造函数
      */
-    public constructor() {
+    public constructor() 
+    {
         super();
 
         this.bgOn = true;
         this.effectOn = true;
 
         this.bgVolume = 0.5;
-        this.effectVolume = 0.5;
+        this.effectVolume = 1;
 
         this.bg = new SoundBg();
         this.bg.setVolume(this.bgVolume);
@@ -51,11 +52,12 @@ class SoundManager extends BaseClass {
      * 播放背景音乐
      * @param key
      */
-    public playBg(bgName:string):void {
+    public playBg(bgName:string):void 
+    {
         this.currBg = bgName;
         if (!this.bgOn)
-            return;
-
+            return;        
+        
         this.bg.play(bgName);
     }
 

@@ -22,7 +22,7 @@ class IndexScene extends BaseScene
 		App.ViewManager.open(ViewConst.Index);
 			
 		//播放背景音乐
-        App.SoundManager.playBg("sound_bg");
+        //App.SoundManager.playBg("BGM_mp3");
 
 		if (mode == "replay")
 		{

@@ -44,6 +44,7 @@
     "resource/skins/RankingSkin.exml",
     "resource/skins/RecordItemSkin.exml",
     "resource/skins/RecordSkin.exml",
+    "resource/skins/ResultShareSkin.exml",
     "resource/skins/VictorySkin.exml"
   ],
   "path": "resource/default.thm.json"

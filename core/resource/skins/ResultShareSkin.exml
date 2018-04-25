@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ResultShareSkin" width="960" height="501" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image source="sharebg_jpg" x="0" y="0"/>
+	<e:Label id="lblName1" text="samsam" x="76" y="355" textAlign="center" anchorOffsetX="0" width="275" anchorOffsetY="0" height="54" verticalAlign="middle" size="46" bold="true" rotation="5.47"/>
+	<e:Label id="lblName2" text="samsam" x="601" y="381.21" textAlign="center" anchorOffsetX="0" width="275" anchorOffsetY="0" height="54" verticalAlign="middle" size="46" bold="true" rotation="354.53"/>
+	<e:Label id="lblScore1" text="5" x="376" y="323.98" textAlign="center" verticalAlign="middle" bold="true" size="120"/>
+	<e:Label text="3" x="512" y="323.98" id="lblScore0" textAlign="center" verticalAlign="middle" bold="true" size="120"/>
+	<ns1:IconImg id="imgIcon1" width="190" height="190" x="166.74" y="152.5"/>
+	<ns1:IconImg id="imgIcon2" width="190" height="190" x="605.74" y="152.5"/>
+</e:Skin>

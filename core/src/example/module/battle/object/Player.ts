@@ -49,6 +49,7 @@ class Player extends egret.DisplayObjectContainer
 	private currentTile:MapTile;		//当前地格
 	private currentStep:number;			//当前几步
 	
+	public type:string;
 
 	public constructor() 
 	{
@@ -64,11 +65,13 @@ class Player extends egret.DisplayObjectContainer
 		if (GlobalData.userModel.isOwn(this.uid))		 
 		{
 			this.mc = App.MovieClipFactory.createMC("hero", "hero");
+			this.type = "hero_1";
 		}
 		else
 		{
 			this.mc = App.MovieClipFactory.createMC("yangtuo", "yangtuo");			
 			this.alpha = 0.5;
+			this.type = "hero_2";
 		}			
 		
 		this.mc.addEventListener(egret.MovieClipEvent.COMPLETE, this.OnMotionComplete, this);		
@@ -110,6 +113,9 @@ class Player extends egret.DisplayObjectContainer
 			else if (this.currentTile.type == TileType.End)
 			{
 				//this.changePlayerState(MovieType.Win);	
+				this.changePlayerState(MovieType.Idle);	
+				this.oldTile = this.currentTile;
+
 				if (this.currentTile.type == TileType.End)
 				{
 					this.view.applyFunc(BattleConst.Move_End, this.uid);
@@ -126,7 +132,7 @@ class Player extends egret.DisplayObjectContainer
 			this.isMove = false;	
 		}
 	
-		console.log(e.type,e.target.currentLabel,this.mc.currentFrame);
+		//console.log(e.type,e.target.currentLabel,this.mc.currentFrame);
 	}
 
 	public initPosition(data:any):void
@@ -233,17 +239,23 @@ class Player extends egret.DisplayObjectContainer
 			this.isTrap = true;			
 			//this.hurtCD();
 			this.mc.gotoAndPlay(state, 1);
-			this.changeDirection(this.currentTile.face);	
+			this.changeDirection(this.currentTile.face);
+			App.SoundManager.playEffect("luoshui_mp3");
+			App.SoundManager.playEffect(this.type + "_help_mp3");
+
+			FBInstant.logEvent("PLAYER_LUOSHUI", 1,{"uid":GlobalData.userId, "gid":GlobalData.contextId, "type":GlobalData.matchMode});
 		}
 		else if (state == MovieType.Win)
 		{
 			this.isEnd = true;
-			this.mc.gotoAndPlay(state, -1);			
+			this.mc.gotoAndPlay(state, -1);	
+			App.SoundManager.playEffect(this.type + "_win_mp3");		
 		}
 		else if (state == MovieType.Lose)
 		{
 			this.isEnd = true;
-			this.mc.gotoAndPlay(state, -1);			
+			this.mc.gotoAndPlay(state, -1);		
+			App.SoundManager.playEffect(this.type + "_lose_mp3");		
 		}
 		else if (state == MovieType.Idle)
 		{
@@ -253,6 +265,8 @@ class Player extends egret.DisplayObjectContainer
 		else
 		{
 			this.mc.gotoAndPlay(state, 1);
+			
+			App.SoundManager.playEffect(this.type + "_" + this.currentStep + "_mp3");				
 		}
 
 		this.oldState = state;
@@ -296,8 +310,8 @@ class Player extends egret.DisplayObjectContainer
 		{
 			
 			//egret.Tween.removeTweens(this.view.gameObjcetLayer);
-			//if (this.tw == null)
-			this.tw = egret.Tween.get(this.view.gameObjcetLayer);
+			// if (this.tw == null)
+			// 	this.tw = egret.Tween.get(this.view.gameObjcetLayer);
 
 			var targetY;
 			if (tile.row == 3)
@@ -306,7 +320,8 @@ class Player extends egret.DisplayObjectContainer
 				targetY = this.view.gameObjcetLayer.y + BattleData.tileHeight * num;
 			
 			//this.view.gameObjcetLayer.y = targetY;
-			this.tw.to({y:targetY}, 200);
+			//this.tw.to({y:targetY}, 200);			
+			egret.Tween.get(this.view.gameObjcetLayer).to({y:targetY}, 200);		
 		}
 	}
 

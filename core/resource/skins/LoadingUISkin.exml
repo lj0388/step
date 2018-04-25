@@ -1,4 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<e:Skin class="LoadingUISkin" width="400" height="300" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Label id="txtMsg" text="Loading..." width="249" horizontalCenter="0" verticalCenter="0" size="25" verticalAlign="middle" textAlign="center"/>
+<e:Skin class="LoadingUISkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+ 	 <e:Image width="100%" height="100%" horizontalCenter="0" verticalCenter="0" source="01_jpg"/>
+	<e:Label  id="txtMsg" text="Loading..." horizontalCenter="0" verticalCenter="0" visible="false"  verticalAlign="middle" textAlign="center"/>
+	
 </e:Skin>

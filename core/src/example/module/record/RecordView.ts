@@ -66,11 +66,8 @@ class RecordView extends BaseEuiView
         var dp:eui.ArrayCollection = new eui.ArrayCollection(model.records);
         
         this.list.dataProvider = dp;
-        //var contextArr:string[] = param[0];
         
-        // var dp:eui.ArrayCollection = new eui.ArrayCollection(model.getFriendsList());        
-        // this.list.dataProvider = dp;
-		//list.data = 
+        FBInstant.logEvent("OPEN_RECORD_VIEW", 1,{"uid":GlobalData.userId, "gid":GlobalData.contextId, "type":GlobalData.matchMode});
     }
 
 	private btnBackClick(e:egret.TouchEvent):void

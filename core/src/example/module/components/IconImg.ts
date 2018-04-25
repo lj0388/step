@@ -8,7 +8,7 @@ class IconImg extends eui.Group
 	{
 		super();
 		
-		console.log("wh11 " + this.width + " / " + this.height);
+		//console.log("wh11 " + this.width + " / " + this.height);
 		
 		this.touchEnabled = false;
 		this.touchChildren = false;
@@ -50,13 +50,13 @@ class IconImg extends eui.Group
 
 		this.img.mask = this.circle;	
 
-		console.log("wh22 " + this.width + " / " + this.height);	
+		//console.log("wh22 " + this.width + " / " + this.height);	
 	}
 
 	protected updateDisplayList(unscaledWidth: number, unscaledHeight: number): void
 	{
 		super.updateDisplayList(unscaledWidth, unscaledHeight);
-		console.log("wh33 " + this.width + " / " + this.height);	
+		//console.log("wh33 " + this.width + " / " + this.height);	
 
 		this.imgBg.texture = RES.getRes("icon_bg_png");
 

@@ -33,7 +33,8 @@ class RecordController extends BaseController
 	private openRecordView():void
     {
         //this.proxy.requestRecordList(GlobalData.userId);
-        this.proxy.requestRecordList("u0001");
+        this.proxy.requestRecordList(GlobalData.userId, GlobalData.contextId);
+        console.log("recordRequest: " + GlobalData.contextId);
     }
 
     private getRecordS2C():void

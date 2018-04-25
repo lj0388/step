@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="FailSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
-    <e:Rect width="640" height="1136" x="0" y="0" fillAlpha="0.5"/>
-    <e:Image x="366.35" y="204" anchorOffsetX="0" width="213.3" anchorOffsetY="0" height="206" source="winsign_png"/>
+	
+	<e:Group width="200" height="200" x="361.06" y="220.34">
+		<e:Image anchorOffsetX="0" width="203.3" anchorOffsetY="0" height="196.34" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" source="winsign_png"/>
+		<ns1:IconImg id="imgIcon2" width="92" height="92" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0" x="60"/>
+	</e:Group>
+
+    <e:Rect width="640" height="1136" x="0" y="0" fillAlpha="0.8"/>
 	<e:Image x="161" y="107" source="losefont_png"/>
-	<e:Image x="117" y="208" source="losesign_png"/>
-	<e:Image source="icon_bg_png" x="176" y="265" anchorOffsetX="0" width="179.06" anchorOffsetY="0" height="176.25"/>
-	<e:Image source="icon_bg_png" x="431.97" y="265.88" anchorOffsetX="0" width="92.06" anchorOffsetY="0" height="90.62"/>
 	<e:Image x="181" y="568.5" source="bgtime_png"/>
-	<e:Image x="397" y="452" source="vs1_png"/>
 	<e:Image id="btnPlay" x="186" y="743" source="btnagain_png"/>
 	<e:Image id="btnBack" x="361.06" y="904" source="btnback_png"/>
 	<e:Image id="btnShare" x="188" y="901" source="btnshare2_png"/>
 	<e:Label id="lblTime" text="00:21" x="227.5" y="645" anchorOffsetX="0" width="209" fontFamily="Microsoft YaHei" textAlign="center" size="30" textColor="0x000000"/>
-	<!--<ns1:IconImg id="imgIcon" width="136" height="116" x="198" y="294" anchorOffsetX="0" anchorOffsetY="0"/>
-	<ns1:IconImg id="imgIcon2" width="78.55" height="67" x="438.73" y="273.5" anchorOffsetX="0" anchorOffsetY="0"/>-->
 
-	<ns1:IconHead id="imgIcon" width="136" height="116" x="198" y="294" />
-	<ns1:IconHead id="imgIcon2" width="78.55" height="67" x="438.73" y="273.5" />
+	<e:Group width="380" height="380" x="72" y="168.5" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" source="losesign_png"/>
+		<ns1:IconImg id="imgIcon" width="150" height="150" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0" x="118"/>
+	</e:Group>
 
 </e:Skin>

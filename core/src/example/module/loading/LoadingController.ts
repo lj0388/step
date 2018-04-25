@@ -13,7 +13,7 @@ class LoadingController extends BaseController{
         App.ViewManager.register(ViewConst.Loading, this.loadingView);
 
         //注册事件监听
-        this.registerFunc(LoadingConst.SetProgress, this.setProgress, this);
+        //this.registerFunc(LoadingConst.SetProgress, this.setProgress, this);
     }
 
     private setProgress(current:number, total:number):void{

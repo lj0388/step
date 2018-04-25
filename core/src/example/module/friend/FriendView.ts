@@ -28,27 +28,31 @@ class FriendView extends BaseEuiView
     {
         var groupId:string = e.itemRenderer.data.groupId;
 
+        var j:any = this;
+
         if (GlobalData.contextId != groupId)
         {
-            FBInstant.context.switchAsync(groupId).then(() => 
+            FBInstant.context.switchAsync(groupId).then(function()
             {
-                App.ViewManager.closeView(this); 
-
-                egret.log('context.id switch:', egretfb.EgretFBInstant.context.getID());
+                //console.log("contextId: " + FBInstant.context.getID());                
                 
+                App.ViewManager.closeView(this);
+
                 GlobalData.contextId = groupId;
                 
-                this.applyControllerFunc(ControllerConst.Index, IndexConst.Update_IndexView);
-                this.applyControllerFunc(ControllerConst.Index, IndexConst.Match_Mode, MatchType.Friends);
-
-            }, (err) => 
+                FBInstant.logEvent("CHANGE_FRIEND_GROUP", 1,{"uid":GlobalData.userId, "gid":GlobalData.contextId, "type":GlobalData.matchMode});
+                
+                j.applyControllerFunc(ControllerConst.Index, IndexConst.Update_IndexView);
+                j.applyControllerFunc(ControllerConst.Index, IndexConst.Match_Mode, MatchType.Friends);
+            }
+            ).catch(function(e) 
             {
-                egret.log('switchAsync error', JSON.stringify(err));
-            })
+                console.log(e);
+            });
         }
         else
         {
-            this.applyControllerFunc(ControllerConst.Index, IndexConst.Match_Mode, MatchType.Friends);
+            j.applyControllerFunc(ControllerConst.Index, IndexConst.Match_Mode, MatchType.Friends);
         }
                
     }
@@ -69,6 +73,8 @@ class FriendView extends BaseEuiView
         var dp:eui.ArrayCollection = new eui.ArrayCollection(model.getFriendsList());
         
         this.list.dataProvider = dp;
+
+        FBInstant.logEvent("OPEN_FRIEND_VIEW", 1,{"uid":GlobalData.userId, "gid":GlobalData.contextId, "type":GlobalData.matchMode});
     }
 
     private btnRandomMatchClick(e:egret.TouchEvent):void
@@ -84,6 +90,7 @@ class FriendView extends BaseEuiView
 	{
         //egret.log('context.id now:', egretfb.EgretFBInstant.context.getID())
         var j:any = this;
+        
         FBInstant.context.chooseAsync().then(function()
         {
             j.changeContext();
@@ -99,7 +106,7 @@ class FriendView extends BaseEuiView
         App.ViewManager.closeView(this);
 
         var contextId = FBInstant.context.getID();
-        console.log("context.id: " + contextId);
+        //console.log("context.id: " + contextId);
         GlobalData.contextId = contextId;
         
         this.applyControllerFunc(ControllerConst.Index, IndexConst.Update_IndexView);       

@@ -14,5 +14,7 @@ class RecordModel extends BaseModel
 	public updateRecordData(data:any):void
 	{
 		this.records = data;
+        console.log("records: " + data);
+        
 	}
 }

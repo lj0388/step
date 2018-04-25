@@ -23,7 +23,7 @@ class UserProxy extends BaseProxy
             "groupId":rid
         };
 
-        console.log("userNameC2S: " + paramObj.name);
+       // console.log("userNameC2S: " + paramObj.name);
 
         if (sid != "-1")
         {

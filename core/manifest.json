@@ -115,6 +115,7 @@
 		"bin-debug/example/module/battle/BattleUIView.js",
 		"bin-debug/example/module/battle/BattleView.js",
 		"bin-debug/example/module/battle/FailView.js",
+		"bin-debug/example/module/battle/ResultShareView.js",
 		"bin-debug/example/module/battle/VictoryView.js",
 		"bin-debug/example/module/battle/object/Eyu.js",
 		"bin-debug/example/module/battle/object/MapTile.js",

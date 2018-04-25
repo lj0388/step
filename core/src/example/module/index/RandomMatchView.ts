@@ -21,7 +21,7 @@ class RandomMatchView extends BaseEuiView
 
 	public open(...param:any[]):void 
 	{
-		console.log("randomMatch");
+		//console.log("randomMatch");
 
 		var data:any = param[0];
 
@@ -44,10 +44,10 @@ class RandomMatchView extends BaseEuiView
 		this.lastTime = time;
 		this.lblTime.text = App.DateUtils.getFormatBySecond(this.lastTime, 3);
 
-		App.TimerManager.doTimer(1000, time, this.onMatchTime, this, this.onMatchTimeOver);
+		App.TimerManager.doTimer(1000, time, this.onMatchTime, this, this.onMatchTimeOver, this);
 	}
 
-	private onMatchTime():void
+	public onMatchTime():void
 	{
 		this.lastTime--;
 		this.lblTime.text = App.DateUtils.getFormatBySecond(this.lastTime, 3);
@@ -55,14 +55,19 @@ class RandomMatchView extends BaseEuiView
 
 	private onMatchTimeOver():void
 	{
+		//App.TimerManager.remove(this.onMatchTime, this);
+
+		//this.lblTime.text = "00:00";	
+
+		// if (App.TimerManager.isExists(this.onMatchTime, this))
 		App.TimerManager.remove(this.onMatchTime, this);
 
-		this.lblTime.text = "00:00";	
 		this.applyFunc(IndexConst.Match_TimeOver);		
 	}
 
 	public close(...param:any[]):void 
 	{
+		// if (App.TimerManager.isExists(this.onMatchTime, this))
 		App.TimerManager.remove(this.onMatchTime, this);
     }
 }

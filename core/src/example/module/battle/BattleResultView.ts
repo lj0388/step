@@ -38,10 +38,6 @@ class BattleResultView extends BaseEuiView
             this.showLoseUI();
     }
 
-    private playSound():void
-	{
-        App.SoundManager.playEffect("sound_dianji");
-    }
 
     private rankClickHandler(e:egret.TouchEvent):void
 	{

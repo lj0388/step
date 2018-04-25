@@ -8,11 +8,11 @@ class RecordProxy extends BaseProxy
         this.receiveServerMsg(ServerConst.GET_Results_S2C, this.recordListMsg, this);	
 	}
 
-	public requestRecordList(uid:string)
+	public requestRecordList(uid:string, gid:string)
 	{
 		var obj:any = {};
 	 	obj.uid = uid;
-		obj.groupId = "c0001";
+		obj.groupId = gid;
 		this.sendSocketMsg(ServerConst.GET_Results_C2S, obj);
 	}
 

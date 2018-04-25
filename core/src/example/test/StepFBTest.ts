@@ -7,14 +7,27 @@ class StepFBTest
 
     private initSDK()
     {
-        console.log("initSDK ");
-        
+        //console.log("initSDK ");
+        this.initModule();       
+
         this.loadAssets();
+
+        // var j:any = this;
+
+        // FBInstant.initializeAsync().then(function()
+        // {
+        //     j.loadAssets();
+        // }
+        // ).catch(function(e) 
+        // {
+        //     console.log(e);
+        // });
     }
 
     private loadAssets():void
     {
-        console.log("load ");
+        //console.log("load ");
+        FBInstant.logEvent("loadAssets", 1);
 
         var groupName:string = "preload";
         var subGroups:Array<string> = ["step"];
@@ -28,9 +41,10 @@ class StepFBTest
 
     private onResourceLoadComplete():void 
     {   
-        console.log("loadcomplete ");
+        App.SceneManager.runScene(SceneConsts.LOADING);
+        //console.log("loadcomplete ");
+        FBInstant.logEvent("loadAssetsComplete", 1);
 
-    
         var j:any = this;
 
         FBInstant.startGameAsync().then(function()
@@ -46,13 +60,13 @@ class StepFBTest
     private startGame():void
     {
         GlobalData.userId = FBInstant.player.getID();
-        console.log("userId: " + FBInstant.player.getID());
+        //console.log("userId: " + FBInstant.player.getID());
         
         GlobalData.userName = FBInstant.player.getName();
-        console.log("userName: " + FBInstant.player.getName());
+        //console.log("userName: " + FBInstant.player.getName());
         
         GlobalData.userIcon = FBInstant.player.getPhoto();
-        console.log("userIcon: " + FBInstant.player.getPhoto())
+        //console.log("userIcon: " + FBInstant.player.getPhoto())
         
         if (FBInstant.context.getID() != null)
         {
@@ -63,15 +77,24 @@ class StepFBTest
 
         
         var data:any = FBInstant.getEntryPointData();
+
         if (data != null && data.hasOwnProperty("senderId"))
             GlobalData.senderId = data.senderId;
 
-        console.log("startgame ");
+        if (data != null && data.hasOwnProperty("msg"))
+        {
+            FBInstant.logEvent("loginGame", 1, {type:data.msg});
+        }
+        else
+        {
+            FBInstant.logEvent("loginGame", 1, {type:0});
+        }
+        //console.log("startgame ");
 
         App.Init();
         //App.Socket.initServer(App.GlobalData.SocketServer, App.GlobalData.SocketPort, new UTFMsgByJson());
 
-        this.initModule();       
+      
 	   
 		this.initSocket();
 
@@ -85,14 +108,17 @@ class StepFBTest
 
 	private initSocket():void
 	{
+        FBInstant.logEvent("START_SOCKET_CONNECT", 1);
+
 		App.Socket.connectByUrl(this.serverUrl);
 		
         App.MessageCenter.addListener(SocketConst.SOCKET_CONNECT, ()=>
 		{
             Log.trace("与服务器连接上");
+            FBInstant.logEvent("SOCKET_CONNECT_SCUESS", 1);
             //send();
 			 //进入游戏
-            console.log("与服务器连接上 ");
+            //console.log("与服务器连接上 ");
 	        App.SceneManager.runScene(SceneConsts.Login);
 
         }, this);
@@ -100,28 +126,32 @@ class StepFBTest
         App.MessageCenter.addListener(SocketConst.SOCKET_RECONNECT, ()=>
 		{
             Log.trace("与服务器重新连接上");
+            FBInstant.logEvent("SOCKET_RECONNECT", 1);
             //send();
         }, this);
 
         App.MessageCenter.addListener(SocketConst.SOCKET_START_RECONNECT, ()=>
 		{
             Log.trace("开始与服务器重新连接");
+            FBInstant.logEvent("SOCKET_START_RECONNECT", 1);
         }, this);
 
         App.MessageCenter.addListener(SocketConst.SOCKET_CLOSE, ()=>
 		{
+            FBInstant.logEvent("SOCKET_CLOSE", 1);
             Log.trace("与服务器断开连接");
         }, this);
 
         App.MessageCenter.addListener(SocketConst.SOCKET_NOCONNECT, ()=>
 		{
+             FBInstant.logEvent("SOCKET_NOCONNECT", 1);
             Log.trace("服务器连接不上");
         }, this);
 
-        App.MessageCenter.addListener("1001", function(msg):void
-		{
-            Log.trace("收到服务器消息:", msg);
-        }, this);
+        // App.MessageCenter.addListener("1001", function(msg):void
+		// {
+        //     Log.trace("收到服务器消息:", msg);
+        // }, this);
     }
 
 	 /**
@@ -129,6 +159,7 @@ class StepFBTest
      */
     private initModule(): void 
 	{
+        App.ControllerManager.register(ControllerConst.Loading, new LoadingController());
         App.ControllerManager.register(ControllerConst.Login, new UserController());
         App.ControllerManager.register(ControllerConst.Index, new IndexController());
         App.ControllerManager.register(ControllerConst.Battle, new BattleController());

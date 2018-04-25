@@ -10,7 +10,8 @@ class LoadingView extends BaseEuiView{
 
     public txtMsg:eui.Label;
 
-    public setProgress(current:number, total:number):void {
+    public setProgress(current:number, total:number):void 
+    {
         this.txtMsg.text = "资源加载中..." + current + "/" + total;
     }
 }

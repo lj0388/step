@@ -76,5 +76,7 @@ declare class RecordItemSkin extends eui.Skin{
 }
 declare class RecordSkin extends eui.Skin{
 }
+declare class ResultShareSkin extends eui.Skin{
+}
 declare class VictorySkin extends eui.Skin{
 }

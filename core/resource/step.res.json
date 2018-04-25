@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "attack_json,tile_down,sound_bg,sound_readygo,global_json,friend_png,icon_bg_png,index_bg_jpg,logo_png,vs_png,hero_png,hero_json,tile_narmal,tile_trap,tile_twosign,tile_end,hero2_png,hero2_json,sign_png,ready_png,GO_png,01_jpg,02,yangtuo_json,yangtuo_png,eyu_png,eyu_json,bg01_png,bg02_png,bg03_png,bgfriendgroup_png,bglingxian_png,bgluohou_png,bgpipei_png,bgresult_png,bgtime_png,bgwarn_png,btnCancel_png,btnResult_png,btnaccept_png,btnagain_png,btnback_png,btnonestep_png,btnpk_png,btnrandom_png,btnshare_png,btnshare2_png,btnswitch_png,btntiaozhan_png,friendsign_png,guang_png,headbg_png,iconhead_png,iconsuiji_png,iconsuiji2_png,losefont_png,losesign_png,randomfont_png,shalou_png,twostep_png,vs1_png,warn_png,winsign_png,wintitle_png,headnull_png",
+			"keys": "attack_json,tile_down,global_json,friend_png,icon_bg_png,index_bg_jpg,logo_png,vs_png,hero_png,hero_json,tile_narmal,tile_trap,tile_twosign,tile_end,hero2_png,hero2_json,sign_png,ready_png,GO_png,01_jpg,02,yangtuo_json,yangtuo_png,eyu_png,eyu_json,bg01_png,bg02_png,bg03_png,bgfriendgroup_png,bglingxian_png,bgluohou_png,bgpipei_png,bgresult_png,bgtime_png,bgwarn_png,btnCancel_png,btnResult_png,btnaccept_png,btnagain_png,btnback_png,btnonestep_png,btnpk_png,btnrandom_png,btnshare_png,btnshare2_png,btnswitch_png,btntiaozhan_png,friendsign_png,guang_png,headbg_png,iconhead_png,iconsuiji_png,iconsuiji2_png,losefont_png,losesign_png,randomfont_png,shalou_png,twostep_png,vs1_png,warn_png,winsign_png,wintitle_png,headnull_png,start_mp3,ready_mp3,luoshui_mp3,kiss_mp3,hero_2_win_mp3,hero_2_up_mp3,hero_2_lose_mp3,hero_2_help_mp3,hero_2_2_mp3,hero_2_1_mp3,hero_1_win_mp3,hero_1_up_mp3,hero_1_lose_mp3,hero_1_help_mp3,hero_1_2_mp3,hero_1_1_mp3,BGM_mp3,sharebg_jpg,onestep_down_png,twostep_down_png",
 			"name": "step"
 		}
 	],
@@ -62,18 +62,6 @@
 			"name": "logo_png"
 		},
 		{
-			"url": "assets/stepGame/sound/step_bg.mp3",
-			"type": "sound",
-			"name": "sound_bg",
-			"soundType": "music"
-		},
-		{
-			"url": "assets/stepGame/sound/step_go.wav",
-			"type": "sound",
-			"name": "sound_readygo",
-			"soundType": "effect"
-		},
-		{
 			"url": "config/global.json",
 			"type": "json",
 			"name": "global_json"
@@ -122,11 +110,6 @@
 			"url": "assets/stepGame/ui/ready.png",
 			"type": "image",
 			"name": "ready_png"
-		},
-		{
-			"url": "font/CarterOne.ttf",
-			"type": "bin",
-			"name": "CarterOne_ttf"
 		},
 		{
 			"url": "assets/stepGame/mc/yangtuo.json",
@@ -337,6 +320,106 @@
 			"url": "assets/stepGame/ui/headnull.png",
 			"type": "image",
 			"name": "headnull_png"
+		},
+		{
+			"url": "assets/stepGame/sound/BGM.mp3",
+			"type": "sound",
+			"name": "BGM_mp3"
+		},
+		{
+			"url": "assets/stepGame/sound/hero_1_1.mp3",
+			"type": "sound",
+			"name": "hero_1_1_mp3"
+		},
+		{
+			"url": "assets/stepGame/sound/hero_1_2.mp3",
+			"type": "sound",
+			"name": "hero_1_2_mp3"
+		},
+		{
+			"url": "assets/stepGame/sound/hero_1_help.mp3",
+			"type": "sound",
+			"name": "hero_1_help_mp3"
+		},
+		{
+			"url": "assets/stepGame/sound/hero_1_lose.mp3",
+			"type": "sound",
+			"name": "hero_1_lose_mp3"
+		},
+		{
+			"url": "assets/stepGame/sound/hero_1_up.mp3",
+			"type": "sound",
+			"name": "hero_1_up_mp3"
+		},
+		{
+			"url": "assets/stepGame/sound/hero_1_win.mp3",
+			"type": "sound",
+			"name": "hero_1_win_mp3"
+		},
+		{
+			"url": "assets/stepGame/sound/hero_2_1.mp3",
+			"type": "sound",
+			"name": "hero_2_1_mp3"
+		},
+		{
+			"url": "assets/stepGame/sound/hero_2_2.mp3",
+			"type": "sound",
+			"name": "hero_2_2_mp3"
+		},
+		{
+			"url": "assets/stepGame/sound/hero_2_help.mp3",
+			"type": "sound",
+			"name": "hero_2_help_mp3"
+		},
+		{
+			"url": "assets/stepGame/sound/hero_2_lose.mp3",
+			"type": "sound",
+			"name": "hero_2_lose_mp3"
+		},
+		{
+			"url": "assets/stepGame/sound/hero_2_up.mp3",
+			"type": "sound",
+			"name": "hero_2_up_mp3"
+		},
+		{
+			"url": "assets/stepGame/sound/hero_2_win.mp3",
+			"type": "sound",
+			"name": "hero_2_win_mp3"
+		},
+		{
+			"url": "assets/stepGame/sound/kiss.mp3",
+			"type": "sound",
+			"name": "kiss_mp3"
+		},
+		{
+			"url": "assets/stepGame/sound/luoshui.mp3",
+			"type": "sound",
+			"name": "luoshui_mp3"
+		},
+		{
+			"url": "assets/stepGame/sound/ready.mp3",
+			"type": "sound",
+			"name": "ready_mp3"
+		},
+		{
+			"url": "assets/stepGame/sound/start.mp3",
+			"type": "sound",
+			"name": "start_mp3"
+		},
+		{
+			"url": "assets/stepGame/ui/sharebg.jpg",
+			"type": "image",
+			"name": "sharebg_jpg"
+		},
+		{
+			"url": "assets/stepGame/ui/twostep_down.png",
+			"type": "image",
+			"name": "twostep_down_png"
+		},
+		{
+			"url": "assets/stepGame/ui/onestep_down.png",
+			"type": "image",
+			"name": "onestep_down_png"
 		}
 	]
 }

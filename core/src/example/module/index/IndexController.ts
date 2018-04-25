@@ -69,19 +69,19 @@ class IndexController extends BaseController
 		{
 			GlobalData.matchMode = MatchType.Friends;
 			App.ViewManager.open(ViewConst.FriendMatch);
-			this.proxy.matchPlayer(GlobalData.userModel.uid, GlobalData.contextId, MatchType.Friends);
+			this.proxy.matchPlayer(GlobalData.userId, GlobalData.contextId, MatchType.Friends);
 		}
 		else
 		{
 			GlobalData.matchMode = MatchType.Random;
 			App.ViewManager.open(ViewConst.RandomMatch);
-			this.proxy.matchPlayer(GlobalData.userModel.uid, GlobalData.contextId, MatchType.Random);	//匹配陌生人
+			this.proxy.matchPlayer(GlobalData.userId, GlobalData.contextId, MatchType.Random);	//匹配陌生人
 		}	
     }
 
 	private onMatchMode(mode:string):void
 	{
-		console.log("matchMode: " + mode);
+		//console.log("matchMode: " + mode);
 		
 		this.closeAll();
 		
@@ -116,25 +116,41 @@ class IndexController extends BaseController
 	//点击 接受/拒绝 邀请
 	private onMatchConfirmClick(confirm:string, data:any):void
 	{
+		var j:any = this;
+
 		if (confirm == ConfirmType.Accept)
 		{
-			FBInstant.context.switchAsync(data.groupId).then(() => 
-            {
-                egret.log('context.id switch:', egretfb.EgretFBInstant.context.getID());
-                
-                GlobalData.contextId = data.groupId;
-				
-				this.OnUpdateIndexView();
-                this.proxy.matchConfirm(GlobalData.userModel.uid, GlobalData.userModel.contextId, confirm, data.senderId);
+			if (data.groupId != GlobalData.contextId)
+			{
+				FBInstant.context.switchAsync(data.groupId).then(function()
+				{
+					//console.log("contextId: " + FBInstant.context.getID());                
 
-            }, (err) => 
-            {
-                egret.log('switchAsync error', JSON.stringify(err));
-            })
+					GlobalData.contextId = data.groupId;
+					
+					j.OnUpdateIndexView();
+
+					j.proxy.matchConfirm(GlobalData.userModel.uid, GlobalData.contextId, confirm, data.senderId);
+
+					App.ViewManager.close(ViewConst.MatchInvite);
+				}
+				).catch(function(e) 
+				{
+					console.log(e);
+				});
+			}
+			else
+			{
+				j.proxy.matchConfirm(GlobalData.userModel.uid, GlobalData.contextId, confirm, data.senderId);
+
+				App.ViewManager.close(ViewConst.MatchInvite);
+			}			
 		}
 		else
 		{
-			this.proxy.matchConfirm(GlobalData.userModel.uid, GlobalData.userModel.contextId, confirm, data.senderId);
+			j.proxy.matchConfirm(GlobalData.userModel.uid, GlobalData.contextId, confirm, data.senderId);
+			
+			App.ViewManager.close(ViewConst.MatchInvite);
 		}
 		
 	}
@@ -175,7 +191,7 @@ class IndexController extends BaseController
 	//更新首页信息（好友头像)
 	private OnUpdateIndexView():void
 	{
-		console.log("OnUpdateIndexView");
+		//console.log("OnUpdateIndexView");
 		
 		this.indexView.updateGroupRoles(GlobalData.contextId);
 	}
